@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section class="bg-container ftco-daily-verse img" >
+    <section class="ftco-section bg-light" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+
+                    <span class="subheading">{% trans 'My profile' %}</span>
+                    <h2 class="mb-4">{% trans 'My Profile' %}</h2>
+
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">×</span>
+                    </button>
+                    {{ message }}
+                    </div>
+                    {% endfor %}
+
+                    <p>{% trans 'You can change your profile settings on this page.' %}</p>
+                    
+                    <form class="bg-light p-4 p-md-5 contact-form" method="post">
+                        {% csrf_token %}
+			<table width="100%">
+			    {% for field in user_form %}
+			    <tr>
+				<td width="100px">
+				<p>
+				    {% if field.name == 'agree_toc' %}
+					<a href="/termsandconditions" target="_blank" >{% trans 'I agree with the Terms and Conditions' %}</a>
+				    {% else %}
+					{{ field.label_tag }}
+				    {% endif %}
+				</td>
+				<td style="align: left;">
+				    {{ field }}
+
+				    {% if field.help_text %}
+					<small>{{ field.help_text }}</small>
+				    {% endif %}
+
+				    {% for error in field.errors %}
+				    <p style="color: red;">{{ error }}</p>
+				    {% endfor %}
+				</td>
+				</p>
+			    </tr>
+			    {% endfor %}
+			    <tr>
+				<td>
+				</td>
+				<td>
+				    <button type="submit" class="button">{% trans 'Save changes' %}</button>
+				</td>
+			    </tr>
+			</table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

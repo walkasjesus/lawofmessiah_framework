@@ -1,0 +1,13 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="content-main">
+    <p>{% trans 'Manage all media resources from one place:' %}</p>
+    <ul>
+        {% for link in links %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

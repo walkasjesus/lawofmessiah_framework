@@ -1,0 +1,12 @@
+PyMuPDF
+PyYAML
+fuzzywuzzy
+python-Levenshtein
+scikit-learn
+gensim
+transformers
+torch
+beautifulsoup4
+fitz
+openai
+-e bible_lib

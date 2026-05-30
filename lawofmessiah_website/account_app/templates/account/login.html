@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section class="bg-container ftco-daily-verse img" >
+    <section class="ftco-section bg-light" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading">{% trans 'Contribute' %}</span>
+                    <h2 class="mb-4">{% trans 'Login' %}</h2>
+                    <h5>{% trans 'Thank you for helping in teaching the words and steps of Jesus all around the world!' %}</h5>
+
+                    {% if form.errors %}
+                    <div class="alert alert-warning" role="alert">
+                        {% trans "Your username and password didn't match. Please try again." %}
+                    </div>
+                    {% endif %}
+
+                    {% if next %}
+                        {% if user.is_authenticated %}
+                            <div class="alert alert-danger" role="alert">
+                                {% trans "Your account doesn't have access to this page. To proceed, please login with an account that has access." %}
+                            </div>
+                        {% else %}
+                                {% trans 'Please login to see this page.' %}
+                        {% endif %}
+                    {% endif %}
+
+                    <div class="mb-12 pb-5">
+                        <div class="bg-light col-md-12 order-md-last">
+                            <br>
+                            <form class="p-12 p-md-12 contact-form" method="post" action="{% url 'account:login' %}">
+                                {% csrf_token %}
+                                <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 150px;">{{ form.username.label_tag }}</td>
+                                    <td style="width: 90%;">{{ form.username }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px;">{{ form.password.label_tag }}</td>
+                                    <td style="width: 90%;">{{ form.password }}</td>
+                                </tr>
+                                <tr>
+                                <td></td>
+                                    <td>
+                                        <input style="width: 150px;" type="submit" value="login" class="button">
+                                    </td>
+                                </tr>
+                                </table>
+
+                                <input type="hidden" name="next" value="{{ next }}">
+
+                            </form>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}

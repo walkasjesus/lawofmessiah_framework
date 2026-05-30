@@ -1,0 +1,6 @@
+[submodule "lawofmessiah_website/data/lawofmessiah"]
+        path = lawofmessiah_website/data/lawofmessiah
+	url = https://github.com/walkasjesus/LawofMessiah.git
+[submodule "lawofmessiah_website/data/lawofmessiah_translations"]
+        path = lawofmessiah_website/data/lawofmessiah_translations
+        url = https://github.com/walkasjesus/lawofmessiah_translations.git

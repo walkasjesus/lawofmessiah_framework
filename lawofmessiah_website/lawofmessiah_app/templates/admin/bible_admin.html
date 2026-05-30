@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans 'Bible cache management' %}</h1>
+
+<div>
+    <form action="{% url 'commandments:admin_reset_bibles' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ request.get_full_path }}">
+        <input type="submit" value="{% trans 'Clear bible list cache' %}">
+    </form>
+
+    {% trans 'Items in cache that are not saved to disk' %} {{ cache_items_not_persisted }}
+
+    <form action="{% url 'commandments:admin_persist_bible_cache' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ request.get_full_path }}">
+        <input type="submit" value="{% trans 'Save bible cache to disk' %}">
+    </form>
+</div>
+
+<br />
+<br />
+<h1>{% trans 'Bibles available' %}</h1>
+<table>
+
+    <tr>
+        <th>{% trans 'Bible' %}</th>
+        <th>{% trans 'Language' %}</th>
+        <th>{% trans 'Enabled' %}</th>
+        <th>{% trans 'Percentage cached' %}</th>
+        <th></th>
+    </tr>
+    {% for bible in bibles %}
+    <tr>
+        <td>{{ bible.name }}</td>
+        <td>{{ bible.language }}</td>
+        <td>{{ bible.enabled }}</td>
+        <td>{{ bible.percentage_cached|floatformat:0 }}</td>
+        <td>
+            <form action="{% url 'commandments:admin_enable_bible' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}">
+            <input name="bible_id" type="hidden" value="{{ bible.id }}">
+            {% if bible.enabled %}
+                <input name="enable" type="hidden" value="False">
+                <input type="submit" value="{% trans 'Disable' %}">
+            {% else %}
+                <input name="enable" type="hidden" value="True">
+                <input type="submit" value="{% trans 'Enable' %}">
+            {% endif %}
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# Auto-translate website static-content translations for this project.
+#
+# Scope:
+# - Dutch only (nl)
+# - Project translations under ./translations/locale
+# - Does not include Law of Messiah data translations kept in ./data/lawofmessiah_translations
+
+if [[ -f ./venv/Scripts/activate ]]; then
+	source ./venv/Scripts/activate
+elif [[ -f ./venv/bin/activate ]]; then 
+	source ./venv/bin/activate
+else
+	echo "ERROR: cannot find environment binary"
+fi
+
+# If Linux based servers. This is the preferred Operating System.
+if which tee > /dev/null 2>&1 && which date > /dev/null 2>&1; then
+	today=$(date +%Y%m%d)
+	start=$(date '+%Y-%m-%d %H:%M:%S')
+	log=log/translation.${today}.log
+	
+	echo "INFO: ${start} - Start Auto Translating Files" | tee -a ${log}
+
+	echo "Translating static project files (Dutch only)." | tee -a ${log}
+	python3 manage.py auto_translate | tee -a ${log}
+	echo "Compiling Dutch .po files for project translations." | tee -a ${log}
+	python3 -m django compilemessages -l nl -i venv -i data/lawofmessiah -i data/lawofmessiah_translations | tee -a ${log}
+	echo "
+	# When running auto_translate_files.sh Google will translate all django variables in a wrong format:
+	# By Example:
+	# msgid %(model_name)s with this %(field_label)s already exists.
+	# msgstr % (Model_name) s mit diesem% (FIELD_LABEL) s ist bereits vorhanden.
+	" | tee -a ${log}
+	echo "" | tee -a ${log}
+	echo "To fix most of the vars run this script: auto_correct_django_locale_vars.sh" | tee -a ${log}
+
+	end=$(date '+%Y-%m-%d %H:%M:%S')
+	echo "INFO: ${end} - Ended Auto Translating Files" | tee -a ${log}
+
+# Other Operating Systems like Windows
+else
+	echo "INFO: Start Auto Translating Files"
+	echo "Translating static project files (Dutch only)."
+	python3 manage.py auto_translate
+	echo "Compiling Dutch .po files for project translations."
+	python3 -m django compilemessages -l nl -i venv -i data/lawofmessiah -i data/lawofmessiah_translations
+	echo "
+	# When running auto_translate_files.sh Google will translate all django variables in a wrong format:
+	# By Example:
+	# msgid %(model_name)s with this %(field_label)s already exists.
+	# msgstr % (Model_name) s mit diesem% (FIELD_LABEL) s ist bereits vorhanden.
+	"
+	echo ""
+	echo "To fix most of the vars run this script: auto_correct_django_locale_vars.sh"
+	echo "INFO: Ended Auto Translating Files"
+fi

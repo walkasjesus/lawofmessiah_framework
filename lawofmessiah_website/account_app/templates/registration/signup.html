@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <section class="bg-container ftco-daily-verse img" >
+    <section class="ftco-section bg-light" id="contact-section">
+      <div class="container">
+          <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+              <span class="subheading">{% trans 'Signup' %}</span>
+              <h2 class="mb-4">{% trans 'Register for a new account' %}</h2>
+              <h5>{% trans 'The content of this website is made possible by contributors around the world. You can help improving by:' %}</h5>
+
+              <div class="list-group-flush">
+                  <div class="list-group-item">
+                    <div class="signup-icon"><img src="{% static 'images/languages.png' %}" width="60px" alt=""></div><div class="signup-text"><p class="mb-0">{% trans 'Translating to your language, since most translation is done automatically, corrections are very welcome!' %}</p></div>
+                  </div>
+                  <div class="list-group-item">
+                      <div class="signup-icon"><img src="{% static 'images/bible.png' %}" width="60px" alt=""></div><div class="signup-text"><p class="mb-0">{% trans 'Adding or correcting steps along with their Bible references' %}</p></div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="signup-icon"><img src="{% static 'images/media.png' %}" width="60px" alt=""></div><div class="signup-text"><p class="mb-0">{% trans 'Adding resources like movies, books, testimonies, blogs, songs, pictures, illustrations and sermons which are related to the corresponding steps' %}</p></div>
+                  </div>
+              </div>
+
+              <form class="bg-light p-4 p-md-5 contact-form" method="post">
+                {% csrf_token %}
+                <table width="100%">
+                    {% for field in form %}
+                    <tr>
+                        <td width="100px">
+                        <p>
+                            {% if field.name == 'agree_toc' %}
+			    	<a href="/termsandconditions" target="_blank" >{% trans 'I agree with the Terms and Conditions' %}</a>
+                            {% else %}
+                                {{ field.label_tag }}
+                            {% endif %}
+                        </td>
+                        <td style="align: left;">
+                            {{ field }}
+
+                            {% if field.help_text %}
+                                <small>{{ field.help_text }}</small>
+                            {% endif %}
+
+                            {% for error in field.errors %}
+                            <p style="color: red;">{{ error }}</p>
+                            {% endfor %}
+                        </td>
+                        </p>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <button type="submit" class="button">{% trans 'Sign up' %}</button>
+                        </td>
+                    </tr>
+                </table>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+{% endblock %}

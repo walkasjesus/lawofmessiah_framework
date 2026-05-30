@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title_content %}{% trans 'Vision' %}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h1>{% trans 'Vision' %}</h1>
+    <p>{% trans 'Our focus is to walk in the Law of Messiah through discipleship and scripture.' %}</p>
+    <ul>
+        <li>1 John 2:6 - {{ verse_1john_2_6 }}</li>
+        <li>1 John 2:3-6 - {{ verse_1john_2_3_6 }}</li>
+        <li>John 15:10 - {{ verse_john_15_10 }}</li>
+        <li>Hebrews 13:20-21 - {{ verse_hebrews_13_20_21 }}</li>
+    </ul>
+</div>
+{% endblock %}

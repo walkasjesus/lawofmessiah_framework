@@ -1,0 +1,1 @@
+from .law_of_messiah_importer import LawOfMessiahImporter

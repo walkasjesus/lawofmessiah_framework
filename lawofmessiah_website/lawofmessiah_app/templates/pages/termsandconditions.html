@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title_content %}{% trans 'Terms and Conditions' %}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h1>{% trans 'Terms and Conditions' %}</h1>
+    <p>{% trans 'By using this website, you agree to the terms and conditions.' %}</p>
+</div>
+{% endblock %}

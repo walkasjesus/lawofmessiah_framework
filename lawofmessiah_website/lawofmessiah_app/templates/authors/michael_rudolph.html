@@ -1,0 +1,763 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load cache %}
+
+{% block title_content %}{% trans 'Michael Rudolph | Introduction to the Law of Messiah' %}{% endblock %}
+{% block meta_description %}{% trans 'Introduction by Michael Rudolph to The Law of Messiah — Torah from a New Covenant Perspective. A scholarly study of Torah, the Law of Messiah, and the codification of biblical mitzvot.' %}{% endblock %}
+{% block og_title %}{% trans 'Michael Rudolph | Introduction to the Law of Messiah' %}{% endblock %}
+{% block og_description %}{% trans 'Introduction by Michael Rudolph to The Law of Messiah — Torah from a New Covenant Perspective. A scholarly study of Torah, the Law of Messiah, and the codification of biblical mitzvot.' %}{% endblock %}
+{% block twitter_title %}{% trans 'Michael Rudolph | Introduction to the Law of Messiah' %}{% endblock %}
+{% block twitter_description %}{% trans 'Introduction by Michael Rudolph to The Law of Messiah — Torah from a New Covenant Perspective. A scholarly study of Torah, the Law of Messiah, and the codification of biblical mitzvot.' %}{% endblock %}
+
+{% block content %}
+{% cache cache_timeout author_rudolph cache_on_language %}
+<section class="ftco-daily-verse img" style="background-image:url({% static 'images/bg_1.jpg' %});">
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <span class="subheading">{% trans 'The Law of Messiah — Torah from a New Covenant Perspective' %}</span>
+          <h2 class="mb-4">{% trans 'Introduction by Michael Rudolph' %}</h2>
+          <p><a href="https://tikkunamerica.org/halachah/intro-mr.php" target="_blank" rel="noopener">{% trans 'View original on tikkunamerica.org' %}</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <nav class="sticky-top pt-3">
+            <ul class="list-unstyled">
+              {% blocktrans trimmed %}
+              <li><a href="#torah-and-the-law">1. Torah and the Law</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#torah-new-covenant">2. Torah in the New Covenant</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#pentateuch-torah">3. What Makes the Pentateuch Torah?</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#gospels-torah">4. The Gospels as Torah</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#mosaic-law">5. The Mosaic Law: Rabbinical View</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#statutes">6. Statutes: Dependent and Transcendent</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#torah-underlies">7. Torah Underlies the Statutes</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#law-of-messiah">8. The Law of Messiah</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#dibeyr">9. Dibeyr, Torah and Mitzvot</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#maimonides">10. Maimonides and Yisrael Meir haKohen</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#other-enumerations">11. Other Classical Enumerations</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#need-codification">12. Need for a New Covenant Codification</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#considerations">13. Considerations in Writing this Book</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#future-volume">14. Matters Left for a Future Volume</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#organization">15. Organization and References</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#two-kinds">16. Two Kinds of Mitzvot</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#translation">17. Choice of Translation</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#collaboration">18. Collaboration with Daniel C. Juster</a></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><a href="#work-to-build">19. A Work to Build Upon</a></li>
+              {% endblocktrans %}
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-9">
+
+          <div class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <p>The term "Law of Messiah" appears only once in the Bible, and that is in Galatians 6:2. That notwithstanding, the term is extremely significant in signaling that there exists such a law, that it is related to "Torah" and, as we shall see, that both it and "Torah" are alive and well under the New Covenant.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The Bible can be appreciated from many points of view. It may be thought of as the biography of God in His dealings with mankind. It may be read as a treatise on the history of the world and, in particular, the history of Israel and the heathen nations. It may also be studied as a prophetic book, revealing our future here on earth and in eternity. In this work, however, it is mainly presented as a book of Torah law, containing God's instructions for holy, moral, and victorious living.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="torah-and-the-law" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>1. Torah and the Law</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The Theological Wordbook of the Old Testament defines "Torah" (Strong's number 8451) as follows<sup>1</sup>:</p>
+            {% endblocktrans %}
+            <blockquote class="blockquote">
+              {% blocktrans trimmed %}
+              <p>The word tôrâ means basically "teaching" whether it is the wise man instructing his son or God instructing Israel. The wise give insight into all aspects of life so that the young may know how to conduct themselves and to live a long blessed life (Prov 3:1 f.). So too God, motivated by love, reveals to man basic insight into how to live with each other and how to approach God. Through the law God shows his interest in all aspects of man's life which is to be lived under his direction and care. Law of God stands parallel to word of the Lord to signify that law is the revelation of God's will (e.g. Isa 1:10). In this capacity it becomes the nation's wisdom and understanding so that others will marvel at the quality of Israel's distinctive life style (Deut 4:6). Thus there is a very similar understanding of the role of teaching with its results in the wisdom school, in the priestly instruction, and the role of the law with its results for all the people of the covenant.</p>
+              {% endblocktrans %}
+            </blockquote>
+            {% blocktrans trimmed %}
+            <p>Specifically law refers to any set of regulations; for example, Exodus 12 contains the law in regard to observing the Passover, and other specific laws include those for the various offerings, for leprosy, and for jealousy. In this light, law is often considered to consist of statutes, ordinances, precepts, commandments, and testimonies.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The meaning of the word gains further perspective in the light of Deuteronomy. There, Moses sets about to explain the law, and law includes moral, ceremonial, and interpretive dimensions. The book of Deuteronomy shows that the law has a broad meaning to encompass history, regulations and their interpretation, and exhortations. It is not merely the listing of casuistic statements as is the case in Hammurabi's code. Later the word extended to include the first five books of the Bible in all their variety.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>In addition, The New Brown-Driver-Briggs-Gesenius Hebrew and English Lexicon gives "direction, instruction, law" as the primary definitions of "Torah"<sup>2</sup>, and the Encyclopaedia Judaica states:<sup>3</sup></p>
+            {% endblocktrans %}
+            <blockquote class="blockquote">
+              {% blocktrans trimmed %}
+              <p>Torah is derived from the root which in the hifil conjugation means "to teach" (cf. Lev. 10:11). The meaning of the word is therefore "teaching", "doctrine", or "instructions"; the commonly accepted "law" gives a wrong impression. The word is used in different ways but the underlying idea of "teaching" is common to all.</p>
+              {% endblocktrans %}
+            </blockquote>
+            {% blocktrans trimmed %}
+            <p>There are basically two ways in which "Torah" is used in the Tanakh. In one usage, "Torah" refers to "the Law" - God's legal code which provides instructions on specific matters. Examples of this usage are:<sup>4</sup></p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>"This is the Torah of the burnt offering..." (Leviticus 6:2(9)ff); "grain offering..." (Leviticus 6:7(14)ff); "sin offering..." (Leviticus 6:18(25)ff); "trespass offering..." (Leviticus 7:1ff); "peace offering..." (Leviticus 7:11ff); "leprous plague..." (Leviticus 13:59ff); "jealousy..." (Numbers 5:29ff).</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Where "Torah" means "law", it is usually accompanied by other Hebrew words having to do with law, such as:</p>
+            {% endblocktrans %}
+            <ul>
+              {% blocktrans trimmed %}
+              <li>mitzvah (commandment - Strong's 4687)<sup>5</sup></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>khukah (statue or ordinance ("regulation" in CJB) - Strong's 2708)<sup>6</sup></li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>mishpat (judgement ("ruling" in CJB) - Strong's 4941)<sup>7</sup></li>
+              {% endblocktrans %}
+            </ul>
+            {% blocktrans trimmed %}
+            <p>The following examples contain the word "Torah" in addition to one or more of the above words, showing that "Torah" is connected to, but distinguishable from, commandments, statutes, ordinances and judgments:</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Numbers 19:2: This is the regulation from the Torah which Adonai has commanded. Here, "Torah" cannot mean "regulation" or "ordinance".</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Numbers 31:21: ... This is the regulation from the Torah which Adonai has ordered Moshe. Here also, "Torah" cannot mean "regulation" or "ordinance".</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Deuteronomy 30:10: ... so that you obey his mitzvot and regulations which are written in this book of the Torah ... Some translations of this verse speak of "statutes" rather than "regulations", so here, "Torah" cannot mean "mitzvot (commandments)" or "regulations (statutes)".</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Psalm 89:31-32(30-31): If his descendants abandon my Torah and fail to live by my rulings, if they profane my regulations and don't obey my mitzvot ... Here, "Torah" cannot mean "rulings (judgments)", "regulations (statutes)" or "mitzvot (commandments)".</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Another way of distinguishing "Torah" (teaching) from commandment, statute, ordinance, and judgment is by its context. In Scripture, the word can clearly mean teaching when it appears in passages such as Exodus 13:9, Exodus 16:4, Psalm 1:2, Psalm 37:31, Psalm 40:9, Proverbs 6:23, Proverbs 7:2, and Proverbs 13:14.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="torah-new-covenant" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>2. Torah in the New Covenant</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The New Covenant was prophesied in Jeremiah 31:30–33<sup>8</sup>:</p>
+            {% endblocktrans %}
+            <blockquote class="blockquote">
+              {% blocktrans trimmed %}
+              <p>'Here the days are coming,' says Adonai, 'when I will make a new covenant with the house of Isra'el and with the house of Y'hudah. It will not be like the covenant I made with their fathers on the day I took them by their hand and brought them out of the land of Egypt; because they, for their part, violated my covenant, even though I, for my part, was a husband to them,' says Adonai. 'For this is the covenant I will make with the house of Isra'el after those days,' says Adonai: 'I will put my Torah within them and write it on their hearts; I will be their God, and they will be my people.'</p>
+              {% endblocktrans %}
+            </blockquote>
+            {% blocktrans trimmed %}
+            <p>Jeremiah is quoting God as saying "I will put My Torah in their minds, and write it on their hearts." This Scripture is repeated in the Greek New Covenant Scriptures in Hebrews 8:8–12<sup>9</sup>. Since the "better covenant" in Hebrews 8:6 is the "New Covenant" which is referred to in Jeremiah 31:31 and Hebrews 8:8, one must conclude that the New Covenant was given as Torah, and therefore is Torah.<sup>10</sup></p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Since in the Hebrew text of this Scripture the word for "law" is Torah, the passage can also be read as a statement that the New Covenant is itself Torah. That same connection is reflected in the Greek New Covenant Scriptures through nomos, which can be used for Torah in the sense of God's revealed teaching and law.<sup>11</sup></p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>A related Greek word, nomotheteo, occurs in Hebrews 8:6 and is translated "established" in some English versions. David H. Stern renders the verse as "For this covenant has been given as Torah on the basis of better promises," reinforcing the connection between the New Covenant and Torah.<sup>12</sup></p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="pentateuch-torah" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>3. What Makes the Pentateuch Torah?</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Since "Torah" is God's teaching, there is a sense in which all Scripture is "Torah." Nevertheless, Yeshua himself recognized a distinction between the "Torah" of the Pentateuch and other classifications of Scriptures (Luke 24:44)<sup>13</sup>.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The uniqueness of the Pentateuch is that it contains God's major covenants prior to Yeshua. The other books of the Tanakh expound on these covenants, teach about them, prophesy about them, and present their history, but they do not themselves contain the covenants.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>All Scripture is God-breathed and valuable for teaching the truth, convicting of sin, correcting faults, and training in right living, so there is still a sense in which the whole Bible functions as Torah. The Pentateuch is unique, however, in that it contains the covenantal foundation on which the rest of the Tanakh builds.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="gospels-torah" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>4. The Gospels as Torah</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The New Covenant is a covenant of Torah — God's teaching written on our hearts. If the test for "pentateuchal" Torah is whether a New Covenant book of the Bible contains the New Covenant itself, then the Gospel books — Matthew, Mark, Luke and John certainly pass the test. Among the many parallels between the Pentateuch and the Gospels:</p>
+            {% endblocktrans %}
+            <ol>
+              {% blocktrans trimmed %}
+              <li>The Pentateuch contains the life of Moses, who was used by God to deliver the Sinai Covenant<sup>14</sup>. The Gospels contain the life of Yeshua, who was used by God to deliver the New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch contains the event in which Moses proclaims the blood of the Sinai Covenant. The Gospels contain the event in which Yeshua proclaims his blood of the New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch contains the teachings and commandments of the Sinai Covenant. The Gospels contain the teachings and commandments of the New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch contains the means by which men must atone for their sins through animal sacrifice. The Gospels contain the means by which men must be forgiven for their sins through Yeshua's sacrifice.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch initiates a priesthood and the appointment of Aaron as High Priest. The Gospels initiate a new priesthood and the appointment of Yeshua as High Priest<sup>15</sup>.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch contains shadows of things to come. The Gospels contain the prophetic fulfillment of those shadows.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch ends with the death of Moses. The Gospels end with the death, resurrection and ascension of Yeshua.</li>
+              {% endblocktrans %}
+            </ol>
+            {% blocktrans trimmed %}
+            <p>Yeshua's life and blood are the substance of the New Covenant, and his sacrificial death and resurrection mark both the New Covenant's beginning and its fulfillment. It is in the Gospel books that we find this New Covenant substance, and therefore the New Covenant itself.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="mosaic-law" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>5. The Mosaic Law: Rabbinical View</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>According to Rabbinical understanding, the Holy Scriptures are organized into three parts — the Torah (Pentateuch, Law), the Nevi'im (Prophets), and the Ketuvim (Holy Writings)<sup>16</sup>. Rabbinical Judaism does not acknowledge the current existence of the "New Covenant" prophesied in Jeremiah 31:31, or the inspiration of the New Covenant Scriptures. One of the ways that Judaism has historically viewed "Torah" has been as synonymous with the Law of Moses — the law to which it considers itself bound today.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Its further understanding is that all of the Mosaic Law is contained in the Torah, and that the remaining Scriptures of the Tanakh, while inspired, merely historicize, exemplify, and embellish. Consequently, Rabbinical Judaism devotes most of its attention to the Torah and to the oral tradition, to which it looks for interpretation.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="statutes" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>6. Statutes of the Mosaic Law: Dependent and Transcendent</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The Commandments contained in the Tanakh are God's explicit directives and are, therefore, divine statutory law<sup>17</sup>. There are two categories of statutes commanded by God under the Mosaic Covenant — those whose literal compliance depends upon the Covenant's continued existence ("covenant-dependent"), and those whose literal compliance does not ("covenant-transcendent").</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Hebrews 8:13 suggests a diminishing literal role for covenant-dependent statutes; consequently, such statutes are not incorporated into New Covenant law in their original form and application, while statutes that are covenant-transcendent are readily adopted without change<sup>18</sup>. A rule-of-thumb test is to ask: "Can or should this statute be complied with in the New Covenant era exactly and literally as commanded?" If the answer is "yes", it is "transcendent". If "no", it is "dependent".</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>It is my opinion that "oldness of the letter", as some translations read, refers to the diminishing role of covenant-dependent statutes as literal law, whereas our need for literal obedience to covenant-transcendent statutes is timeless. In practice, the distinction is not always simple, so judgment must be exercised carefully in deciding whether a command should be carried over literally or only in principle<sup>19</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="torah-underlies" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>7. Torah Underlies the Statutes</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Underlying each of God's commandments is Torah, which is broadly defined as His essential teaching<sup>21</sup><sup>22</sup>. Although not all Torah is statutory in origin, all Torah is God's law because it is the essence of His will. Even if a commandment is covenant-dependent, its Torah transcends the change in covenant because God's values never change.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Torah is not only revealed through Mosaic commandments, but through all Scripture<sup>23</sup>. Thus, not only does Torah pass into the New Covenant, it defines it, and without it there would be no New Covenant<sup>24</sup><sup>25</sup><sup>26</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="law-of-messiah" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>8. The Law of Messiah</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>In Galatians 6:2, Paul instructs us:</p>
+            {% endblocktrans %}
+            <blockquote class="blockquote">
+              {% blocktrans trimmed %}
+              <p>Bear one another's burdens — in this way you will be fulfilling the Torah's true meaning, which the Messiah upholds.</p>
+              {% endblocktrans %}
+            </blockquote>
+            {% blocktrans trimmed %}
+            <p>Most English translations of this verse employ the expression "the Law of Messiah"<sup>27</sup>, which is from where the title of this book is derived<sup>28</sup>. Although this verse is the only occurrence of the term in Scripture, the Apostolic writings are replete with references to operative law in the New Covenant.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>We have seen that there are two components of Law in the Tanakh that are eternal: (1) covenant-transcendent statutes, and (2) Torah (teaching) that is revealed through all Scripture. Since covenant-dependent statutes vanish along with their vanishing covenant, it is the covenant-transcendent statutes, plus all Torah contained in the Tanakh, plus all law added by the New Covenant Scriptures, which form the "Law of Messiah" to which we are accountable today. Hence, the Law of Messiah is the New Covenant counterpart of the Law of Moses.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Examples of operative New Covenant law include the instructions of Yeshua in the Gospels, the commands of the Apostolic writings, and the apostolic recognition that God's law is written on the hearts of Gentiles who naturally do what the Torah requires.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="dibeyr" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>9. Dibeyr, Torah and Mitzvot</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>As used in this book, a "dibeyr" is an explicit commandment of God in Scripture — an imperative directive (usually a statute or ordinance of the Mosaic Law) which may be either covenant-dependent or transcendent. "Torah" can mean several things but, in the absence of the article "the", it most often means God's essential and eternal teaching or instruction. Torah underlies all of God's dibrot<sup>29</sup>, and is revealed (explicitly or implicitly) by all Scripture — not just the Scriptures of the Pentateuch. A "Mitzvah" is an interpreted statement of God's will, derived from Scripture, and expressed in the form of a commandment.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>There have been several attempts in history to codify God's Word into numbered mitzvot<sup>30</sup>. The earliest was Hilchot Gedolot, published in the 8th century. By that time, a principle had already been established in the Talmud that the total number of mitzvot in the Torah was Taryag (613)<sup>31</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="maimonides" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>10. Maimonides and Yisrael Meir haKohen</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Moshe ben Maimon (Maimonides, the "RAMBAM"), sometime prior to 1170 C.E., wrote his compilation of Torah law under the title <em>Kitab Al-Fara'id</em> (The Book of Divine Precepts)<sup>34</sup>. Unlike his predecessors, Maimonides was careful to follow defined principles (fourteen) to justify his conclusions. His work received almost universal acceptance.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>In 1931, Rabbi Yisrael Meir haKohen published <em>Sefer haMitzvot haKatzar</em> (The Concise Book of Mitzvoth)<sup>36</sup>, in which he extracted from Maimonides' list 297 mitzvot — 77 positive, 194 negative, and 26 applicable only in the Land of Israel<sup>37</sup>. Rabbi Meir intended his book to be a compilation of mitzvot that could be observed by Jews in the post-Temple era and, particularly in the Diaspora.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Maimonides and Meir do not always agree on the statement of the mitzvah that they extract from a given Scripture, and their translations and editorial apparatus also differ in chapter and verse citation<sup>38</sup><sup>39</sup><sup>40</sup><sup>41</sup>. Those differences matter because this book is not merely reproducing lists, but attempting to interpret the underlying scriptural intent.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="other-enumerations" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>11. Other Classical Enumerations</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Codifications written after <em>Sefer haMitzvot</em> have added to our overall understanding of God's commandments, but no other codifier ever attained the prestige and influence of Maimonides<sup>42</sup>. Several deserve special mention:</p>
+            {% endblocktrans %}
+            <ul>
+              {% blocktrans trimmed %}
+              <li><em>Mishneh Torah</em>, a fourteen-book compilation of laws gleaned from both Scripture and Talmud by Maimonides.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><em>Sefer Mitzvot Gadol</em> (Big Book of Commandments), Moses of Coucy (13th century).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><em>Sefer Mitzvot Katan</em> (Little Book of Commandments), Isaac ben Joseph of Corveil (13th century).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><em>Sefer HaChinuch</em> (The Book of Education), attributed to Aaron haLevi of Barcelona (c. 1257), still in common use today<sup>43</sup><sup>44</sup>.</li>
+              {% endblocktrans %}
+            </ul>
+            {% blocktrans trimmed %}
+            <p>Shulchan Aruch and Kitzur Shulchan Aruch are beyond the scope of this book because they combine Scriptural and rabbinical elements. The present work is narrower in aim: to stay focused on Scripture-based mitzvot and their New Covenant application.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="need-codification" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>12. Need for a New Covenant Codification</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>For Messianic Jews and Torah-adherent Gentile believers (followers of Messiah Yeshua), neither Maimonides', nor Meir's, nor HaChinuch's works are a sufficient guide for daily conduct and for relating to God<sup>45</sup>. It is because these believers acknowledge the continuing priesthood of Yeshua, look to regular communication with the Ruach HaKodesh for personal guidance<sup>46</sup>, and seek to be obedient to additional Torah contained in the Kitvey B'rit Chadasha (the New Testament Scriptures)<sup>47</sup> - all part of a New Covenant between God and the Jewish people<sup>48</sup>.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>New Covenant believers (both Jews and Gentiles) have the same need as Rabbinical Jews for a handy compilation of Scripture-based mitzvot to assist them in their walk of obedience. The challenge in writing this book was to provide such a tool — one that parallels the older works in form, but which adds additional Scriptures and provides interpretation for New Covenant usage.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Underlying this attempt is the conviction that the Torah God gave to the ancient Israelites is relevant today for both the Jew and the non-Jew, albeit sometimes differently for each.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Exodus 12:49 says, "The same teaching is to apply equally to the citizen and to the foreigner living among you." Romans 15:4 says that everything written in the past was written to teach us, so that with the encouragement of the Tanakh we might patiently hold on to our hope. First Corinthians 7:19 says that being circumcised means nothing, and being uncircumcised means nothing; what does mean something is keeping God's commandments. Galatians 3:24 says that the Torah functioned as a custodian until the Messiah came. Second Timothy 3:16-17 says that all Scripture is God-breathed and is valuable for teaching the truth, convicting of sin, correcting faults and training in right living. Hebrews 10:1 says that the Torah has in it a shadow of the good things to come, but not the actual manifestation of the originals.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>This verse of Scripture is sometimes wrongly generalized to mean that all the commandments of Torah are applicable to Jews and Gentiles in the same way. That is a mistaken view because the context of Exodus 12:49 is of the sojourner who desired to eat the Pesach and thus needed to be circumcised<sup>49</sup>. Even if one generalizes the verse from its narrow context of Pesach and circumcision, the CJB's choice of the word "teaching" rather than "law" suggests that there may be different applications for the Jew and the Gentile<sup>50</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="considerations" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>13. Considerations in Writing this Book</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The matter of proper application of Scripture looms very large. The author approached this work prayerfully, beginning with the mitzvot promulgated by Rabbi Yisrael Meir HaKohen in his <em>Sefer haMitzvot haKatzar</em><sup>51</sup>, determined which mitzvot in Maimonides'<sup>52</sup>,<sup>53</sup> and HaChinuch's<sup>54</sup> compilations corresponded, and then compared each with the Scriptures they were intended to interpret. As a final step, New Covenant Scriptures that appeared relevant were consulted<sup>55</sup>.<sup>56</sup></p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Not being bound by Talmudic authority, the author did not attempt to arrive at Taryag (613) mitzvot and did not follow Maimonides' practice of listing mitzvot in categories of positive and negative. Mitzvot that addressed the same or similar issues were combined. All of this was done in collaboration with Dr. Daniel C. Juster whose comments are liberally included.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Differences in the chapter and verse citations among the various translated sources can be explained by the fact that the translators and editors, not Maimonides, Meir, or HaChinuch, placed them there. After merging the work of Meir and Maimonides and eliminating duplications, the resulting list was reduced by eliminating those mitzvot that were judged to be not literally observable in the New Covenant<sup>57</sup>.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>For example, Meir's Positive Mitzvah #MP52 (Deuteronomy 18:4) requires that we give the kohen the first wool of our sheep. With the Mosaic Covenant in the process of vanishing away or having already vanished, there is no longer a reason to support the Levitical kohanim with such gifts<sup>58</sup><sup>59</sup>. Although the New Covenant has rendered some of the Mosaic mitzvot literally unobservable, it also produced new ones, and changed how some of the Mosaic mitzvot are to be applied today. Consider, for example, Meir's Positive Mitzvah #MP38 (Leviticus 25:35-36 & Deuteronomy 15:8), in which he states that we are to give charity to the poor in Jewry. Under the New Covenant, however, our brethren include non-Jews of the faith grafted to Israel as well, and so the mitzvah is broadened to include our poor brethren who dwell among us<sup>60</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="future-volume" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>14. Matters Left for a Future Volume</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Although New Covenant Scriptures (especially mitzvot spoken by Yeshua) are liberally referenced in this work, a methodical list and commentary of all the mitzvot in the New Testament remains for a future volume. As a foretaste, an Appendix listing the mitzvot that appear in the Book of Matthew is included, as well as an Appendix listing mitzvot spoken by the shlichim in the New Testament.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>As a foretaste of what is planned to come, this introduction points toward a larger structure that includes appendices and indexes rather than trying to do everything here.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="organization" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>15. Organization and References</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The organization of this book and the Scripture verses selected to support each mitzvah are not necessarily the same as those of the classical commentators<sup>42</sup>. Some mitzvot are included here that were not contemplated by the classical commentators — e.g. mitzvot derived from parts of the Tanakh other than the Torah, and mitzvot derived from the Apostolic Writings.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The following list summarizes this book's overall approach and content:</p>
+            {% endblocktrans %}
+            <ul>
+              {% blocktrans trimmed %}
+              <li>Cross-references to the mitzvot identified by Maimonides, Meir and HaChinuch, and to additional Scriptures not referenced by them.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Mitzvot identified by Maimonides, Meir and HaChinuch that I do not deem observable in the New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Mitzvot not traditionally recognized, yet which I deem relevant in the New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Interpretations of Scripture from a New Covenant perspective.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A selective commentary that includes differences in the classical commentators' perspectives, New Covenant interpretation, and application to Jews and Gentiles.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Mitzvot organized into subject categories.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A New Covenant Literal Application (NCLA) code designation for each mitzvah, assigning one of seven possible literal compliance levels.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Table of Contents.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Preface.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>This Introduction.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>An Introduction by Daniel C. Juster.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>An article on Paul's understanding of the Torah.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Subject Index.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>An English-versified Scripture Index of Hebrew Scriptures.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Hebrew-versified Scripture Index of Hebrew Scriptures.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Scripture Index of New Covenant Scriptures.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Maimonides Mitzvah Cross-Reference Index.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Meir Mitzvah Cross-Reference Index.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Chinuch Mitzvah Cross-Reference Index.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>An Index of Three Classical Commentators' Mitzvot Arranged in Order of HaChinuch's Mitzvah Numbers and Labeled according to Weekly Parashiyot.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>An Index of Scriptures Cited by Three Classical Commentators Arranged according to Weekly Parashiyot.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Maimonides' List of Positive and Negative Mitzvot.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A List of Explicit Mitzvot of the New Covenant Shlichim.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A Hebrew Word Glossary.</li>
+              {% endblocktrans %}
+            </ul>
+            {% blocktrans trimmed %}
+            <p>There is a modern work, "The Mitzvot: The Commandments and their Rationale" by Abraham Chill<sup>61</sup>, that I consult from time to time and that deserves special mention because, in addition to his own commentary, he includes extensive references to classical rabbinical literature.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>There is another modern work "The 613 Mitzvot: A Contemporary Guide to the Commandments of Judaism" by Ronald L. Eisenberg<sup>62</sup>, that I recommend for its clarity of commentary, and its excellent indices that allow one to easily determine Maimonides' mitzvah number from its Scripture citation, and vice versa.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>In addition to the rabbinical commentaries that focus on the mitzvot, there are others of a more general character, and there are also Messianic Jewish commentaries such as David H. Stern's <em>Jewish New Testament Commentary</em><sup>63</sup>, which I consult from time to time.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Finally, I should like to say a word about usage. The writings of Meir, Maimonides, HaChinuch, and my writings as well, are attempts at interpretation, codification, explanation, and application of mitzvot that we believe we have found in the Scriptures. Although we did not write or compose new commandments, this book follows the common usage of saying that XYZ "wrote" mitzvot, or of referring to one of our writings as "XYZ's mitzvah" when talking about our compilations and explanations. I follow this convention of usage both for the historical commentators as well as for myself within this book and by doing so, no disrespect to God is intended.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="two-kinds" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>16. Two Kinds of Mitzvot</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The Law of Messiah Mitzvot in this book are of two kinds: (1) inclusive of one or more of the classical mitzvot (those from Maimonides, Meir, or HaChinuch), or (2) completely unrelated to the classical mitzvot. The classical mitzvot are based only upon Scriptures from the Torah, whereas the Mitzvot written by the authors herein are based upon Scriptures throughout the Bible.</p>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>Those containing Scripture references from the classical mitzvah compilations are marked by an asterisk in the Table of Contents, and one or more of the referenced Scriptures carry the label "Key Scriptures". In the Mitzvot that are unrelated, their "Key Scriptures" are those that appear to the authors as most relevant; these are not necessarily presented in a canonical order.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="translation" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>17. Choice of Translation</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The mitzvot which are the subject of this book derive from the original biblical languages and not from any English or other translation. Nevertheless, because this book was written with the English speaker in mind, it was necessary that I select an English translation in which the Scriptures being discussed could be displayed. I chose to use David H. Stern's 1998 translation known as the Complete Jewish Bible (CJB)<sup>64</sup> because, more than any other, it brings out the Jewish background and nuances of the Scriptures, and this despite Dr. Stern himself stating:</p>
+            {% endblocktrans %}
+            <blockquote class="blockquote">
+              {% blocktrans trimmed %}
+              <p>So the Tanakh you have in this book is something between a translation and a paraphrase; since it is partly one and partly the other, I refuse to define it as either and instead call it simply a "version". On the other hand, the books of the New Covenant are my translation from the original Greek.<sup>65</sup></p>
+              {% endblocktrans %}
+            </blockquote>
+          </div>
+
+          <div id="collaboration" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>18. Collaboration with Daniel C. Juster</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>This book has been written in collaboration with Dr. Daniel C. Juster. Dr. Juster is a shaliach of Tikkun, an international network of Messianic Jewish congregations, and he is the author of numerous books and journal articles on Messianic Jewish theological and ministry subjects. In some cases, Dr. Juster's commentary is labeled as his alone, but in many cases, his and the author's are integrated seamlessly.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="work-to-build" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>19. A Work to Build Upon</h3>
+            {% endblocktrans %}
+            {% blocktrans trimmed %}
+            <p>The uniqueness of this book is not so much in its commentary (although I have prayerfully sought God's wisdom while writing it), but in its utility as a handbook and a framework for others to build upon. I am aware that there are some who might criticize me for publishing my personal views and interpretations of God's commandments, preferring that a work such as this be undertaken by a plurality of scholars and with the authority of a community behind it. In my defense, I will only say that this work is no different than any other commentary on Scripture, most of which have been written by individuals. Indeed, Maimonides himself came under criticism for not citing Talmudic sources to support his application of rules for deciding which mitzvot to codify<sup>66</sup>, and for not disclosing the identity of the scholars that declared the rules on which he relied<sup>67</sup>.</p>
+            {% endblocktrans %}
+          </div>
+
+          <div id="footnotes" class="ftco-animate mb-5">
+            {% blocktrans trimmed %}
+            <h3>Footnotes</h3>
+            {% endblocktrans %}
+            <ol>
+              {% blocktrans trimmed %}
+              <li>R. Laird Harris, editor, <em>Theological Wordbook of the Old Testament</em>, TWOT No. 910, p. 404, Moody Press (Chicago, Illinois: 1980).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Francis Brown, editor, <em>The New Brown-Driver-Briggs-Gesenius Hebrew and English Lexicon</em>, "Torah", p. 435-436, Hendrickson Publishers (Peabody, Massachusetts: 1979).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Louis Isaac Rabinowitz, <em>Encyclopedia Judaica</em>, "Torah", vol. 15, pp. 1235-36, Keter Publishing House Ltd. (Jerusalem: 1971).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Except where otherwise noted or as part of a quotation, the English translation of Scripture used in this book is from David H. Stern's <em>Complete Jewish Bible</em> (CJB), and the Tanakh chapter and verse numbers cited are those of the standard Hebrew Bible (followed by the traditional English citations, in parentheses or brackets, where they are different). The copyright of "The Complete Jewish Bible" and its translation are held by "Jewish New Testament Publications, Inc.", and may not be reproduced without its permission.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>"A commandment is an order from, and enforceable by, a singular authority such as a king." Francis Brown, editor, <em>The New Brown-Driver-Briggs-Gesenius Hebrew and English Lexicon</em>, "mitzvah", p. 846, Hendrickson Publishers (Peabody, Massachusetts: 1979).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A statute is a legislated directive, generally enforceable by a branch of government. An ordinance is similar, but at a lower level.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A judgement is law created by a decision made in a case in controversy or a specific situation.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The CJB verse numbering for these verses is not standard; the majority Tanakh Hebrew verse numbering is Jeremiah 31:31-34.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Timothy &amp; Barbara Friberg, <em>Analytical Lexicon to the Greek New Testament</em>, BibleWorks 4.0, Hermeneutica Bible Research Software (Big Fork, Montana: 1999).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>David H. Stern, <em>Jewish New Testament</em>, 1st ed., p. 302, Jewish New Testament Publications (Clarksville, Maryland: 1991).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>George Morrish, editor, <em>A Concordance of the Septuagint</em>, p. 166, Zondervan Publishing House (Grand Rapids, Michigan: 1988).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>According to MJ 8:6&amp;N, the New Covenant itself "has been made Torah". David H. Stern, <em>Jewish New Testament Commentary</em>, 1st ed., p. 498, Jewish New Testament Publications (Clarksville, Maryland: 1992). See also pp. 220 and 466.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Joseph Telushkin, <em>Jewish Literacy</em>, p. 23, William Morrow and Company, Inc. (New York: 1991).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The Pentateuch also contains the lives of the patriarchs of earlier covenants.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Yeshua's priesthood begins with his resurrection.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>This categorization, to wit, Torah, Nevi'im and Ketuvim, has resulted in the Rabbinical canon of the Bible being known by the acronym Tanakh. It is noteworthy that Yeshua Himself referred to Scripture by these categories (Luke 24:44).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The terms "statutory law" and "statutes", as used here, contemplate ordinances as well.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Mosaic statutes are not enforceable as law in the New Covenant; it is their underlying teaching (Torah) and not the statutes themselves that carry over.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Some believe that the Mosaic Covenant has already "vanished" as evidenced by Israel's two thousand-year inability to conduct the Temple sacrifices (the Temple was destroyed in 70 A.D.).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The author does not believe that the temple, priesthood, and statutes prophesied in Ezekiel 40-48 indicate a revitalization of the Mosaic Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not believe that Yeshua is the Messiah.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Messianic Jews and Gentiles affiliated with them do not look to the Talmud for authoritative interpretation.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not consider these Apostolic Writings to be Scripture.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not acknowledge the existence of a New Covenant.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>This verse of Scripture is sometimes wrongly generalized to mean that all the commandments of Torah are applicable to Jews and Gentiles in the same way. This is a mistaken view because the context of this Scripture is of the sojourner who desired to eat the Pesach and thus needed to be circumcised.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Even if one generalizes the verse from its narrow context of Pesach and circumcision, the CJB's choice of the word "teaching" rather than "law" suggests that there may be different applications for the Jew and the Gentile.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The author believes that after Yeshua's death and prior to the 70 c.e. destruction, both the Mosaic and the New Covenant existed simultaneously, but that after the destruction, it is likely that the Mosaic Covenant, already in the process of vanishing away, finally came to an end. Even if the Mosaic Covenant has not yet fully vanished, the author's view is that we are to enthusiastically pursue where God is leading - not dwell on what He is ending.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>There is a reference to what we understand to be a Millennial Temple in Ezekiel, that some think implies a future restoration of a functioning Levitical priesthood.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>It is interesting to note that Maimonides' positive Mitzvah #RP195, the counterpart to Meir's positive Mitzvah #MP58, does not so clearly limit the application of charity to fellow Jews.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Although most Hebrew and English renderings of Sefer haMitzvot, Sefer haMitzvot haKatzar and Sefer haChinuch contain parenthetical chapter and verse citations, these were not in Maimonides', Meir's or Chinuch's original works. All three quoted words of Scripture to support their respective mitzvot, but did not identify the chapters and verses from which the words came. This resulted in ambiguities as to which Scriptures were intended where the quoted words occur in more than one place in the Torah.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Even commandments which are no longer observable have teaching value for our lives (Galatians 3:24, 2 Timothy 3:16-17).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Mak. 23b</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>I. Brull, <em>Jewish Encyclopedia</em>, "Commandments, the 613", vol. 4, p. 181 (ed. Isidore Singer, New York: 1901-1906). Describes the opinions of early Jewish scholars over the selection of commandments that comprise the taryag.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Some critics remained, notably Moshe ben Nachman Gerondi (Nachmanides).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li><em>Sefer HaChinuch</em> and Nachmanides' criticisms are based upon Maimonides' first version.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Known respectfully as "the Chafetz Chaim".</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>English adaptation and notes by Charles Wengrove, Feldheim Publishers, Jerusalem / New York, 1990.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>For Maimonides, this may be confirmed (without consulting <em>Kitab al Fara'id</em> in Arabic) by consulting early copies of <em>Sefer haMitzvot</em>, all of which lack chapter and verse references.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>For Meir, see Yisrael Meir haKohen, <em>Sefer haMitzvot haKatzar (The Concise Book of Mitzvot)</em>, p. VIII, (Charles Wengrove, trans. &amp; ed.; Jerusalem: Feldheim Publishers, 1990).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>E.g. see Moshe ben Maimon, <em>Sefer haMitzvot</em>, vol. 1 of <em>Rambam L'am</em>, (Jerusalem: <em>Mossad harav kook</em>, 1957) and ibid. 1971 (both in Hebrew). The former contains chapter and verse references while the latter does not.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>To see an example of this in English, compare Positive <em>Mitzvah</em> #1 appearing in Moshe ben Maimon (Maimonides), <em>The Commandments</em>, (Charles B. Chavel, trans. &amp; ed.; London: The Soncino Press, 1967) with Moshe ben Maimon (Maimonides), <em>Sefer HaMitzvot</em> (The Book of Mitzvot), vols. 21 &amp; 22 in the <em>Mishneh Torah</em> series, (Shraga Silverstein, trans.; New York: Moznai Publishing Corporation, 1993). The former contains the entire text of <em>Exodus 20:2</em> while the latter contains only the few words of the verse quoted by Maimonides.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>A few differences exist between this list and <em>Sefer haMitzvot</em>, particularly in the Scriptures chosen as proof texts.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Alternatively, the <em>Chumash</em>, which consists of the Pentateuch and selections from the remainder of the <em>Tanakh</em>.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Aaron haLevi of Barcelona, <em>Sefer haHinnuch</em>, vols. 1-5, p.xiii, (Charles Wengrove, trans,. Jerusalem/New York: Feldheim Publishers, 1978-89).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not believe that Yeshua is the Messiah.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Messianic Jews and Gentiles affiliated with them do not look to the <em>Talmud</em> for authoritative interpretation.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not consider these Apostolic Writings to be Scripture.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Rabbinical Jews do not acknowledge the existence of a New Covenant</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>This verse of Scripture is sometimes wrongly generalized to mean that all the commandments of <em>Torah</em> are applicable to Jews and Gentiles in the same way. This is a mistaken view because the context of this Scripture is of the sojourner who desired to eat the <em>Pesach</em> and thus needed to be circumcised.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Even if one generalizes the verse from its narrow context of <em>Pesach</em> and circumcision, the CJB's choice of the word "teaching" rather than "law" suggests that there may be different applications for the Jew and the Gentile.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Yisrael Meir haKohen, <em>Sefer haMitzvot haKatzar (The Concise Book of Mitzvot)</em> (Charles Wengrove, trans. &amp; ed.; Jerusalem: Feldheim Publishers, 1990).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Moshe ben Maimon (Maimonides), <em>The Commandments</em>, (Charles B. Chavel, trans. &amp; ed.; London: The Soncino Press, 1967).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Moshe ben Maimon (Maimonides), <em>Sefer HaMitzvot (The Book of Mitzvot)</em>, vols 21 &amp; 22 in the Mishneh Torah series, (Shraga Silverstein, trans.; New York: Moznaim Publishing Corporation, 1993).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Aaron haLevi of Barcelona, <em>Sefer haHinnuch</em>, vols. 1-5, p. xiii, (Charles Wengrove, trans.; Jerusalem/New York: Feldheim Publishers, 1978-89).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Moshe ben Maimon (Maimonides), <em>Sefer haMitzvot</em>, 10th ed.; vol. 1 in the <em>Rambam L'am</em> (Yosef Kapach, trans.; Jerusalem: Mossad Harav Kook, 1990).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Although most Hebrew and English renderings of <em>Sefer haMitzvot</em>, <em>Sefer haMitzvot haKatzar</em> and <em>Sefer haChinuch</em> contain parenthetical chapter and verse citations, these were not in Maimonides', Meir's or Chinuch's original works. All three quoted words of Scripture to support their respective <em>mitzvot</em>, but did not identify the chapters and verses from which the words came. This resulted in ambiguities as to which Scriptures were intended where the quoted words occur in more than one place in the <em>Torah</em>.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Even commandments which are no longer observable have teaching value for our lives (<em>Galatians 3:24</em>, <em>2 Timothy 3:16-17</em>).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>The author believes that after Yeshua's death and prior to the 70 c.e. destruction, both the Mosaic and the New Covenant existed simultaneously, but that after the destruction, it is likely that the Mosaic Covenant, already in the process of vanishing away, finally came to an end. Even if the Mosaic Covenant has not yet fully vanished, the author's view is that we are to enthusiastically pursue where God is leading - not dwell on what He is ending.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>There is a reference to what we understand to be a Millennial Temple in Ezekiel, that some think implies a future restoration of a functioning Levitical priesthood.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>It is interesting to note that Maimonides' positive <em>Mitzvah</em> #RP195, the counterpart to Meir's positive <em>Mitzvah</em> #MP58, does not so clearly limit the application of charity to fellow Jews.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Abraham Chill, <em>The Mitzvot: The Commandments and their Rationale</em>, 2nd ed., (Jerusalem, Keter Publishing House, 2000).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Ronald L. Eisenberg, <em>The 613 Mitzvot: A Contemporary Guide to the Commandments of Judaism</em>, (Rockville, Maryland: Schreiber Publishing, 2005).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>David H. Stern, <em>Jewish New Testament Commentary</em>.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Stern, <em>Complete Jewish Bible (CJB)</em>. The copyright of "The Complete Jewish Bible" and its translation are held by "Jewish New Testament Publications, Inc.", and may not be reproduced without its permission.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Stern, <em>CJB</em>, p. xiv.</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Nahum Rakover, ed., <em>Maimonides as Codifier of Jewish Law</em>, p. 26, in the Library of Jewish Law, (Jerusalem: The Jewish Legal Heritage Society, 1987).</li>
+              {% endblocktrans %}
+              {% blocktrans trimmed %}
+              <li>Ibid., p. 39.</li>
+              {% endblocktrans %}
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% endcache %}
+{% endblock %}
