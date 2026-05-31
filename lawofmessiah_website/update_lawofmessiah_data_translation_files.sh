@@ -10,4 +10,4 @@ if [[ ! -f "${SCRIPT_PATH}" ]]; then
     exit 1
 fi
 
-bash "${SCRIPT_PATH}"
+bash "${SCRIPT_PATH}" "$@"
