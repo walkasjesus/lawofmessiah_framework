@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.utils import translation
 
+from lawofmessiah_app.lib.media_cache_version import get_media_cache_version
 from lawofmessiah_app.models import BibleTranslation, UserPreferences
 
 
@@ -23,5 +24,6 @@ def cache_settings(request):
         'cache_on_multi_language': UserPreferences(request.session).languages,
         'cache_on_bible': translation.get_language() + '_' + UserPreferences(request.session).bible.id,
         'cache_on_kids_mode': 'kids' if request.COOKIES.get('jc_kids_mode') else 'default',
+        'cache_on_media_version': get_media_cache_version(),
         'commentary_cache_timeout_seconds': int(getattr(settings, 'COMMENTARY_CACHE_TIMEOUT_SECONDS', 60 * 60 * 24 * 30 * 6)),
     }

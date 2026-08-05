@@ -140,6 +140,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'lawofmessiah_website.middleware.GeoLocationRedirectMiddleware',
+    'lawofmessiah_app.middleware.LocalizedUrlRedirectMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

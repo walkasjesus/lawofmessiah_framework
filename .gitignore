@@ -13,6 +13,7 @@ build
 
 bible_api_cache.json
 .django_cache
+bible_lib/sources
 
 lawofmessiah_website/media
 lawofmessiah_website/log

@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.urls import path
+from django.utils import translation
 from django.utils.translation import gettext_lazy as _
 
 # Import all your views and other necessary modules
@@ -48,3 +50,34 @@ urlpatterns = [
     path(_('admin/persist_bible_cache/'), AdminPersistBibleCache.as_view(), name='admin_persist_bible_cache'),
     path(_('admin/enable_bible/'), AdminEnableBible.as_view(), name='admin_enable_bible'),
 ]
+
+
+def _build_localized_aliases():
+    """Build URL aliases for all non-default languages using .po file translations."""
+    default_lang = settings.LANGUAGE_CODE
+    aliases = []
+
+    with translation.override(default_lang):
+        default_routes = {
+            id(p): str(p.pattern._route)
+            for p in urlpatterns
+            if hasattr(p, 'pattern') and hasattr(p.pattern, '_route')
+        }
+
+    for lang_code, _ in settings.LANGUAGES:
+        if lang_code == default_lang:
+            continue
+        with translation.override(lang_code):
+            for p in urlpatterns:
+                pid = id(p)
+                if pid not in default_routes:
+                    continue
+                localized = str(p.pattern._route)
+                if localized != default_routes[pid]:
+                    aliases.append(path(localized, p.callback, name=p.pattern.name))
+
+    return aliases
+
+
+# Prepend localized aliases so named English patterns overwrite them in reverse().
+urlpatterns = _build_localized_aliases() + urlpatterns

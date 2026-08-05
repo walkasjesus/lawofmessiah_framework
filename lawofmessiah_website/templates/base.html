@@ -80,7 +80,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
         <div class="logodiv">
-        <a class="navbar-brand" href="{% url 'commandments:index' %}"><span class="jclogo"><img src="{% static 'images/jc_icon.png' %}"></span>{% trans 'Law of Messiah' %}</a>
+        <a class="navbar-brand" href="{% url 'commandments:index' %}"><span class="jclogo"><img src="{% static 'images/jc_icon.png' %}"></span><span class="brand-title">{% trans 'Law of Messiah' %}</span></a>
           <div class="logodiv-subtitle">
             {% trans "Torah from a New Covenant Perspective" %}
           </div>
@@ -240,6 +240,12 @@
   <script type="text/javascript" src="{% static 'js/gtag.js' %}"></script>
 
   <script src="{% static 'js/customjs.js' %}"></script>
+
+  <script>
+    if (window.jcInitChangeLanguageModal) {
+      window.jcInitChangeLanguageModal();
+    }
+  </script>
 
   {% endcache %}
   {% block extra_js %}{% endblock %}

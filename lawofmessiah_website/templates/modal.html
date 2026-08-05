@@ -15,7 +15,7 @@
                     <input name="next" type="hidden" value="{{ request.get_full_path }}">
                     <b>{% trans 'Site language' %}:</b>
                     <div class="select">
-                        <select class="drpSelectLanguage" name="language">
+                        <select class="drpSelectLanguage selectpicker" id="drpSelectLanguageModal" name="language" data-live-search="false" data-width="100%" data-size="10">
                             {% get_current_language as LANGUAGE_CODE %}
                             {% get_available_languages as LANGUAGES %}
                             {% get_language_info_list for LANGUAGES as languages %}
@@ -34,7 +34,7 @@
                 <form action="{% url 'commandments:bible' %}" method="post" id="frmBibleTranslation">{% csrf_token %}
                     <input name="next" type="hidden" value="{{ request.get_full_path }}">
                     <div class="select">
-                    <select name="bible_id" class="drpBibleTranslation" id="drpBibleTranslation">
+                    <select name="bible_id" class="drpBibleTranslation selectpicker" id="drpBibleTranslation" data-live-search="true" data-width="100%" data-size="10">
                         <option value="{{ user_preferences.bible.id }}" selected>
                             {{ user_preferences.bible.name }} ({{ user_preferences.bible.language }})
                         </option>
@@ -61,7 +61,7 @@
     </div>
   </div>
 <script>
-(function () {
+window.jcInitChangeLanguageModal = function () {
     var languageForm = document.getElementById('frmSiteLanguage');
     var languageSelect = document.querySelector('.drpSelectLanguage');
     var bibleSelect = document.getElementById('drpBibleTranslation');
@@ -69,9 +69,15 @@
     var bibleTranslationsUrl = "{% url 'commandments:bible_translations_for_language' %}";
     var bibleRefreshPromise = Promise.resolve();
 
+    if (languageForm && languageForm.dataset.jcModalInitialized === '1') {
+        return;
+    }
+
     if (!languageForm || !languageSelect || !bibleSelect || !saveButton) {
         return;
     }
+
+    languageForm.dataset.jcModalInitialized = '1';
 
     function refreshBibleDropdown(selectedLanguage) {
         var previousSelection = bibleSelect.value;
@@ -167,5 +173,5 @@
                 saveButton.disabled = false;
             });
     });
-})();
+};
 </script>

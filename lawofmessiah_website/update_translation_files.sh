@@ -11,8 +11,12 @@ if [[ -f ./venv/Scripts/activate ]]; then
 	source ./venv/Scripts/activate
 elif [[ -f ./venv/bin/activate ]]; then 
 	source ./venv/bin/activate
+elif [[ -f ./.venv/bin/activate ]]; then
+	source ./.venv/bin/activate
 elif [[ -f ../venv/bin/activate ]]; then
 	source ../venv/bin/activate
+elif [[ -f ../.venv/bin/activate ]]; then
+	source ../.venv/bin/activate
 else
 	echo "ERROR: cannot find environment binary"
 	exit 1
@@ -36,7 +40,7 @@ cmd.run_from_argv([
 	'manage.py',
 	'makemessages',
 	'-l', 'nl',
-	'--extension=html',
+	'--extension=html,py',
 	'--ignore=venv',
 		'--ignore=data/lawofmessiah/*',
 		'--ignore=data/lawofmessiah_translations/*',
@@ -69,7 +73,7 @@ cmd.run_from_argv([
 	'manage.py',
 	'makemessages',
 	'-l', 'nl',
-	'--extension=html',
+	'--extension=html,py',
 	'--ignore=venv',
 		'--ignore=data/lawofmessiah/*',
 		'--ignore=data/lawofmessiah_translations/*',

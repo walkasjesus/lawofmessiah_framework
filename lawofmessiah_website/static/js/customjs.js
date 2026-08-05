@@ -16,7 +16,222 @@ $(document).ready(function(){
   var scripturaChapterCache = {};
   var sefariaRelatedCache = {};
   var sefariaTextCache = {};
+  var detailOriginalTextCache = {};
   var translationCache = {};
+
+  function setupNativeComboForSelect($select) {
+    if (!$select || !$select.length) {
+      return;
+    }
+    if ($select.prop('multiple')) {
+      return;
+    }
+    if ($select.closest('.bible-study-select-wrap').length) {
+      return;
+    }
+
+    var $wrap = $select.closest('.select');
+    if (!$wrap.length) {
+      return;
+    }
+
+    var selectId = String($select.attr('id') || '');
+    if (!selectId) {
+      return;
+    }
+
+    var liveSearchAttr = String($select.attr('data-live-search') || '').toLowerCase();
+    var liveSearch = liveSearchAttr === 'true' || liveSearchAttr === '1';
+    var $input = $wrap.children('.native-combo-input[data-select-id="' + selectId + '"]');
+    var $menu = $wrap.children('.native-combo-menu[data-select-id="' + selectId + '"]');
+
+    function closeMenu() {
+      $wrap.removeClass('native-combo-open');
+      syncInputValue();
+    }
+
+    function renderMenu(filterText) {
+      var typed = filterText;
+      if (typeof typed === 'undefined') {
+        typed = $input.val();
+      }
+      typed = $.trim(String(typed || '')).toLowerCase();
+      var selectedValue = String($select.val() || '');
+      var items = [];
+
+      $select.find('option').each(function() {
+        var optionValue = String($(this).val() || '');
+        var label = $.trim($(this).text());
+        if (!optionValue || !label) {
+          return;
+        }
+        if (liveSearch && typed && label.toLowerCase().indexOf(typed) === -1) {
+          return;
+        }
+        items.push({ value: optionValue, label: label });
+      });
+
+      $menu.empty();
+      if (!items.length) {
+        $menu.append('<div class="native-combo-empty">No matching option found.</div>');
+        return;
+      }
+
+      $.each(items, function(_, item) {
+        var $item = $('<button type="button" class="native-combo-option"></button>')
+          .attr('data-value', item.value)
+          .toggleClass('active', item.value === selectedValue)
+          .text(item.label);
+        $menu.append($item);
+      });
+    }
+
+    function syncInputValue() {
+      var selectedLabel = $.trim($select.find('option:selected').text());
+      $input.val(selectedLabel);
+      $input.prop('disabled', !!$select.prop('disabled'));
+      renderMenu('');
+    }
+
+    function closeOpenNativeCombos($exceptWrap) {
+      $('.select.native-combo-open').not($exceptWrap || $()).each(function() {
+        var $openWrap = $(this);
+        var $openSelect = $openWrap.children('select').first();
+        var $openInput = $openWrap.children('.native-combo-input').first();
+        var selectedLabel = $.trim($openSelect.find('option:selected').text());
+        $openInput.val(selectedLabel);
+        $openWrap.removeClass('native-combo-open');
+      });
+    }
+
+    function openMenu() {
+      if ($select.prop('disabled')) {
+        return;
+      }
+      closeOpenNativeCombos($wrap);
+      renderMenu('');
+      $wrap.addClass('native-combo-open');
+
+      if (liveSearch) {
+        window.setTimeout(function() {
+          $input.trigger('select');
+        }, 0);
+      }
+    }
+
+    if (!$input.length) {
+      $input = $('<input type="search" class="native-combo-input" autocomplete="off">')
+        .attr('data-select-id', selectId)
+        .insertAfter($select);
+
+      if (!liveSearch) {
+        $input.prop('readonly', true);
+      }
+
+      $input.on('focus click', function() {
+        openMenu();
+      });
+
+      $input.on('input', function() {
+        if (!liveSearch) {
+          return;
+        }
+        var typed = $.trim(String($input.val() || '')).toLowerCase();
+        var selectedValue = '';
+        $select.find('option').each(function() {
+          var optionValue = String($(this).val() || '');
+          if (!optionValue || selectedValue) {
+            return;
+          }
+          var label = $.trim($(this).text()).toLowerCase();
+          if (typed && (label === typed || label.indexOf(typed) === 0)) {
+            selectedValue = optionValue;
+          }
+        });
+        if (selectedValue) {
+          $select.val(selectedValue).trigger('change');
+        }
+        renderMenu();
+        $wrap.addClass('native-combo-open');
+      });
+
+      $input.on('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeMenu();
+          return;
+        }
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          openMenu();
+        }
+      });
+    }
+
+    if (!$menu.length) {
+      $menu = $('<div class="native-combo-menu"></div>')
+        .attr('data-select-id', selectId)
+        .insertAfter($input);
+
+      $menu.on('mousedown', '.native-combo-option', function(event) {
+        event.preventDefault();
+        var value = String($(this).attr('data-value') || '');
+        if (!value) {
+          return;
+        }
+        $select.val(value).trigger('change');
+        syncInputValue();
+        closeMenu();
+      });
+    }
+
+    $wrap.addClass('native-combo-enabled');
+    syncInputValue();
+  }
+
+  function initStyledNativeSelectCombos() {
+    if ($.fn && $.fn.selectpicker) {
+      return;
+    }
+
+    $('.select select').each(function() {
+      setupNativeComboForSelect($(this));
+    });
+
+    $(document).off('mousedown.jcNativeCombo').on('mousedown.jcNativeCombo', function(event) {
+      if ($(event.target).closest('.select.native-combo-enabled').length) {
+        return;
+      }
+      $('.select.native-combo-open').each(function() {
+        var $openWrap = $(this);
+        var $openSelect = $openWrap.children('select').first();
+        var $openInput = $openWrap.children('.native-combo-input').first();
+        var selectedLabel = $.trim($openSelect.find('option:selected').text());
+        $openInput.val(selectedLabel);
+        $openWrap.removeClass('native-combo-open');
+      });
+    });
+
+    $(document).off('jc:native-select-refresh.jcNativeCombo').on('jc:native-select-refresh.jcNativeCombo', 'select', function() {
+      setupNativeComboForSelect($(this));
+    });
+  }
+
+  function ensureMinimumVisibleSelectItems() {
+    $('select').each(function() {
+      var $select = $(this);
+      var dataSize = parseInt(String($select.attr('data-size') || ''), 10);
+      if ((isNaN(dataSize) || dataSize < 10) && ($select.hasClass('selectpicker') || $select.hasClass('law-filter-select'))) {
+        $select.attr('data-size', '10');
+      }
+
+      if ($.fn && $.fn.selectpicker && $select.data('selectpicker')) {
+        $select.selectpicker('refresh');
+      }
+    });
+  }
+
+  initStyledNativeSelectCombos();
+  ensureMinimumVisibleSelectItems();
 
   function verseSpinnerHtml(source) {
     var spinnerClass = source === 'api' ? 'verse-loading-spinner verse-loading-spinner-api' : 'verse-loading-spinner verse-loading-spinner-cache';
@@ -202,6 +417,14 @@ $(document).ready(function(){
       machine_translated_from_en: {
         en: 'Machine translated from English.',
         nl: 'Automatisch vertaald vanuit het Engels.'
+      },
+      show_original_text: {
+        en: 'Show original text',
+        nl: 'Toon originele tekst'
+      },
+      show_translated_text: {
+        en: 'Show translation',
+        nl: 'Toon vertaling'
       },
       view_on_sefaria: {
         en: 'View on Sefaria',
@@ -601,11 +824,15 @@ $(document).ready(function(){
     }
 
     function getScripturaSources() {
-      if (getCommentaryLanguage() === 'nl') {
-        return ['matthew_henry_nl', 'matthew-henry-nl', 'matthew_henry', 'matthew-henry'];
-      }
-      // English is not available as a separate source on BijbelAPI
-      // return ['matthew_henry_en', 'matthew-henry-en', 'matthew-henry', 'matthew_henry'];
+      return ['david-stern', 'david_stern', 'jnt-stern', 'jnt_stern'];
+    }
+
+    function buildScripturaSourceButtons(activeCommentatorId) {
+      var activeClass = activeCommentatorId === 'david-stern' ? ' active' : '';
+      return '<div class="scriptura-commentary-sources">' +
+        '<p class="sefaria-select-label">' + uiMessage('select_commentator') + '</p>' +
+        '<button class="btn btn-sm sefaria-commentator-btn scriptura-commentary-source-btn mr-1 mb-1' + activeClass + '" data-scriptura-commentator="david-stern">David Stern</button>' +
+        '</div>';
     }
 
     function getScripturaEndpoints() {
@@ -681,17 +908,28 @@ $(document).ready(function(){
       var safeHtml = sanitizeSefariaHtml(String(commentaryText || '').replace(/\n/g, '<br>'));
       var displayHtml = safeHtml || $('<span>').text(commentaryText || '').html().replace(/\n/g, '<br>');
       var scripturaUrl = scripturaCommentaryUrl(endpoint || getScripturaEndpoints()[0], source, book, chapter, entryKey);
-      var sourceLabel = getCommentaryLanguage() === 'nl' ? 'Matthew Henry (NL)' : 'Matthew Henry';
+      var sourceLabel = 'David Stern';
       var titleLabel = scripturaEntryLabel(entryKey);
       $panel.find('.scriptura-commentary-entry-btn').removeClass('active');
       $panel.find('.scriptura-commentary-entry-btn[data-entry-key="' + entryKey + '"]').addClass('active');
-      $panel.find('.scriptura-commentary-text').html(
-        '<div class="sefaria-commentary-content">' +
-        '<strong>' + sourceLabel + ' · ' + titleLabel + '</strong>' +
-        '<div class="sefaria-commentary-body mt-1">' + displayHtml + '</div>' +
-        '<p class="sefaria-attribution">Commentary provided by <a href="https://www.bijbelapi.com/" target="_blank" rel="noopener noreferrer">BijbelAPI</a> · <a href="' + scripturaUrl + '" target="_blank" rel="noopener noreferrer">Open API response</a></p>' +
-        '</div>'
-      );
+      translateCommentaryText(String(commentaryText || ''), function(translatedText, isMachineTranslated) {
+        var translatedSafeHtml = sanitizeSefariaHtml(String(translatedText || '').replace(/\n/g, '<br>'));
+        var translatedDisplayHtml = translatedSafeHtml || $('<span>').text(translatedText || '').html().replace(/\n/g, '<br>');
+        var translationNote = '';
+        var bodyHtml = '<div class="sefaria-commentary-body mt-1">' + translatedDisplayHtml + '</div>';
+
+        if (isMachineTranslated && translatedText && commentaryText && translatedText !== commentaryText) {
+          translationNote = '<p class="sefaria-attribution"><em>' + uiMessage('machine_translated_from_en') + '</em></p>';
+        }
+
+        $panel.find('.scriptura-commentary-text').html(
+          '<div class="sefaria-commentary-content">' +
+          '<strong>' + sourceLabel + ' · ' + titleLabel + '</strong>' +
+          translationNote +
+          bodyHtml +
+          '</div>'
+        );
+      });
     }
 
     $(document).on('click', '.scriptura-commentary-btn', function() {
@@ -730,6 +968,7 @@ $(document).ready(function(){
             uiMessage('no_exact_scriptura_verse', { verse: $('<span>').text(String(verse)).html() }) +
             '</em></p>';
         }
+        html = buildScripturaSourceButtons('david-stern') + html;
         html += '<div class="scriptura-commentators"><p class="sefaria-select-label">' + uiMessage('select_available_commentary') + '</p>';
         entryKeys.forEach(function(entryKey) {
           html += '<button class="btn btn-sm sefaria-commentator-btn scriptura-commentary-entry-btn mr-1 mb-1" data-entry-key="' + $('<span>').text(entryKey).html() + '">' + $('<span>').text(scripturaEntryLabel(entryKey)).html() + '</button>';
@@ -773,6 +1012,7 @@ $(document).ready(function(){
               uiMessage('no_exact_scriptura_verse', { verse: $('<span>').text(String(verse)).html() }) +
               '</em></p>';
           }
+          html = buildScripturaSourceButtons('david-stern') + html;
           html += '<div class="scriptura-commentators"><p class="sefaria-select-label">' + uiMessage('select_available_commentary') + '</p>';
           entryKeys.forEach(function(entryKey) {
             html += '<button class="btn btn-sm sefaria-commentator-btn scriptura-commentary-entry-btn mr-1 mb-1" data-entry-key="' + $('<span>').text(entryKey).html() + '">' + $('<span>').text(scripturaEntryLabel(entryKey)).html() + '</button>';
@@ -991,6 +1231,32 @@ $(document).ready(function(){
           });
         }
       });
+    });
+
+    $(document).on('click', '.commentary-original-toggle', function(event) {
+      event.preventDefault();
+      var $btn = $(this);
+      var $lomBlock = $btn.closest('.lom-commentary-machine-translation');
+
+      if ($lomBlock.length) {
+        var $translated = $lomBlock.find('.lom-commentary-body-translated').first();
+        var $original = $lomBlock.find('.lom-commentary-body-original').first();
+        if (!$translated.length || !$original.length) {
+          return;
+        }
+
+        var showingOriginal = $btn.data('showingOriginal') === true || $btn.data('showingOriginal') === 'true';
+        if (showingOriginal) {
+          $original.addClass('d-none');
+          $translated.removeClass('d-none');
+          $btn.text(String($btn.attr('data-show-original-label') || uiMessage('show_original_text')));
+        } else {
+          $translated.addClass('d-none');
+          $original.removeClass('d-none');
+          $btn.text(String($btn.attr('data-show-translation-label') || uiMessage('show_translated_text')));
+        }
+        $btn.data('showingOriginal', !showingOriginal);
+      }
     });
 
     // ----- Sefaria Jewish Commentary END ------ \\

@@ -3,7 +3,8 @@ import vinaigrette
 
 def register_translations(app_config):
     translatable_model_fields = {
-        'LawOfMessiah': ['title', 'commandment', 'commentary_rudolph', 'commentary_juster', 'classical_commentators'],
+        # Keep concise labels translatable via PO, but keep long commentary bodies out of PO.
+        'LawOfMessiah': ['title', 'commandment'],
         'LawOfMessiahDrawing': ['title', 'description'],
         'Maimonides': ['commandment'],
     }
