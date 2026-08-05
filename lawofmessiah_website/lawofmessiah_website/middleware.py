@@ -92,6 +92,7 @@ class GeoLocationRedirectMiddleware(MiddlewareMixin):
         
         # Only trust explicit language cookie for cross-domain routing decisions.
         current_lang = str(request.COOKIES.get(settings.LANGUAGE_COOKIE_NAME, '')).strip().lower()
+        has_explicit_language_cookie = bool(current_lang)
         if not current_lang:
             # Fallback only when there is no language preference cookie.
             try:
@@ -121,9 +122,29 @@ class GeoLocationRedirectMiddleware(MiddlewareMixin):
             elif forwarded_proto in ('http', 'https'):
                 scheme = forwarded_proto
 
-            redirect_url = f'{scheme}://{target_domain}{request.path_info}'
-            if request.GET:
-                redirect_url += '?' + request.GET.urlencode()
+            redirect_path = request.path_info or '/'
+            query_items = list(request.GET.lists())
+
+            # NL geo fallback should set Dutch as default language on target host.
+            if target_domain == nl_domain and not has_explicit_language_cookie:
+                has_handoff = any(key == CROSS_DOMAIN_LANG_PARAM for key, _ in query_items)
+                if not has_handoff:
+                    query_items.append((CROSS_DOMAIN_LANG_PARAM, ['nl']))
+
+            query_string = urlencode(query_items, doseq=True)
+            redirect_url = f'{scheme}://{target_domain}{redirect_path}'
+            if query_string:
+                redirect_url += '?' + query_string
             return HttpResponseRedirect(redirect_url)
+
+        # Keep Dutch active on the Dutch domain when no explicit language preference exists.
+        if current_host == nl_domain and not has_explicit_language_cookie:
+            try:
+                from django.utils import translation
+
+                translation.activate('nl')
+                request.LANGUAGE_CODE = 'nl'
+            except Exception:
+                pass
         
         return None
