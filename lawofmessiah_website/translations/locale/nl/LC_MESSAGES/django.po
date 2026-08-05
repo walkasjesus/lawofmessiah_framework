@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-30 08:11+0000\n"
+"POT-Creation-Date: 2026-08-05 16:44+0000\n"
 "PO-Revision-Date: 2026-05-30 08:04+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,325 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.3\n"
+
+#: lawofmessiah_app/lib/youtube_embed_validation.py:58
+#, fuzzy
+msgid "Invalid YouTube URL format."
+msgstr "Ongeldig YouTube-URL-formaat."
+
+#: lawofmessiah_app/lib/youtube_embed_validation.py:70
+#, python-format, fuzzy
+msgid ""
+"Could not validate this YouTube video for embedding right now: %(error)s"
+msgstr ""
+"Kan deze YouTube-video momenteel niet valideren voor insluiten: %(error)s"
+
+#: lawofmessiah_app/lib/youtube_embed_validation.py:79
+#, fuzzy
+msgid ""
+"This YouTube video cannot be embedded. Please choose another video that "
+"allows embedding."
+msgstr ""
+"Deze YouTube-video kan niet worden ingesloten. Kies een andere video die "
+"insluiten toestaat."
+
+#: lawofmessiah_app/lib/youtube_embed_validation.py:83
+#, python-format, fuzzy
+msgid ""
+"Could not validate this YouTube video for embedding (HTTP %(status)s). "
+"Please try again."
+msgstr ""
+"Kan deze YouTube-video niet valideren voor insluiten (HTTP %(status)s). "
+"Probeer het opnieuw."
+
+#: lawofmessiah_app/models/bible_books.py:12
+msgid "Genesis"
+msgstr "Genesis"
+
+#: lawofmessiah_app/models/bible_books.py:13
+msgid "Exodus"
+msgstr "Exodus"
+
+#: lawofmessiah_app/models/bible_books.py:14
+msgid "Leviticus"
+msgstr "Leviticus"
+
+#: lawofmessiah_app/models/bible_books.py:15
+msgid "Numbers"
+msgstr "Numeri"
+
+#: lawofmessiah_app/models/bible_books.py:16
+msgid "Deuteronomy"
+msgstr "Deuteronomium"
+
+#: lawofmessiah_app/models/bible_books.py:17
+msgid "Joshua"
+msgstr "Jozua"
+
+#: lawofmessiah_app/models/bible_books.py:18
+msgid "Judges"
+msgstr "Richteren"
+
+#: lawofmessiah_app/models/bible_books.py:19
+msgid "Ruth"
+msgstr "Ruth"
+
+#: lawofmessiah_app/models/bible_books.py:20
+msgid "1 Samuel"
+msgstr "1 Samuel"
+
+#: lawofmessiah_app/models/bible_books.py:21
+msgid "2 Samuel"
+msgstr "2 Samuel"
+
+#: lawofmessiah_app/models/bible_books.py:22
+msgid "1 Kings"
+msgstr "1 Koningen"
+
+#: lawofmessiah_app/models/bible_books.py:23
+msgid "2 Kings"
+msgstr "2 Koningen"
+
+#: lawofmessiah_app/models/bible_books.py:24
+msgid "1 Chronicles"
+msgstr "1 Kronieken"
+
+#: lawofmessiah_app/models/bible_books.py:25
+msgid "2 Chronicles"
+msgstr "2 Kronieken"
+
+#: lawofmessiah_app/models/bible_books.py:26
+msgid "Ezra"
+msgstr "Ezra"
+
+#: lawofmessiah_app/models/bible_books.py:27
+msgid "Nehemiah"
+msgstr "Nehemia"
+
+#: lawofmessiah_app/models/bible_books.py:28
+msgid "Esther"
+msgstr "Esther"
+
+#: lawofmessiah_app/models/bible_books.py:29
+msgid "Job"
+msgstr "Job"
+
+#: lawofmessiah_app/models/bible_books.py:30
+msgid "Psalms"
+msgstr "Psalmen"
+
+#: lawofmessiah_app/models/bible_books.py:31
+msgid "Proverbs"
+msgstr "Spreuken"
+
+#: lawofmessiah_app/models/bible_books.py:32
+msgid "Ecclesiastes"
+msgstr "Prediker"
+
+#: lawofmessiah_app/models/bible_books.py:33
+msgid "Song of Solomon"
+msgstr "Hooglied"
+
+#: lawofmessiah_app/models/bible_books.py:34
+msgid "Isaiah"
+msgstr "Jesaja"
+
+#: lawofmessiah_app/models/bible_books.py:35
+msgid "Jeremiah"
+msgstr "Jeremia"
+
+#: lawofmessiah_app/models/bible_books.py:36
+msgid "Lamentations"
+msgstr "Klaagliederen"
+
+#: lawofmessiah_app/models/bible_books.py:37
+msgid "Ezekiel"
+msgstr "Ezechiël"
+
+#: lawofmessiah_app/models/bible_books.py:38
+msgid "Daniel"
+msgstr "Daniël"
+
+#: lawofmessiah_app/models/bible_books.py:39
+msgid "Hosea"
+msgstr "Hosea"
+
+#: lawofmessiah_app/models/bible_books.py:40
+msgid "Joel"
+msgstr "Joël"
+
+#: lawofmessiah_app/models/bible_books.py:41
+msgid "Amos"
+msgstr "Amos"
+
+#: lawofmessiah_app/models/bible_books.py:42
+msgid "Obadiah"
+msgstr "Obadja"
+
+#: lawofmessiah_app/models/bible_books.py:43
+msgid "Jonah"
+msgstr "Jona"
+
+#: lawofmessiah_app/models/bible_books.py:44
+msgid "Micah"
+msgstr "Micha"
+
+#: lawofmessiah_app/models/bible_books.py:45
+msgid "Nahum"
+msgstr "Nahum"
+
+#: lawofmessiah_app/models/bible_books.py:46
+msgid "Habakkuk"
+msgstr "Habakuk"
+
+#: lawofmessiah_app/models/bible_books.py:47
+msgid "Zephaniah"
+msgstr "Zefanja"
+
+#: lawofmessiah_app/models/bible_books.py:48
+msgid "Haggai"
+msgstr "Haggaï"
+
+#: lawofmessiah_app/models/bible_books.py:49
+msgid "Zechariah"
+msgstr "Zacharia"
+
+#: lawofmessiah_app/models/bible_books.py:50
+msgid "Malachi"
+msgstr "Maleachi"
+
+#: lawofmessiah_app/models/bible_books.py:51
+msgid "Matthew"
+msgstr "Mattheüs"
+
+#: lawofmessiah_app/models/bible_books.py:52
+msgid "Mark"
+msgstr "Markus"
+
+#: lawofmessiah_app/models/bible_books.py:53
+msgid "Luke"
+msgstr "Lukas"
+
+#: lawofmessiah_app/models/bible_books.py:54
+msgid "John"
+msgstr "Johannes"
+
+#: lawofmessiah_app/models/bible_books.py:55
+msgid "Acts"
+msgstr "Handelingen"
+
+#: lawofmessiah_app/models/bible_books.py:56
+msgid "Romans"
+msgstr "Romeinen"
+
+#: lawofmessiah_app/models/bible_books.py:57
+msgid "1 Corinthians"
+msgstr "1 Korintiërs"
+
+#: lawofmessiah_app/models/bible_books.py:58
+msgid "2 Corinthians"
+msgstr "2 Korintiërs"
+
+#: lawofmessiah_app/models/bible_books.py:59
+msgid "Galatians"
+msgstr "Galaten"
+
+#: lawofmessiah_app/models/bible_books.py:60
+msgid "Ephesians"
+msgstr "Efeziërs"
+
+#: lawofmessiah_app/models/bible_books.py:61
+msgid "Philippians"
+msgstr "Filipenzen"
+
+#: lawofmessiah_app/models/bible_books.py:62
+msgid "Colossians"
+msgstr "Kolossenzen"
+
+#: lawofmessiah_app/models/bible_books.py:63
+msgid "1 Thessalonians"
+msgstr "1 Tessalonicenzen"
+
+#: lawofmessiah_app/models/bible_books.py:64
+msgid "2 Thessalonians"
+msgstr "2 Tessalonicenzen"
+
+#: lawofmessiah_app/models/bible_books.py:65
+msgid "1 Timothy"
+msgstr "1 Timotheüs"
+
+#: lawofmessiah_app/models/bible_books.py:66
+msgid "2 Timothy"
+msgstr "2 Timotheüs"
+
+#: lawofmessiah_app/models/bible_books.py:67
+msgid "Titus"
+msgstr "Titus"
+
+#: lawofmessiah_app/models/bible_books.py:68
+msgid "Philemon"
+msgstr "Filemon"
+
+#: lawofmessiah_app/models/bible_books.py:69
+msgid "Hebrews"
+msgstr "Hebreeën"
+
+#: lawofmessiah_app/models/bible_books.py:70
+msgid "James"
+msgstr "Jakobus"
+
+#: lawofmessiah_app/models/bible_books.py:71
+msgid "1 Peter"
+msgstr "1 Petrus"
+
+#: lawofmessiah_app/models/bible_books.py:72
+msgid "2 Peter"
+msgstr "2 Petrus"
+
+#: lawofmessiah_app/models/bible_books.py:73
+msgid "1 John"
+msgstr "1 Johannes"
+
+#: lawofmessiah_app/models/bible_books.py:74
+msgid "2 John"
+msgstr "2 Johannes"
+
+#: lawofmessiah_app/models/bible_books.py:75
+msgid "3 John"
+msgstr "3 Johannes"
+
+#: lawofmessiah_app/models/bible_books.py:76
+msgid "Jude"
+msgstr "Judas"
+
+#: lawofmessiah_app/models/bible_books.py:77
+msgid "Revelation"
+msgstr "Openbaring"
+
+#: lawofmessiah_app/models/law_of_messiah.py:336
+#: lawofmessiah_app/models/maimonides.py:63
+msgid "The bible book like Genesis, Exodus, etc."
+msgstr "Het bijbelboek zoals Genesis, Exodus, etc."
+
+#: lawofmessiah_app/models/law_of_messiah_media.py:61
+msgid "Language independent"
+msgstr "Taal onafhankelijk"
+
+#: lawofmessiah_app/models/law_of_messiah_media.py:62
+msgid "Language unknown"
+msgstr "Taal onbekend"
+
+#: lawofmessiah_app/models/lesson_categories.py:5
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:80
+#: lawofmessiah_app/templates/pages/index.html:97
+msgid "Old Testament"
+msgstr "Oude Testament"
+
+#: lawofmessiah_app/models/lesson_categories.py:6
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:81
+#: lawofmessiah_app/templates/pages/index.html:98
+msgid "New Testament"
+msgstr "Nieuwe Testament"
 
 #: lawofmessiah_app/templates/admin/bible_admin.html:5
 msgid "Bible cache management"
@@ -84,23 +403,22 @@ msgstr ""
 " nieuw verbondsperspectief. Halacha in het joodse denken, de Thora van het "
 "Nieuwe Verbond en de Messiaans-Joodse taak."
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:20
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:20
-#: lawofmessiah_app/templates/pages/legalism.html:20 templates/base.html:195
+#: lawofmessiah_app/templates/authors/daniel_juster.html:21
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:21
 msgid "The Law of Messiah — Torah from a New Covenant Perspective"
 msgstr "The Law of Messiah — Torah from a New Covenant Perspective"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:21
+#: lawofmessiah_app/templates/authors/daniel_juster.html:22
 msgid "Introduction by Daniel C. Juster"
 msgstr "Inleiding door Daniel C. Juster"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:22
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:22
+#: lawofmessiah_app/templates/authors/daniel_juster.html:23
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:23
 #: lawofmessiah_app/templates/pages/legalism.html:27
 msgid "View original on tikkunamerica.org"
 msgstr "Bekijk het origineel op tikkunamerica.org"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:30
+#: lawofmessiah_app/templates/authors/daniel_juster.html:31
 msgid ""
 "<li><a href=\"#halakhah\">1. The Concept of Halakhah in Jewish "
 "Thought</a></li>"
@@ -108,7 +426,7 @@ msgstr ""
 "<li><a href=\"#halakhah\">1. Het concept van halacha in het Joodse "
 "denken</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:33
+#: lawofmessiah_app/templates/authors/daniel_juster.html:34
 msgid ""
 "<li><a href=\"#new-testament-torah\">2. The New Testament and the "
 "Torah</a></li>"
@@ -116,7 +434,7 @@ msgstr ""
 "<li><a href=\"#new-testament-torah\">2. Het Nieuwe Testament en de "
 "Thora</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:36
+#: lawofmessiah_app/templates/authors/daniel_juster.html:37
 msgid ""
 "<li><a href=\"#hittite-treaties\">3. The Discovery of Hittite "
 "Treaties</a></li>"
@@ -124,7 +442,7 @@ msgstr ""
 "<li><a href=\"#hittite-treaties\">3. De ontdekking van Hettitische "
 "verdragen</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:39
+#: lawofmessiah_app/templates/authors/daniel_juster.html:40
 msgid ""
 "<li><a href=\"#continuity\">4. Continuity and Discontinuity in "
 "Halakhah</a></li>"
@@ -132,15 +450,15 @@ msgstr ""
 "<li><a href=\"#continuity\">4. Continuïteit en discontinuïteit in de "
 "Halacha</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:42
+#: lawofmessiah_app/templates/authors/daniel_juster.html:43
 msgid "<li><a href=\"#messianic-task\">5. The Messianic Jewish Task</a></li>"
 msgstr "<li><a href=\"#messianic-task\">5. De Messiaans-Joodse taak</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:45
+#: lawofmessiah_app/templates/authors/daniel_juster.html:46
 msgid "<li><a href=\"#plan\">6. The Plan of This Book</a></li>"
 msgstr "<li><a href=\"#plan\">6. Het plan van dit boek</a></li>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:54
+#: lawofmessiah_app/templates/authors/daniel_juster.html:55
 msgid ""
 "<p><strong>New Covenant Torah:</strong> What is the meaning of this phrase? "
 "New Covenant Torah is a concept that recognizes the continuing place of "
@@ -162,7 +480,7 @@ msgstr ""
 "het Nieuwe Verbond. Deze betekenis zal duidelijker worden naarmate ik verder"
 " ga.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:57
+#: lawofmessiah_app/templates/authors/daniel_juster.html:58
 msgid ""
 "<p>As Thomas McComiskey argued in his excellent book \"Covenants of "
 "Promise\", the Abrahamic Covenant is permanent. The Mosaic Covenant is a "
@@ -190,7 +508,7 @@ msgstr ""
 "de kwestie van de halacha, het Joodse concept van de weg, of de toepassing "
 "van de Thora op nieuwe situaties.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:60
+#: lawofmessiah_app/templates/authors/daniel_juster.html:61
 msgid ""
 "<p>It has been common to teach that Judaism is a religion of law and "
 "Christianity a religion of grace. This is a distortion of both Judaism "
@@ -226,11 +544,11 @@ msgstr ""
 "gedeeltelijk te wijten aan het verlies van deze ethische traditie en het "
 "grove verzaken van de plicht om daarin te trainen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:66
+#: lawofmessiah_app/templates/authors/daniel_juster.html:67
 msgid "<h3>1. The Concept of Halakhah in Jewish Thought</h3>"
 msgstr "<h3>1. Het concept van halacha in het Joodse denken</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:69
+#: lawofmessiah_app/templates/authors/daniel_juster.html:70
 msgid ""
 "<p>The word halakhah comes from the word halak, which means \"way\". The "
 "first followers of Yeshua were called \"followers of the way\", i.e. "
@@ -269,7 +587,7 @@ msgstr ""
 "volk te krijgen (zie Daniel Grubers \"Rabbi Akiba's Messiah\"). Toch is de "
 "basisbehoefte aan halacha onvermijdelijk.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:72
+#: lawofmessiah_app/templates/authors/daniel_juster.html:73
 msgid ""
 "<p>Just as the United States Constitution has to be applied to new "
 "situations by the courts of our land, so the Mosaic Constitution needs to be"
@@ -281,7 +599,7 @@ msgstr ""
 "ook op nieuwe situaties worden toegepast (bijvoorbeeld: wat doen we met alle"
 " wetten die verband houden met de tempel, nu er geen tempel is?).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:75
+#: lawofmessiah_app/templates/authors/daniel_juster.html:76
 msgid ""
 "<p>Halakhah (binding law upon the Jewish community) that was not explicitly "
 "written in the Torah, was built through consensus that arose out of intense "
@@ -308,7 +626,7 @@ msgstr ""
 "Misjna de Gemara genoemd. De Misjna bevat de eerste van deze besluiten en de"
 " wetstraditie die hiervan is doorgegeven.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:78
+#: lawofmessiah_app/templates/authors/daniel_juster.html:79
 msgid ""
 "<p>The Mishnah and the Gemara together make up the Talmud. The rules of "
 "logic for reaching decisions are sometimes in accord with the normal rules "
@@ -340,7 +658,7 @@ msgstr ""
 "traditionele jodendom in feite de geschreven Thora vervangt en daadwerkelijk"
 " vervangt.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:81
+#: lawofmessiah_app/templates/authors/daniel_juster.html:82
 msgid ""
 "<p>The claim that the Oral Law is from Moses is really quite indefensible "
 "and is certainly an attempt by the rabbinic community in the early centuries"
@@ -370,7 +688,7 @@ msgstr ""
 "voor onze eigen toepassing vandaag de dag. Gods algemene genade is hier aan "
 "het werk.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:84
+#: lawofmessiah_app/templates/authors/daniel_juster.html:85
 msgid ""
 "<p>The rabbis were correct concerning the need for applying the Torah to new"
 " situations and having sufficient authority vested in some body to unify the"
@@ -406,7 +724,7 @@ msgstr ""
 "Woord om de Mondelinge Halacha te verdedigen vaak gespannen en vergezocht, "
 "maar gedaan om enige eerbied te tonen aan het Geschreven Woord.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:87
+#: lawofmessiah_app/templates/authors/daniel_juster.html:88
 msgid ""
 "<p>Messianic Jews seek to apply the Torah (Law-instruction) of God to the "
 "New Covenant situation and to the particular situation of life in which we "
@@ -434,11 +752,11 @@ msgstr ""
 "hele Bijbel en de toepassing ervan op onze huidige levens. Dit omvat de "
 "Mozaïsche geschriften.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:93
+#: lawofmessiah_app/templates/authors/daniel_juster.html:94
 msgid "<h3>2. The New Testament and the Torah</h3>"
 msgstr "<h3>2. Het Nieuwe Testament en de Thora</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:96
+#: lawofmessiah_app/templates/authors/daniel_juster.html:97
 msgid ""
 "<p>The New Testament, which Messianic Jews often prefer to call the New "
 "Covenant Scriptures, is Torah-positive. Unfortunately, there has been a "
@@ -454,7 +772,7 @@ msgstr ""
 "was. Dit misverstand komt voort uit een theologie die ‘dispensationalisme’ "
 "wordt genoemd (in zijn klassieke vorm).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:99
+#: lawofmessiah_app/templates/authors/daniel_juster.html:100
 msgid ""
 "<p>The problem is, in my opinion grave, but solely from the promise of God, "
 "I do believe the Church will get it right before the return of the Lord "
@@ -481,11 +799,11 @@ msgstr ""
 "Johannes Calvijn in Boek II, Hoofdstuk 7 van zijn Instituten van de "
 "Christelijke Religie representatief.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:102
+#: lawofmessiah_app/templates/authors/daniel_juster.html:103
 msgid "<h5>The Church Consensus</h5>"
 msgstr "<h5>De consensus van de kerk</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:105
+#: lawofmessiah_app/templates/authors/daniel_juster.html:106
 msgid ""
 "<p>Generally, this consensus taught that the Church was the new Israel and "
 "had replaced the old ethnic Israel (There were significant dissenters from "
@@ -511,11 +829,11 @@ msgstr ""
 "vervulling van de wet) niet was gekomen; daarom werd de praktijk van de "
 "ceremoniële wet verboden door de katholieke en orthodoxe kerken.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:108
+#: lawofmessiah_app/templates/authors/daniel_juster.html:109
 msgid "<h5>The Classical Protestant View</h5>"
 msgstr "<h5>De klassieke protestantse visie</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:111
+#: lawofmessiah_app/templates/authors/daniel_juster.html:112
 msgid ""
 "<p>Basically, it is understood that we are under condemnation due to our "
 "violation of the universal dimensions of the Law of God as taught in "
@@ -553,7 +871,7 @@ msgstr ""
 "door zich te onderwerpen aan Zijn transformerende genade, geworteld in Zijn "
 "offerdood.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:114
+#: lawofmessiah_app/templates/authors/daniel_juster.html:115
 msgid ""
 "<p>Having undergone this transformation, we are now capable of submitting to"
 " the Law-instruction of God. Hence the biblical statements that by faith we "
@@ -574,7 +892,7 @@ msgstr ""
 " Daarom maakt bijbelse ethiek deel uit van de opleiding van predikanten en "
 "catechumenen in het klassieke christendom.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:117
+#: lawofmessiah_app/templates/authors/daniel_juster.html:118
 msgid ""
 "<p>Many understood that the Gospel of the Kingdom required that we come "
 "under the rule of God. We seek to live out God's righteous order in every "
@@ -608,7 +926,7 @@ msgstr ""
 "getuigenis van de gelovige en als onderdeel van het manifesteren van de "
 "Glorie van God in het menselijk leven.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:120
+#: lawofmessiah_app/templates/authors/daniel_juster.html:121
 msgid ""
 "<p>Many saw that the Ten Commandments were, for example, really two-fold. "
 "Some of them summarized the requirement to love God exclusively, e.g., all "
@@ -646,11 +964,11 @@ msgstr ""
 " van Jesjoea aan te wenden voor vergeving en gemeenschap te stichten op "
 "basis van Gods principes.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:123
+#: lawofmessiah_app/templates/authors/daniel_juster.html:124
 msgid "<h5>The Call for Justice</h5>"
 msgstr "<h5>De roep om gerechtigheid</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:126
+#: lawofmessiah_app/templates/authors/daniel_juster.html:127
 msgid ""
 "<p>The degree of lack of understanding God's call for justice (His righteous"
 " order as defined in Scripture - not some false humanistic idea of equality)"
@@ -677,7 +995,7 @@ msgstr ""
 "gemotiveerd door liefde voor anderen. Het Evangelie is Gods middel om "
 "gerechtigheid te vestigen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:129
+#: lawofmessiah_app/templates/authors/daniel_juster.html:130
 msgid ""
 "<p>Micah summarized it well in his great verse that answers the question, "
 "what does the LORD require of you but to do justice, and to love kindness, "
@@ -705,7 +1023,7 @@ msgstr ""
 "gerechtigheid voorziet in het offer van Yeshua, zodat Hij zowel rechtvaardig"
 " kan zijn als de rechtvaardiger van degenen die in Yeshua zijn.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:132
+#: lawofmessiah_app/templates/authors/daniel_juster.html:133
 msgid ""
 "<p>I should note that justice in the Bible is only equality before the law "
 "and its requirement. It does not imply economic equality as today's Marxist "
@@ -723,7 +1041,7 @@ msgstr ""
 "voorzieningen zijn. Degenen die veel hebben, zullen de kansen en "
 "voorzieningen voor iedereen uitbreiden.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:135
+#: lawofmessiah_app/templates/authors/daniel_juster.html:136
 msgid ""
 "<p>In addition, love is the passionate identification with others that seeks"
 " their good guided by law. As such love seeks the destiny fulfillment of the"
@@ -737,7 +1055,7 @@ msgstr ""
 "liefhebben, trouwen en kinderen krijgen, voldoende voorzieningen hebben. "
 "Maar er is een duidelijke roeping voor ieder mens.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:138
+#: lawofmessiah_app/templates/authors/daniel_juster.html:139
 msgid ""
 "<p>I believe that the Messianic Jewish perspective is in basic accord with "
 "this classical Christian understanding of the relationship of Law and Grace."
@@ -762,11 +1080,11 @@ msgstr ""
 "algemene consensus van het klassieke protestantisme hebben gekeken, moeten "
 "we nu nader naar het Nieuwe Testament kijken.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:141
+#: lawofmessiah_app/templates/authors/daniel_juster.html:142
 msgid "<h5>Yeshua and the Torah</h5>"
 msgstr "<h5>Jesjoea en de Thora</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:144
+#: lawofmessiah_app/templates/authors/daniel_juster.html:145
 msgid ""
 "<p>The Gospel material implies a context for understanding the coming of the"
 " New Covenant order. It is the order of the in-breaking Kingdom which is at "
@@ -787,7 +1105,7 @@ msgstr ""
 " is het nog steeds een overgangstijd, want het Koninkrijk zal pas in volheid"
 " komen bij Zijn wederkomst.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:147
+#: lawofmessiah_app/templates/authors/daniel_juster.html:148
 msgid ""
 "<p>This is the growing stage of the Kingdom where the Word of the Good News "
 "is preached as a farmer scatters seed, and the Kingdom grows from a small "
@@ -809,7 +1127,7 @@ msgstr ""
 "naties tot discipelen te maken, zodat ze volgens de voorschriften ervan "
 "kunnen leven.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:150
+#: lawofmessiah_app/templates/authors/daniel_juster.html:151
 msgid ""
 "<p>In this context, Yeshua teaches that the written Torah has not been "
 "abolished. Heaven and earth will pass away before one jot or one tittle "
@@ -858,7 +1176,7 @@ msgstr ""
 "schriftgeleerden deden), maar door uitspraken te doen in overeenstemming met"
 " zijn eigen autoriteit (Matteüs 7:28).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:153
+#: lawofmessiah_app/templates/authors/daniel_juster.html:154
 msgid ""
 "<p>This role of making authoritative halakhah is given to the disciples who "
 "will supersede the Jewish Supreme Court, the Sanhedrin. In Matthew 16, "
@@ -881,7 +1199,7 @@ msgstr ""
 "16 en 18 de basis voor het opleggen van gemeentelijke discipelen voor de "
 "Nieuwe Verbondsgemeenschap, een gemeenschap van rechtvaardige orde.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:156
+#: lawofmessiah_app/templates/authors/daniel_juster.html:157
 msgid ""
 "<p>In those passages where Yeshua is accused of violating the Torah, closer "
 "observation shows that He was only violating Pharisaic traditions - not any "
@@ -908,7 +1226,7 @@ msgstr ""
 "halacha ingesteld volgens het principe dat de sabbat gemaakt is voor de mens"
 " en niet de mens voor de sabbat.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:159
+#: lawofmessiah_app/templates/authors/daniel_juster.html:160
 msgid ""
 "<p>We can see, in all of this, that Yeshua taught, enhanced, and applied the"
 " Torah. While the New Testament and the Shlichim (Apostles) are given "
@@ -933,11 +1251,11 @@ msgstr ""
 " de status van de Thora, of de halachische autoriteit van het Nieuwe "
 "Testament.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:162
+#: lawofmessiah_app/templates/authors/daniel_juster.html:163
 msgid "<h5>The Letters of Sha'ul (Paul)</h5>"
 msgstr "<h5>De brieven van Sha'ul (Paulus)</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:165
+#: lawofmessiah_app/templates/authors/daniel_juster.html:166
 msgid ""
 "<p>The letters of Sha'ul (Paul) are the primary source of controversy "
 "concerning the place of the Torah in the New Covenant. Some have interpreted"
@@ -958,7 +1276,7 @@ msgstr ""
 "Paulus voor Felix, Agrippa en de Joodse gemeenschap in Rome was een "
 "onwankelbare loyaliteit aan de Thora (Handelingen 28:17).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:168
+#: lawofmessiah_app/templates/authors/daniel_juster.html:169
 msgid ""
 "<p>Indeed, the Book of Acts was written in part to show the nature of Jewish"
 " and Gentile life together in one Body, where Jewish distinctions of life "
@@ -968,7 +1286,7 @@ msgstr ""
 "het joodse en niet-Joodse leven samen in één lichaam te laten zien, waar het"
 " joodse onderscheid tussen leven en roeping wordt gehandhaafd.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:171
+#: lawofmessiah_app/templates/authors/daniel_juster.html:172
 msgid ""
 "<p>Gentiles are not generally required to live according to everything that "
 "God requires of Jews, but they are called to live out the universal "
@@ -995,7 +1313,7 @@ msgstr ""
 " dus het zou goed voor hen zijn om begrip en waardering te zoeken voor "
 "Joodse aspecten van de Thora vanwege hun connectie met het Joodse volk.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:174
+#: lawofmessiah_app/templates/authors/daniel_juster.html:175
 msgid ""
 "<p>This includes an understanding and application of the appointed times "
 "(Leviticus 23). These times give us a sense of the agricultural pattern of "
@@ -1023,7 +1341,7 @@ msgstr ""
 "kalender, of met wat sommige geleerden nu denken dat de tempelkalender "
 "was.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:177
+#: lawofmessiah_app/templates/authors/daniel_juster.html:178
 msgid ""
 "<p>The relationship of grace and law, or spirit and law is apparently "
 "paradoxical. Too quick an oversimplification, and we are bound for error. "
@@ -1045,7 +1363,7 @@ msgstr ""
 "Averbeck van Trinity in Illinois, C.E.B. Cranfield, J. Murray, Rhyne, W.P. "
 "Kaiser en vele anderen het bij het juiste eind. Wat zegt Sha'ul? </p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:180
+#: lawofmessiah_app/templates/authors/daniel_juster.html:181
 msgid ""
 "<p>First, he notes that by the law and standard of God, all human beings "
 "stand condemned. Those who are not of Israel do have a reflection of the Law"
@@ -1085,7 +1403,7 @@ msgstr ""
 "we met Hem zijn gekruisigd (Galaten 3:20; Romeinen 6). Daarom worden wij in "
 "Hem aanvaard als rechtvaardig.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:183
+#: lawofmessiah_app/templates/authors/daniel_juster.html:184
 msgid ""
 "<p>Before we see this, the Law is our schoolmaster. It teaches us right from"
 " wrong and shows us that we need a savior. Therefore, we receive "
@@ -1108,7 +1426,7 @@ msgstr ""
 " Zeker niet. Integendeel, wij stellen de wet vast (Romeinen 3:30-31, "
 "NKJ).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:186
+#: lawofmessiah_app/templates/authors/daniel_juster.html:187
 msgid ""
 "<p>The Gospel is God's means of establishing His Torah which is the goal of "
 "salvation history. The Torah will go out from Zion, the word of the LORD "
@@ -1136,7 +1454,7 @@ msgstr ""
 "oriëntatie worden we bekrachtigd door genade via de Geest, en vervullen we "
 "de gerechtigheid van de wet.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:189
+#: lawofmessiah_app/templates/authors/daniel_juster.html:190
 msgid ""
 "<p>As if this is not enough, Paul rebukes those who say that he teaches "
 "antinomianism (anti-Torah). Such a claim is slanderous (Romans 3:8, 6:1-2). "
@@ -1151,11 +1469,11 @@ msgstr ""
 "stelt hij, met betrekking tot de normen van de Thora, dat hun overtreding in"
 " strijd is met het Evangelie dat hij predikt.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:192
+#: lawofmessiah_app/templates/authors/daniel_juster.html:193
 msgid "<h5>(a) The Book of Galatians</h5>"
 msgstr "<h5>(a) Het boek Galaten</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:195
+#: lawofmessiah_app/templates/authors/daniel_juster.html:196
 msgid ""
 "<p>Actually, but for the Book of Galatians, error in interpreting Paul would"
 " have been much less. The principles of interpretation should have led us to"
@@ -1189,7 +1507,7 @@ msgstr ""
 "onder de Wet (onderworpen aan het streven door onze eigen inspanningen en "
 "onder de veroordeling van de straf die voor ons werd betaald).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:198
+#: lawofmessiah_app/templates/authors/daniel_juster.html:199
 msgid ""
 "<blockquote class=\"blockquote\"><p>Now the works of the flesh are plain: "
 "fornication, impurity, licentiousness, idolatry, sorcery, enmity, strife, "
@@ -1205,7 +1523,7 @@ msgstr ""
 " u eerder waarschuwde, dat degenen die zulke dingen doen het koninkrijk van "
 "God niet zullen beërven. (Galaten 5:19-21, RSV)</p></blockquote>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:201
+#: lawofmessiah_app/templates/authors/daniel_juster.html:202
 msgid ""
 "<p>What defines these sins? What is immorality? Paul says that, apart from "
 "the Law, we would not know what these sins are. Indeed, today we defend as "
@@ -1232,11 +1550,11 @@ msgstr ""
 "weg van geloof in het Nieuwe Verbond is Gods weg ernaartoe, want Hij "
 "schrijft de Thora in ons hart.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:204
+#: lawofmessiah_app/templates/authors/daniel_juster.html:205
 msgid "<h5>(b) The Book of Hebrews</h5>"
 msgstr "<h5>(b) Het boek Hebreeën</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:207
+#: lawofmessiah_app/templates/authors/daniel_juster.html:208
 msgid ""
 "<p>If Paul wrote Hebrews, we see nothing but confirmation. The Mosaic "
 "Covenant Order is fading and becoming obsolete. However, in the New Covenant"
@@ -1273,7 +1591,7 @@ msgstr ""
 " Verbond de Geest aanbiedt die ons zal bewegen Gods inzettingen, "
 "verordeningen en oordelen te gehoorzamen (Ezechiël 36:24 e.v.).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:210
+#: lawofmessiah_app/templates/authors/daniel_juster.html:211
 msgid ""
 "<p>Furthermore, Paul teaches that the Torah is still part of Jewish calling "
 "as it is applicable in the New Covenant. This is shown by his example in "
@@ -1305,11 +1623,11 @@ msgstr ""
 " de naties. Dit laatste is ook een kwestie van Gods juiste orde, die Hij zal"
 " vestigen in overeenstemming met Zijn belofte aan Abraham.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:213
+#: lawofmessiah_app/templates/authors/daniel_juster.html:214
 msgid "<h5>(c) The General Epistles</h5>"
 msgstr "<h5>(c) De algemene brieven</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:216
+#: lawofmessiah_app/templates/authors/daniel_juster.html:217
 msgid ""
 "<p>We will find no evidence against our orientation in the General Epistles."
 " It is our call to pursue justice, even the establishment of God's righteous"
@@ -1336,7 +1654,7 @@ msgstr ""
 "Deze verdraaiing zou hoogstwaarschijnlijk verband houden met het toestaan "
 "​​van zonde vanwege een anti-wetsinterpretatie van Paulus.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:219
+#: lawofmessiah_app/templates/authors/daniel_juster.html:220
 msgid ""
 "<p>The writings of James could be well seen as a corrective to those who "
 "were misunderstanding Paul. Therefore he calls for mitzvot (good works) to "
@@ -1356,7 +1674,7 @@ msgstr ""
 "Jakobus gehad, zelfs tot het punt dat ze beweerden dat het niet de Schrift "
 "was.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:222
+#: lawofmessiah_app/templates/authors/daniel_juster.html:223
 msgid ""
 "<p>Enough has been said, I believe, to convince the fair minded that the "
 "understanding and application of the teaching of the whole Bible on right "
@@ -1375,11 +1693,11 @@ msgstr ""
 "we met Mozes en passen we deze opnieuw toe op de Nieuwe Verbondsorde, net "
 "als Yeshua en de Shlichim.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:228
+#: lawofmessiah_app/templates/authors/daniel_juster.html:229
 msgid "<h3>3. The Discovery of Hittite Treaties</h3>"
 msgstr "<h3>3. De ontdekking van Hettitische verdragen</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:231
+#: lawofmessiah_app/templates/authors/daniel_juster.html:232
 msgid ""
 "<p>One of the great archaeological discoveries was the treaties of the "
 "Hittites, a large nation at the time of Exodus. The tablets were discovered "
@@ -1400,7 +1718,7 @@ msgstr ""
 "vorm van het verbondsmateriaal in de Mozaïsche geschriften, vooral het boek "
 "Deuteronomium.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:234
+#: lawofmessiah_app/templates/authors/daniel_juster.html:235
 msgid ""
 "<p>Meredith Kline expanded this work and showed that not only were the "
 "treaties parallel to covenant material in the Mosaic writings, but the order"
@@ -1430,7 +1748,7 @@ msgstr ""
 "voor het begrijpen van dit materiaal. Het recht is een ondergeschikt "
 "concept.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:237
+#: lawofmessiah_app/templates/authors/daniel_juster.html:238
 msgid ""
 "<p>Other leading scholars picked up on this work and now assert the same "
 "view as Kline. Samuel Schultz, the esteemed Old Testament professor from "
@@ -1462,7 +1780,7 @@ msgstr ""
 "Omdat ik in Jewish Roots een uitgebreid overzicht van deze wetenschap heb "
 "gegeven, zal ik slechts een zeer korte samenvatting geven.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:240
+#: lawofmessiah_app/templates/authors/daniel_juster.html:241
 msgid ""
 "<p>Deuteronomy is in the form of a covenant of grace whereby God first "
 "recounts to Israel that He saved them through no merits of their own. This "
@@ -1491,7 +1809,7 @@ msgstr ""
 " zakelijke integriteit, tot integriteit en waarheid in het rechtssysteem, "
 "tot de zorg voor de armen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:243
+#: lawofmessiah_app/templates/authors/daniel_juster.html:244
 msgid ""
 "<p>Obedience is a response to grace and salvation offered as a gift. "
 "Therefore, Israel's corporate salvation fits the same pattern as the "
@@ -1518,7 +1836,7 @@ msgstr ""
 " een manifestatie van een volk dat bevrijd is. Deze dag is gegeven voor God,"
 " aanbidding en gemeenschap.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:246
+#: lawofmessiah_app/templates/authors/daniel_juster.html:247
 msgid ""
 "<p>Once this is understood, we can see that there is greater continuity "
 "between the Mosaic Covenant and the New Covenant than even perceived by our "
@@ -1539,11 +1857,11 @@ msgstr ""
 "huis van slavernij, totdat we wedergeboren worden en het Koninkrijk van God "
 "binnengaan.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:252
+#: lawofmessiah_app/templates/authors/daniel_juster.html:253
 msgid "<h3>4. Continuity and Discontinuity in Halakhah</h3>"
 msgstr "<h3>4. Continuïteit en discontinuïteit in de Halacha</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:255
+#: lawofmessiah_app/templates/authors/daniel_juster.html:256
 msgid ""
 "<p>As we stated, the application of the teaching of Moses (and of the whole "
 "Bible) to new challenges and situations requires prayer and thinking akin to"
@@ -1569,7 +1887,7 @@ msgstr ""
 "denominaties hebben verschillende conclusies getrokken. Dit is hun "
 "halacha.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:258
+#: lawofmessiah_app/templates/authors/daniel_juster.html:259
 msgid ""
 "<p>Consistency is a virtue, but not all followers of Yeshua or theologians "
 "are consistent. Consistency is based on the virtue of integrity, honesty, "
@@ -1592,7 +1910,7 @@ msgstr ""
 "gebracht over welke delen van de Thora gevolgd moeten worden in het tijdperk"
 " van het Nieuwe Verbond, en welke delen verworpen moeten worden.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:261
+#: lawofmessiah_app/templates/authors/daniel_juster.html:262
 msgid ""
 "<p>With regard to their varying theses, Protestant streams have differed "
 "with regard to the question of the extent to which the Mosaic writings are "
@@ -1618,11 +1936,11 @@ msgstr ""
 "ceremonieel varieert. Ik zal nu kort het continuïteit-discontinuïteit-"
 "patroon in verschillende stromingen schetsen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:264
+#: lawofmessiah_app/templates/authors/daniel_juster.html:265
 msgid "<h5>Roman Catholic Thought</h5>"
 msgstr "<h5>Rooms-katholieke gedachte</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:267
+#: lawofmessiah_app/templates/authors/daniel_juster.html:268
 msgid ""
 "<p>Roman Catholic and Eastern Orthodox thought did not make a clear "
 "distinction between ceremonial and moral law. Instead, the early Church that"
@@ -1655,7 +1973,7 @@ msgstr ""
 "priesterschappen – fysieke afstamming in de eerste, en een geestelijke "
 "afstamming van continuïteit door handoplegging in de laatste.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:270
+#: lawofmessiah_app/templates/authors/daniel_juster.html:271
 msgid ""
 "<p>The Church parallels the Tabernacle-Temple in offering daily and special "
 "sacrifices upon an altar. However, the sacrifice offered is the sacrifice of"
@@ -1688,7 +2006,7 @@ msgstr ""
 " oude Israël en figuren uit het Nieuwe Testament. De Rooms-Katholieke Kerk "
 "heeft een Nieuwe Verbondstempel-aanbidding gecreëerd.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:273
+#: lawofmessiah_app/templates/authors/daniel_juster.html:274
 msgid ""
 "<p>The Sabbath day is also special, but has been transferred to Sunday when "
 "the resurrection is also celebrated. Whatever one might think of the "
@@ -1711,11 +2029,11 @@ msgstr ""
 "nieuwe regels toegevoegd en manieren ontwikkeld om de wet in verschillende "
 "gevallen te omzeilen (casuïstiek).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:276
+#: lawofmessiah_app/templates/authors/daniel_juster.html:277
 msgid "<h5>Lutheranism</h5>"
 msgstr "<h5>Lutheranisme</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:279
+#: lawofmessiah_app/templates/authors/daniel_juster.html:280
 msgid ""
 "<p>Martin Luther rejected much of Catholic doctrine. The priesthood of all "
 "believers and the identification of the gathered community of saints (as a "
@@ -1751,11 +2069,11 @@ msgstr ""
 "gedachten waren daarom ambivalent ten opzichte van de Mozaïsche geschriften "
 "en inconsistent in hun aanpak.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:282
+#: lawofmessiah_app/templates/authors/daniel_juster.html:283
 msgid "<h5>Calvinism</h5>"
 msgstr "<h5>Calvinisme</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:285
+#: lawofmessiah_app/templates/authors/daniel_juster.html:286
 msgid ""
 "<p>Those of the Calvinist tradition projected a very high regard for Torah. "
 "They accepted the distinction of the Ceremonial and Moral Law. Calvin put "
@@ -1775,7 +2093,7 @@ msgstr ""
 "dimensie van het discipeleninstrument voor gelovigen werd het derde gebruik "
 "van de Wet genoemd.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:288
+#: lawofmessiah_app/templates/authors/daniel_juster.html:289
 msgid ""
 "<p>Puritans in the Calvinist tradition maintained the same basic stance "
 "whether they became British Presbyterians or Congregationalist or Calvinist "
@@ -1798,11 +2116,11 @@ msgstr ""
 "het puriteinse New England was verboden omdat het in zijn wortels te heidens"
 " was.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:291
+#: lawofmessiah_app/templates/authors/daniel_juster.html:292
 msgid "<h5>Anglicanism</h5>"
 msgstr "<h5>Anglicanisme</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:294
+#: lawofmessiah_app/templates/authors/daniel_juster.html:295
 msgid ""
 "<p>The Anglican Church developed an amazing eclecticism of Catholic, "
 "Lutheran, and Reform thought. One can see the Ceremonial Law applied as in "
@@ -1824,7 +2142,7 @@ msgstr ""
 "Mozaïsche wet letterlijk toe te passen om het sociale en burgerlijke leven "
 "te ordenen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:297
+#: lawofmessiah_app/templates/authors/daniel_juster.html:298
 msgid ""
 "<p>Hooker argues that the Mosaic Law, as given, was for ancient Israel. We "
 "had to discern more universal principles in the Law and apply them to new "
@@ -1841,11 +2159,11 @@ msgstr ""
 "Uit dit debat blijkt dat de kwestie van continuïteit en discontinuïteit en "
 "de toepassing van de wet geen nieuwe kwestie is.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:300
+#: lawofmessiah_app/templates/authors/daniel_juster.html:301
 msgid "<h5>The Methodists</h5>"
 msgstr "<h5>De Methodisten</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:303
+#: lawofmessiah_app/templates/authors/daniel_juster.html:304
 msgid ""
 "<p>John Wesley, the founder of the Methodist movement was an Anglican. He "
 "did not emphasize the application of specific Mosaic commandments, but "
@@ -1862,11 +2180,11 @@ msgstr ""
 "en heiligheid gebaseerd op de Wet en de uiteenzetting ervan in de Bergrede "
 "was een opmerkelijk onderdeel van het methodisme.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:306
+#: lawofmessiah_app/templates/authors/daniel_juster.html:307
 msgid "<h5>The Anabaptists</h5>"
 msgstr "<h5>De wederdopers</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:309
+#: lawofmessiah_app/templates/authors/daniel_juster.html:310
 msgid ""
 "<p>In the 16th Century, several leaders believed that the reformation did "
 "not go far enough. These were the Anabaptists, committed to simple life, "
@@ -1884,11 +2202,11 @@ msgstr ""
 "voldoende uiteenzetting en toepassing van de Wet voor christenen. De "
 "Bergrede was het middelpunt van dit begrip.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:312
+#: lawofmessiah_app/templates/authors/daniel_juster.html:313
 msgid "<h5>The Dispensationalists</h5>"
 msgstr "<h5>De dispensationalisten</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:315
+#: lawofmessiah_app/templates/authors/daniel_juster.html:316
 msgid ""
 "<p>The end of the 19th Century spawned a movement that dramatically affected"
 " western Evangelical Protestantism. It broke from Classical Christianity and"
@@ -1911,7 +2229,7 @@ msgstr ""
 " Testament een bedeling van de wet was die in totaal contrast stond met de "
 "periode van het Nieuwe Testament, een bedeling van genade.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:318
+#: lawofmessiah_app/templates/authors/daniel_juster.html:319
 msgid ""
 "<p>This radical redefinition of grace produced a radical discontinuity "
 "between the Mosaic Covenant and the New Covenant. Even the Sermon on the "
@@ -1930,11 +2248,11 @@ msgstr ""
 "van de Amerikaanse evangelisatie en heeft in veel stromingen anti-"
 "wetslezingen aangemoedigd.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:321
+#: lawofmessiah_app/templates/authors/daniel_juster.html:322
 msgid "<h5>Messianic Judaism</h5>"
 msgstr "<h5>Messiaans jodendom</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:324
+#: lawofmessiah_app/templates/authors/daniel_juster.html:325
 msgid ""
 "<p>Messianic Judaism finds itself in a unique position. We oppose the "
 "replacement theology of Classical Christianity where ethnic Israel has been "
@@ -1955,7 +2273,7 @@ msgstr ""
 "is (Romeinen 11:29), zijn we georiënteerd op een grotere continuïteit dan de"
 " meeste christelijke opvattingen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:327
+#: lawofmessiah_app/templates/authors/daniel_juster.html:328
 msgid ""
 "<p>My little book The Irrevocable Calling puts forth the idea of why Jewish "
 "followers of Yeshua are to live a Jewish life and the essence of what Jewish"
@@ -1978,7 +2296,7 @@ msgstr ""
 "vervulling krijgen bij de terugkeer van Jesjoea en in het Komende "
 "Tijdperk.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:330
+#: lawofmessiah_app/templates/authors/daniel_juster.html:331
 msgid ""
 "<p>We can discern in Scripture what is required of the Jewish people and "
 "what is required of Gentiles in Yeshua. It is not the same in all regards. "
@@ -2007,11 +2325,11 @@ msgstr ""
 "Yeshua is door God gewild; het is de leer en het voorbeeld van de "
 "apostelen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:333
+#: lawofmessiah_app/templates/authors/daniel_juster.html:334
 msgid "<h5>More on Continuity and Discontinuity</h5>"
 msgstr "<h5>Meer over continuïteit en discontinuïteit</h5>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:336
+#: lawofmessiah_app/templates/authors/daniel_juster.html:337
 msgid ""
 "<p>In applying the Torah, we recognize a degree of discontinuity between the"
 " Mosaic and New Covenants. Just how does the New Covenant differ from the "
@@ -2033,7 +2351,7 @@ msgstr ""
 "toe om alle naties te zegenen door ons te bevelen de boodschap van het "
 "Evangelie aan iedereen te brengen.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:339
+#: lawofmessiah_app/templates/authors/daniel_juster.html:340
 msgid ""
 "<p>The following are the basic differences. We now have the power of "
 "identification with Yeshua's crucifixion to put to death the deeds of the "
@@ -2058,7 +2376,7 @@ msgstr ""
 "leringen en principes ervan moeten worden toegepast op de Nieuwe "
 "Verbondsorde.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:342
+#: lawofmessiah_app/templates/authors/daniel_juster.html:343
 msgid ""
 "<p>In addition, the New Covenant enjoins us to share the Gospel with all "
 "people and to disciple the nations. Jew and Gentile in the Messiah are now "
@@ -2096,7 +2414,7 @@ msgstr ""
 "uitsluiting (tot de avond of zeven dagen) van de betrokkenheid bij de Tempel"
 " vereiste.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:345
+#: lawofmessiah_app/templates/authors/daniel_juster.html:346
 msgid ""
 "<p>Also, some of the clean-unclean laws, if intentionally violated, required"
 " severe penalties. Today, these are connected to higher moral meanings with "
@@ -2121,11 +2439,11 @@ msgstr ""
 "van de kruisiging en opstanding van de Messias, en de uitstorting van de "
 "Geest.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:351
+#: lawofmessiah_app/templates/authors/daniel_juster.html:352
 msgid "<h3>5. The Messianic Jewish Task</h3>"
 msgstr "<h3>5. De Messiaans-Joodse taak</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:354
+#: lawofmessiah_app/templates/authors/daniel_juster.html:355
 msgid ""
 "<p>One of the more universal dimensions of the Messianic Jewish task is to "
 "reassert the fact that God has not changed in His desire for justice and for"
@@ -2148,7 +2466,7 @@ msgstr ""
 "totdat hij gerechtigheid op aarde heeft gevestigd; en de kustlanden wachten "
 "op zijn wet (Jesaja 42:4 RSV).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:357
+#: lawofmessiah_app/templates/authors/daniel_juster.html:358
 msgid ""
 "<p>In the Age to Come the Messiah will have established justice. It is now "
 "through us that He seeks to establish it. It is part of our witness and "
@@ -2172,7 +2490,7 @@ msgstr ""
 "staan ​​gerechtigheid en liefde niet tegenover elkaar. Micha zegt dat we "
 "recht moeten doen en barmhartigheid moeten liefhebben (Micha 6:8).</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:360
+#: lawofmessiah_app/templates/authors/daniel_juster.html:361
 msgid ""
 "<p>Therefore, the pursuit of God's righteous order in every sphere of life "
 "is an expression of the second of the two greatest commandments - to love "
@@ -2211,7 +2529,7 @@ msgstr ""
 "hoofdstad van de wereld is, en Israël en de naties een goede relatie hebben "
 "onder de heerschappij van de Messias.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:363
+#: lawofmessiah_app/templates/authors/daniel_juster.html:364
 msgid ""
 "<p>The goal of God is that the Torah will go forth from Zion, and the Word "
 "of the Lord from Jerusalem (Micah 4:2). The goal of the Gospel (the New "
@@ -2238,7 +2556,7 @@ msgstr ""
 "zaken bij het nastreven van gerechtigheid, want tenzij mensen wedergeboren "
 "zijn, kunnen zij zich niet onderwerpen aan de Regel of Torah van God.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:366
+#: lawofmessiah_app/templates/authors/daniel_juster.html:367
 msgid ""
 "<p>May I end this section with a heart cry for Israeli Messianic Jews not to"
 " give themselves to antinomian theology. Deliver the term Torah from "
@@ -2254,11 +2572,11 @@ msgstr ""
 "Verbond en de hoop van de profeten om de Thora over de hele aarde te "
 "vestigen niet varen. Moge het woord Torah een vreugde voor je zijn.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:372
+#: lawofmessiah_app/templates/authors/daniel_juster.html:373
 msgid "<h3>6. The Plan of This Book</h3>"
 msgstr "<h3>6. Het plan van dit boek</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:375
+#: lawofmessiah_app/templates/authors/daniel_juster.html:376
 msgid ""
 "<p>This book suggests a Messianic Jewish halakhic approach to the various "
 "commandments and laws (explicit and implied) that are found in the Bible. It"
@@ -2279,7 +2597,7 @@ msgstr ""
 "gecategoriseerd in basisonderverdelingen voor een meer samenhangende "
 "presentatie.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:378
+#: lawofmessiah_app/templates/authors/daniel_juster.html:379
 msgid ""
 "<p>One will see by this that the easy distinction of Ceremonial and Moral "
 "Law does not fly, nor was it ever consistently applied in any tradition of "
@@ -2302,7 +2620,7 @@ msgstr ""
 "citaten naast elk besproken gebod of wet plaatsen, zodat men deze kan vinden"
 " in Joodse lijsten en commentaren.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:381
+#: lawofmessiah_app/templates/authors/daniel_juster.html:382
 msgid ""
 "<p>In applying the Law we will discuss the traditional Jewish consensus, "
 "applications made in the New Testament, Classical Christian applications, "
@@ -2325,12 +2643,12 @@ msgstr ""
 "sociale ethiek voor alle gelovigen en zal wijzen op specifieke toepassingen "
 "van de Joodse roeping.</p>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:387
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:549
+#: lawofmessiah_app/templates/authors/daniel_juster.html:388
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:550
 msgid "<h3>Footnotes</h3>"
 msgstr "<h3>Voetnoten</h3>"
 
-#: lawofmessiah_app/templates/authors/daniel_juster.html:391
+#: lawofmessiah_app/templates/authors/daniel_juster.html:392
 msgid ""
 "<li>Shiffman, Lawrence H., <em>From Text to Tradition</em>, (New York: KTAV,"
 " 1991).</li>"
@@ -2356,20 +2674,20 @@ msgstr ""
 "nieuw verbondsperspectief. Een wetenschappelijke studie van de Thora, de wet"
 " van de Messias en de codificatie van bijbelse mitswot."
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:21
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:22
 msgid "Introduction by Michael Rudolph"
 msgstr "Introductie door Michael Rudolph"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:30
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:31
 msgid "<li><a href=\"#torah-and-the-law\">1. Torah and the Law</a></li>"
 msgstr "<li><a href=\"#torah-and-the-law\">1. Thora en de wet</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:33
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:34
 msgid "<li><a href=\"#torah-new-covenant\">2. Torah in the New Covenant</a></li>"
 msgstr ""
 "<li><a href=\"#torah-new-covenant\">2. Thora in het Nieuwe Verbond</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:36
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:37
 msgid ""
 "<li><a href=\"#pentateuch-torah\">3. What Makes the Pentateuch "
 "Torah?</a></li>"
@@ -2377,40 +2695,40 @@ msgstr ""
 "<li><a href=\"#pentateuch-torah\">3. Wat maakt de Pentateuch Torah? "
 "</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:39
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:40
 msgid "<li><a href=\"#gospels-torah\">4. The Gospels as Torah</a></li>"
 msgstr "<li><a href=\"#gospels-torah\">4. De Evangeliën als Thora</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:42
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:43
 msgid "<li><a href=\"#mosaic-law\">5. The Mosaic Law: Rabbinical View</a></li>"
 msgstr "<li><a href=\"#mosaic-law\">5. De Mozaïsche wet: rabbijnse visie</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:45
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:46
 msgid "<li><a href=\"#statutes\">6. Statutes: Dependent and Transcendent</a></li>"
 msgstr ""
 "<li><a href=\"#statutes\">6. Statuten: afhankelijk en transcendent</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:48
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:49
 msgid "<li><a href=\"#torah-underlies\">7. Torah Underlies the Statutes</a></li>"
 msgstr ""
 "<li><a href=\"#torah-underlies\">7. Torah ligt ten grondslag aan de "
 "statuten</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:51
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:52
 msgid "<li><a href=\"#law-of-messiah\">8. The Law of Messiah</a></li>"
 msgstr "<li><a href=\"#law-of-messiah\">8. De wet van de Messias</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:54
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:55
 msgid "<li><a href=\"#dibeyr\">9. Dibeyr, Torah and Mitzvot</a></li>"
 msgstr "<li><a href=\"#dibeyr\">9. Dibeyr, Thora en Mitswot</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:57
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:58
 msgid ""
 "<li><a href=\"#maimonides\">10. Maimonides and Yisrael Meir haKohen</a></li>"
 msgstr ""
 "<li><a href=\"#maimonides\">10. Maimonides en Yisrael Meir haKohen</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:60
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:61
 msgid ""
 "<li><a href=\"#other-enumerations\">11. Other Classical "
 "Enumerations</a></li>"
@@ -2418,7 +2736,7 @@ msgstr ""
 "<li><a href=\"#other-enumerations\">11. Andere klassieke "
 "opsommingen</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:63
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:64
 msgid ""
 "<li><a href=\"#need-codification\">12. Need for a New Covenant "
 "Codification</a></li>"
@@ -2426,7 +2744,7 @@ msgstr ""
 "<li><a href=\"#need-codification\">12. Noodzaak van een nieuwe "
 "verbondscodificatie</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:66
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:67
 msgid ""
 "<li><a href=\"#considerations\">13. Considerations in Writing this "
 "Book</a></li>"
@@ -2434,26 +2752,26 @@ msgstr ""
 "<li><a href=\"#considerations\">13. Overwegingen bij het schrijven van dit "
 "boek</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:69
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:70
 msgid ""
 "<li><a href=\"#future-volume\">14. Matters Left for a Future Volume</a></li>"
 msgstr ""
 "<li><a href=\"#future-volume\">14. Zaken die overblijven voor een toekomstig"
 " deel</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:72
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:73
 msgid "<li><a href=\"#organization\">15. Organization and References</a></li>"
 msgstr "<li><a href=\"#organization\">15. Organisatie en referenties</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:75
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:76
 msgid "<li><a href=\"#two-kinds\">16. Two Kinds of Mitzvot</a></li>"
 msgstr "<li><a href=\"#two-kinds\">16. Twee soorten mitswot</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:78
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:79
 msgid "<li><a href=\"#translation\">17. Choice of Translation</a></li>"
 msgstr "<li><a href=\"#translation\">17. Keuze van vertaling</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:81
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:82
 msgid ""
 "<li><a href=\"#collaboration\">18. Collaboration with Daniel C. "
 "Juster</a></li>"
@@ -2461,12 +2779,12 @@ msgstr ""
 "<li><a href=\"#collaboration\">18. Samenwerking met Daniel C. "
 "Juster</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:84
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:85
 msgid "<li><a href=\"#work-to-build\">19. A Work to Build Upon</a></li>"
 msgstr ""
 "<li><a href=\"#work-to-build\">19. Een werk om op voort te bouwen</a></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:93
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:94
 msgid ""
 "<p>The term \"Law of Messiah\" appears only once in the Bible, and that is "
 "in Galatians 6:2. That notwithstanding, the term is extremely significant in"
@@ -2480,7 +2798,7 @@ msgstr ""
 "en, zoals we zullen zien, dat zowel deze wet als \"Torah\" springlevend zijn"
 " onder het Nieuwe Verbond.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:96
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:97
 msgid ""
 "<p>The Bible can be appreciated from many points of view. It may be thought "
 "of as the biography of God in His dealings with mankind. It may be read as a"
@@ -2499,11 +2817,11 @@ msgstr ""
 "voornamelijk gepresenteerd als een boek met Thorawetten, dat Gods "
 "instructies bevat voor een heilig, moreel en zegevierend leven.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:102
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:103
 msgid "<h3>1. Torah and the Law</h3>"
 msgstr "<h3>1. Thora en de wet</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:105
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:106
 msgid ""
 "<p>The Theological Wordbook of the Old Testament defines \"Torah\" (Strong's"
 " number 8451) as follows<sup>1</sup>:</p>"
@@ -2511,7 +2829,7 @@ msgstr ""
 "<p>Het Theologische Woordboek van het Oude Testament definieert \"Torah\" "
 "(Strong's nummer 8451) als volgt<sup>1</sup>:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:109
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:110
 msgid ""
 "<p>The word tôrâ means basically \"teaching\" whether it is the wise man "
 "instructing his son or God instructing Israel. The wise give insight into "
@@ -2544,7 +2862,7 @@ msgstr ""
 " de wijsheidsschool, in het priesterlijk onderwijs, en de rol van de wet met"
 " de resultaten ervan voor alle mensen van het verbond.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:113
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:114
 msgid ""
 "<p>Specifically law refers to any set of regulations; for example, Exodus 12"
 " contains the law in regard to observing the Passover, and other specific "
@@ -2559,7 +2877,7 @@ msgstr ""
 "bestaat uit statuten, verordeningen, voorschriften, geboden en "
 "getuigenissen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:116
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:117
 msgid ""
 "<p>The meaning of the word gains further perspective in the light of "
 "Deuteronomy. There, Moses sets about to explain the law, and law includes "
@@ -2579,7 +2897,7 @@ msgstr ""
 "code van Hammurabi. Later werd het woord uitgebreid tot de eerste vijf "
 "boeken van de Bijbel in al hun verscheidenheid.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:119
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:120
 msgid ""
 "<p>In addition, The New Brown-Driver-Briggs-Gesenius Hebrew and English "
 "Lexicon gives \"direction, instruction, law\" as the primary definitions of "
@@ -2589,7 +2907,7 @@ msgstr ""
 "Lexicon ‘richting, instructie, wet’ als de primaire definities van "
 "‘Torah’<sup>2</sup>, en stelt de Encyclopaedia Judaica:<sup>3</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:123
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:124
 msgid ""
 "<p>Torah is derived from the root which in the hifil conjugation means \"to "
 "teach\" (cf. Lev. 10:11). The meaning of the word is therefore \"teaching\","
@@ -2604,7 +2922,7 @@ msgstr ""
 "gebruikt, maar het onderliggende idee van ‘lesgeven’ is voor iedereen "
 "hetzelfde.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:127
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:128
 msgid ""
 "<p>There are basically two ways in which \"Torah\" is used in the Tanakh. In"
 " one usage, \"Torah\" refers to \"the Law\" - God's legal code which "
@@ -2616,7 +2934,7 @@ msgstr ""
 "wettelijke code die instructies geeft over specifieke zaken. Voorbeelden van"
 " dit gebruik zijn:<sup>4</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:130
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:131
 msgid ""
 "<p>\"This is the Torah of the burnt offering...\" (Leviticus 6:2(9)ff); "
 "\"grain offering...\" (Leviticus 6:7(14)ff); \"sin offering...\" (Leviticus "
@@ -2630,7 +2948,7 @@ msgstr ""
 "(Leviticus 7:11 ev); \"melaatse plaag...\" (Leviticus 13:59 ev); "
 "\"jaloezie...\" (Numeri 5:29 ev).</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:133
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:134
 msgid ""
 "<p>Where \"Torah\" means \"law\", it is usually accompanied by other Hebrew "
 "words having to do with law, such as:</p>"
@@ -2638,11 +2956,11 @@ msgstr ""
 "<p>Waar \"Torah\" \"wet\" betekent, wordt dit meestal vergezeld door andere "
 "Hebreeuwse woorden die met wet te maken hebben, zoals:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:137
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:138
 msgid "<li>mitzvah (commandment - Strong's 4687)<sup>5</sup></li>"
 msgstr "<li>mitswa (gebod - Strong's 4687)<sup>5</sup></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:140
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:141
 msgid ""
 "<li>khukah (statue or ordinance (\"regulation\" in CJB) - Strong's "
 "2708)<sup>6</sup></li>"
@@ -2650,14 +2968,14 @@ msgstr ""
 "<li>khukah (standbeeld of verordening (\"verordening\" in CJB) - Strong's "
 "2708)<sup>6</sup></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:143
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:144
 msgid ""
 "<li>mishpat (judgement (\"ruling\" in CJB) - Strong's 4941)<sup>7</sup></li>"
 msgstr ""
 "<li>mishpat (oordeel (\"uitspraak\" in CJB) - Strong's "
 "4941)<sup>7</sup></li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:147
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:148
 msgid ""
 "<p>The following examples contain the word \"Torah\" in addition to one or "
 "more of the above words, showing that \"Torah\" is connected to, but "
@@ -2668,7 +2986,7 @@ msgstr ""
 "maar te onderscheiden is van, geboden, statuten, verordeningen en "
 "oordelen:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:150
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:151
 msgid ""
 "<p>Numbers 19:2: This is the regulation from the Torah which Adonai has "
 "commanded. Here, \"Torah\" cannot mean \"regulation\" or \"ordinance\".</p>"
@@ -2676,7 +2994,7 @@ msgstr ""
 "<p>Numeri 19:2: Dit is de regeling uit de Torah die Adonai geboden heeft. "
 "Hier kan ‘Torah’ niet ‘regelgeving’ of ‘verordening’ betekenen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:153
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:154
 msgid ""
 "<p>Numbers 31:21: ... This is the regulation from the Torah which Adonai has"
 " ordered Moshe. Here also, \"Torah\" cannot mean \"regulation\" or "
@@ -2686,7 +3004,7 @@ msgstr ""
 "heeft opgedragen. Ook hier kan ‘Torah’ niet ‘regelgeving’ of ‘verordening’ "
 "betekenen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:156
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:157
 msgid ""
 "<p>Deuteronomy 30:10: ... so that you obey his mitzvot and regulations which"
 " are written in this book of the Torah ... Some translations of this verse "
@@ -2699,7 +3017,7 @@ msgstr ""
 "\"voorschriften\", dus hier kan \"Torah\" niet \"mitswot (geboden)\" of "
 "\"voorschriften (statuten)\" betekenen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:159
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:160
 msgid ""
 "<p>Psalm 89:31-32(30-31): If his descendants abandon my Torah and fail to "
 "live by my rulings, if they profane my regulations and don't obey my mitzvot"
@@ -2712,7 +3030,7 @@ msgstr ""
 "(oordelen)\", \"voorschriften (statuten)\" of \"mitswot (geboden)\" "
 "betekenen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:162
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:163
 msgid ""
 "<p>Another way of distinguishing \"Torah\" (teaching) from commandment, "
 "statute, ordinance, and judgment is by its context. In Scripture, the word "
@@ -2726,17 +3044,17 @@ msgstr ""
 "Exodus 13:9, Exodus 16:4, Psalm 1:2, Psalm 37:31, Psalm 40:9, Spreuken 6:23,"
 " Spreuken 7:2 en Spreuken 13:14.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:168
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:169
 msgid "<h3>2. Torah in the New Covenant</h3>"
 msgstr "<h3>2. Thora in het Nieuwe Verbond</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:171
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:172
 msgid ""
 "<p>The New Covenant was prophesied in Jeremiah 31:30–33<sup>8</sup>:</p>"
 msgstr ""
 "<p>Het Nieuwe Verbond werd geprofeteerd in Jeremia 31:30–33<sup>8</sup>:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:175
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:176
 msgid ""
 "<p>'Here the days are coming,' says Adonai, 'when I will make a new covenant"
 " with the house of Isra'el and with the house of Y'hudah. It will not be "
@@ -2757,7 +3075,7 @@ msgstr ""
 " zal sluiten', zegt Adonai: 'Ik zal mijn Torah in hen leggen en het in hun "
 "hart schrijven; Ik zal hun God zijn, en zij zullen mijn volk zijn.'</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:179
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:180
 msgid ""
 "<p>Jeremiah is quoting God as saying \"I will put My Torah in their minds, "
 "and write it on their hearts.\" This Scripture is repeated in the Greek New "
@@ -2774,7 +3092,7 @@ msgstr ""
 "concluderen dat het Nieuwe Verbond gegeven werd als Torah, en daarom Torah "
 "is.<sup>10</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:182
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:183
 msgid ""
 "<p>Since in the Hebrew text of this Scripture the word for \"law\" is Torah,"
 " the passage can also be read as a statement that the New Covenant is itself"
@@ -2789,7 +3107,7 @@ msgstr ""
 "kunnen worden voor Torah in de zin van Gods geopenbaarde leer en "
 "wet.<sup>11</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:185
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:186
 msgid ""
 "<p>A related Greek word, nomotheteo, occurs in Hebrews 8:6 and is translated"
 " \"established\" in some English versions. David H. Stern renders the verse "
@@ -2803,11 +3121,11 @@ msgstr ""
 "betere beloften\", waarmee hij de verbinding tussen het Nieuwe Verbond en de"
 " Thora versterkt.<sup>12</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:191
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:192
 msgid "<h3>3. What Makes the Pentateuch Torah?</h3>"
 msgstr "<h3>3. Wat maakt de Pentateuch Torah? </h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:194
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:195
 msgid ""
 "<p>Since \"Torah\" is God's teaching, there is a sense in which all "
 "Scripture is \"Torah.\" Nevertheless, Yeshua himself recognized a "
@@ -2819,7 +3137,7 @@ msgstr ""
 "de \"Torah\" van de Pentateuch en andere classificaties van de Schrift "
 "(Lucas 24:44)<sup>13</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:197
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:198
 msgid ""
 "<p>The uniqueness of the Pentateuch is that it contains God's major "
 "covenants prior to Yeshua. The other books of the Tanakh expound on these "
@@ -2831,7 +3149,7 @@ msgstr ""
 "uiteen, onderwijzen erover, profeteren erover en presenteren hun "
 "geschiedenis, maar ze bevatten zelf niet de verbonden.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:200
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:201
 msgid ""
 "<p>All Scripture is God-breathed and valuable for teaching the truth, "
 "convicting of sin, correcting faults, and training in right living, so there"
@@ -2846,11 +3164,11 @@ msgstr ""
 "omdat hij het verbondsfundament bevat waarop de rest van de Tenach "
 "bouwt.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:206
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:207
 msgid "<h3>4. The Gospels as Torah</h3>"
 msgstr "<h3>4. De Evangeliën als Thora</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:209
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:210
 msgid ""
 "<p>The New Covenant is a covenant of Torah — God's teaching written on our "
 "hearts. If the test for \"pentateuchal\" Torah is whether a New Covenant "
@@ -2864,7 +3182,7 @@ msgstr ""
 " Evangelieboeken – Matteüs, Markus, Lukas en Johannes zeker de test. Onder "
 "de vele parallellen tussen de Pentateuch en de Evangeliën: </p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:213
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:214
 msgid ""
 "<li>The Pentateuch contains the life of Moses, who was used by God to "
 "deliver the Sinai Covenant<sup>14</sup>. The Gospels contain the life of "
@@ -2875,7 +3193,7 @@ msgstr ""
 "leven van Yeshua, die door God werd gebruikt om het Nieuwe Verbond te "
 "verwezenlijken.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:216
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:217
 msgid ""
 "<li>The Pentateuch contains the event in which Moses proclaims the blood of "
 "the Sinai Covenant. The Gospels contain the event in which Yeshua proclaims "
@@ -2885,7 +3203,7 @@ msgstr ""
 "verbond verkondigt. De Evangeliën bevatten de gebeurtenis waarin Yeshua zijn"
 " bloed van het Nieuwe Verbond verkondigt.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:219
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:220
 msgid ""
 "<li>The Pentateuch contains the teachings and commandments of the Sinai "
 "Covenant. The Gospels contain the teachings and commandments of the New "
@@ -2894,7 +3212,7 @@ msgstr ""
 "<li>De Pentateuch bevat de leringen en geboden van het Sinaï-verbond. De "
 "Evangeliën bevatten de leringen en geboden van het Nieuwe Verbond.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:222
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:223
 msgid ""
 "<li>The Pentateuch contains the means by which men must atone for their sins"
 " through animal sacrifice. The Gospels contain the means by which men must "
@@ -2905,7 +3223,7 @@ msgstr ""
 "waarmee mensen vergeving van hun zonden moeten krijgen door het offer van "
 "Yeshua.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:225
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:226
 msgid ""
 "<li>The Pentateuch initiates a priesthood and the appointment of Aaron as "
 "High Priest. The Gospels initiate a new priesthood and the appointment of "
@@ -2915,7 +3233,7 @@ msgstr ""
 "Hogepriester. De Evangeliën initiëren een nieuw priesterschap en de "
 "benoeming van Yeshua als Hogepriester<sup>15</sup>.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:228
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:229
 msgid ""
 "<li>The Pentateuch contains shadows of things to come. The Gospels contain "
 "the prophetic fulfillment of those shadows.</li>"
@@ -2923,7 +3241,7 @@ msgstr ""
 "<li>De Pentateuch bevat schaduwen van toekomstige dingen. De Evangeliën "
 "bevatten de profetische vervulling van deze schaduwen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:231
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:232
 msgid ""
 "<li>The Pentateuch ends with the death of Moses. The Gospels end with the "
 "death, resurrection and ascension of Yeshua.</li>"
@@ -2931,7 +3249,7 @@ msgstr ""
 "<li>De Pentateuch eindigt met de dood van Mozes. De Evangeliën eindigen met "
 "de dood, opstanding en hemelvaart van Yeshua.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:235
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:236
 msgid ""
 "<p>Yeshua's life and blood are the substance of the New Covenant, and his "
 "sacrificial death and resurrection mark both the New Covenant's beginning "
@@ -2943,11 +3261,11 @@ msgstr ""
 "het Nieuwe Verbond. Het is in de Evangelieboeken dat we deze Nieuwe "
 "Verbondsinhoud vinden, en daarom ook het Nieuwe Verbond zelf.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:241
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:242
 msgid "<h3>5. The Mosaic Law: Rabbinical View</h3>"
 msgstr "<h3>5. De Mozaïsche wet: rabbijnse visie</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:244
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:245
 msgid ""
 "<p>According to Rabbinical understanding, the Holy Scriptures are organized "
 "into three parts — the Torah (Pentateuch, Law), the Nevi'im (Prophets), and "
@@ -2967,7 +3285,7 @@ msgstr ""
 "synoniem geweest met de wet van Mozes – de wet waaraan het zichzelf vandaag "
 "de dag gebonden acht.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:247
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:248
 msgid ""
 "<p>Its further understanding is that all of the Mosaic Law is contained in "
 "the Torah, and that the remaining Scriptures of the Tanakh, while inspired, "
@@ -2981,12 +3299,12 @@ msgstr ""
 "rabbijnse judaïsme de meeste aandacht aan de Thora en aan de mondelinge "
 "traditie, waar het naar interpretatie zoekt.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:253
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:254
 msgid "<h3>6. Statutes of the Mosaic Law: Dependent and Transcendent</h3>"
 msgstr ""
 "<h3>6. Statuten van de Mozaïsche wet: afhankelijk en transcendent</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:256
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:257
 msgid ""
 "<p>The Commandments contained in the Tanakh are God's explicit directives "
 "and are, therefore, divine statutory law<sup>17</sup>. There are two "
@@ -3002,7 +3320,7 @@ msgstr ""
 "('verbondsafhankelijk'), en degenen waarvan de letterlijke naleving dat niet"
 " is ('verbondsoverstijgend').</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:259
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:260
 msgid ""
 "<p>Hebrews 8:13 suggests a diminishing literal role for covenant-dependent "
 "statutes; consequently, such statutes are not incorporated into New Covenant"
@@ -3022,7 +3340,7 @@ msgstr ""
 "het antwoord ‘ja’ is, is het ‘transcendent’. Indien 'nee', is het "
 "'afhankelijk'.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:262
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:263
 msgid ""
 "<p>It is my opinion that \"oldness of the letter\", as some translations "
 "read, refers to the diminishing role of covenant-dependent statutes as "
@@ -3039,11 +3357,11 @@ msgstr ""
 "uitgeoefend bij de beslissing of een bevel letterlijk moet worden "
 "overgenomen of alleen in principe<sup>19</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:268
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:269
 msgid "<h3>7. Torah Underlies the Statutes</h3>"
 msgstr "<h3>7. Torah ligt ten grondslag aan de statuten</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:271
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:272
 msgid ""
 "<p>Underlying each of God's commandments is Torah, which is broadly defined "
 "as His essential teaching<sup>21</sup><sup>22</sup>. Although not all Torah "
@@ -3058,7 +3376,7 @@ msgstr ""
 "verbond, overstijgt de Torah de verandering in het verbond, omdat Gods "
 "waarden nooit veranderen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:274
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:275
 msgid ""
 "<p>Torah is not only revealed through Mosaic commandments, but through all "
 "Scripture<sup>23</sup>. Thus, not only does Torah pass into the New "
@@ -3070,15 +3388,15 @@ msgstr ""
 "Nieuwe Verbond, maar definieert het ook, en zonder dat zou er geen Nieuw "
 "Verbond zijn<sup>24</sup><sup>25</sup><sup>26</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:280
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:281
 msgid "<h3>8. The Law of Messiah</h3>"
 msgstr "Leef de Wet van Christus"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:283
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:284
 msgid "<p>In Galatians 6:2, Paul instructs us:</p>"
 msgstr "<p>In Galaten 6:2 instrueert Paulus ons: </p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:287
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:288
 msgid ""
 "<p>Bear one another's burdens — in this way you will be fulfilling the "
 "Torah's true meaning, which the Messiah upholds.</p>"
@@ -3086,7 +3404,7 @@ msgstr ""
 "<p>Draag elkaars lasten – op deze manier zul je de ware betekenis van de "
 "Torah vervullen, die de Messias hooghoudt.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:291
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:292
 msgid ""
 "<p>Most English translations of this verse employ the expression \"the Law "
 "of Messiah\"<sup>27</sup>, which is from where the title of this book is "
@@ -3100,7 +3418,7 @@ msgstr ""
 "Bijbel voorkomt, staan ​​de apostolische geschriften vol met verwijzingen "
 "naar de geldende wet in het Nieuwe Verbond.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:294
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:295
 msgid ""
 "<p>We have seen that there are two components of Law in the Tanakh that are "
 "eternal: (1) covenant-transcendent statutes, and (2) Torah (teaching) that "
@@ -3121,7 +3439,7 @@ msgstr ""
 "verschuldigd zijn. Daarom is de Wet van de Messias de tegenhanger van het "
 "Nieuwe Verbond van de Wet van Mozes.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:297
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:298
 msgid ""
 "<p>Examples of operative New Covenant law include the instructions of Yeshua"
 " in the Gospels, the commands of the Apostolic writings, and the apostolic "
@@ -3133,11 +3451,11 @@ msgstr ""
 "geschriften en de apostolische erkenning dat Gods wet geschreven is in de "
 "harten van heidenen die van nature doen wat de Torah vereist.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:303
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:304
 msgid "<h3>9. Dibeyr, Torah and Mitzvot</h3>"
 msgstr "<h3>9. Dibeyr, Thora en Mitswot</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:306
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:307
 msgid ""
 "<p>As used in this book, a \"dibeyr\" is an explicit commandment of God in "
 "Scripture — an imperative directive (usually a statute or ordinance of the "
@@ -3161,7 +3479,7 @@ msgstr ""
 "verklaring van Gods wil, afgeleid van de Bijbel, en uitgedrukt in de vorm "
 "van een gebod.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:309
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:310
 msgid ""
 "<p>There have been several attempts in history to codify God's Word into "
 "numbered mitzvot<sup>30</sup>. The earliest was Hilchot Gedolot, published "
@@ -3175,11 +3493,11 @@ msgstr ""
 "vastgelegd in de Talmoed dat het totale aantal mitswot in de Thora Taryag "
 "was (613)<sup>31</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:315
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:316
 msgid "<h3>10. Maimonides and Yisrael Meir haKohen</h3>"
 msgstr "<h3>10. Maimonides en Yisrael Meir haKohen</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:318
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:319
 msgid ""
 "<p>Moshe ben Maimon (Maimonides, the \"RAMBAM\"), sometime prior to 1170 "
 "C.E., wrote his compilation of Torah law under the title <em>Kitab Al-"
@@ -3195,7 +3513,7 @@ msgstr ""
 "gedefinieerde principes (veertien) om zijn conclusies te rechtvaardigen. "
 "Zijn werk werd bijna universeel geaccepteerd.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:321
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:322
 msgid ""
 "<p>In 1931, Rabbi Yisrael Meir haKohen published <em>Sefer haMitzvot "
 "haKatzar</em> (The Concise Book of Mitzvoth)<sup>36</sup>, in which he "
@@ -3211,7 +3529,7 @@ msgstr ""
 "zijn boek als een compilatie van mitswot die door joden in het post-"
 "tempeltijdperk en vooral in de diaspora in acht konden worden genomen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:324
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:325
 msgid ""
 "<p>Maimonides and Meir do not always agree on the statement of the mitzvah "
 "that they extract from a given Scripture, and their translations and "
@@ -3227,11 +3545,11 @@ msgstr ""
 " zijn van belang omdat dit boek niet alleen maar lijsten reproduceert, maar "
 "probeert de onderliggende schriftuurlijke bedoeling te interpreteren.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:330
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:331
 msgid "<h3>11. Other Classical Enumerations</h3>"
 msgstr "<h3>11. Andere klassieke opsommingen</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:333
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:334
 msgid ""
 "<p>Codifications written after <em>Sefer haMitzvot</em> have added to our "
 "overall understanding of God's commandments, but no other codifier ever "
@@ -3244,7 +3562,7 @@ msgstr ""
 "Maimonides<sup>42</sup> bereikt. Verschillende verdienen een speciale "
 "vermelding:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:337
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:338
 msgid ""
 "<li><em>Mishneh Torah</em>, a fourteen-book compilation of laws gleaned from"
 " both Scripture and Talmud by Maimonides.</li>"
@@ -3252,7 +3570,7 @@ msgstr ""
 "<li><em>Mishneh Torah</em>, een compilatie van veertien boeken met wetten, "
 "ontleend aan zowel de Schrift als de Talmoed door Maimonides.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:340
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:341
 msgid ""
 "<li><em>Sefer Mitzvot Gadol</em> (Big Book of Commandments), Moses of Coucy "
 "(13th century).</li>"
@@ -3260,7 +3578,7 @@ msgstr ""
 "<li><em>Sefer Mitzvot Gadol</em> (Groot Boek met Geboden), Mozes van Coucy "
 "(13e eeuw).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:343
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:344
 msgid ""
 "<li><em>Sefer Mitzvot Katan</em> (Little Book of Commandments), Isaac ben "
 "Joseph of Corveil (13th century).</li>"
@@ -3268,7 +3586,7 @@ msgstr ""
 "<li><em>Sefer Mitzvot Katan</em> (Klein Boekje met Geboden), Isaac ben "
 "Joseph van Corveil (13e eeuw).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:346
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:347
 msgid ""
 "<li><em>Sefer HaChinuch</em> (The Book of Education), attributed to Aaron "
 "haLevi of Barcelona (c. 1257), still in common use "
@@ -3278,7 +3596,7 @@ msgstr ""
 "Aaron haLevi van Barcelona (ca. 1257), nog steeds in algemeen gebruik "
 "vandaag<sup>43</sup><sup>44</sup>.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:350
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:351
 msgid ""
 "<p>Shulchan Aruch and Kitzur Shulchan Aruch are beyond the scope of this "
 "book because they combine Scriptural and rabbinical elements. The present "
@@ -3290,11 +3608,11 @@ msgstr ""
 "werk heeft een beperkter doel: gefocust blijven op op de Schrift gebaseerde "
 "mitswot en de toepassing ervan in het Nieuwe Verbond.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:356
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:357
 msgid "<h3>12. Need for a New Covenant Codification</h3>"
 msgstr "<h3>12. Noodzaak van een nieuwe verbondscodificatie</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:359
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:360
 msgid ""
 "<p>For Messianic Jews and Torah-adherent Gentile believers (followers of "
 "Messiah Yeshua), neither Maimonides', nor Meir's, nor HaChinuch's works are "
@@ -3317,7 +3635,7 @@ msgstr ""
 "geschriften)<sup>47</sup> - allemaal onderdeel van een Nieuw Verbond tussen "
 "God en de Joodse mensen<sup>48</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:362
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:363
 msgid ""
 "<p>New Covenant believers (both Jews and Gentiles) have the same need as "
 "Rabbinical Jews for a handy compilation of Scripture-based mitzvot to assist"
@@ -3334,7 +3652,7 @@ msgstr ""
 "aanvullende Schriftgedeelten toevoegt en interpretatie biedt voor het "
 "gebruik van het Nieuwe Verbond.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:365
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:366
 msgid ""
 "<p>Underlying this attempt is the conviction that the Torah God gave to the "
 "ancient Israelites is relevant today for both the Jew and the non-Jew, "
@@ -3344,7 +3662,7 @@ msgstr ""
 "aan de oude Israëlieten gaf vandaag de dag relevant is voor zowel de Jood "
 "als de niet-Jood, zij het soms voor elk verschillend.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:368
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:369
 msgid ""
 "<p>Exodus 12:49 says, \"The same teaching is to apply equally to the citizen"
 " and to the foreigner living among you.\" Romans 15:4 says that everything "
@@ -3373,7 +3691,7 @@ msgstr ""
 " die komen gaan, maar niet de daadwerkelijke manifestatie van de "
 "originelen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:371
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:372
 msgid ""
 "<p>This verse of Scripture is sometimes wrongly generalized to mean that all"
 " the commandments of Torah are applicable to Jews and Gentiles in the same "
@@ -3394,11 +3712,11 @@ msgstr ""
 "verschillende toepassingen kunnen zijn voor de Jood en de "
 "heiden<sup>50</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:377
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:378
 msgid "<h3>13. Considerations in Writing this Book</h3>"
 msgstr "<h3>13. Overwegingen bij het schrijven van dit boek</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:380
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:381
 msgid ""
 "<p>The matter of proper application of Scripture looms very large. The "
 "author approached this work prayerfully, beginning with the mitzvot "
@@ -3419,7 +3737,7 @@ msgstr ""
 "Verbondsgeschriften die relevant leken "
 "geraadpleegd<sup>55</sup>.<sup>56</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:383
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:384
 msgid ""
 "<p>Not being bound by Talmudic authority, the author did not attempt to "
 "arrive at Taryag (613) mitzvot and did not follow Maimonides' practice of "
@@ -3435,7 +3753,7 @@ msgstr ""
 "behandelden, werden gecombineerd. Dit alles werd gedaan in samenwerking met "
 "Dr. Daniel C. Juster, wiens commentaar royaal is opgenomen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:386
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:387
 msgid ""
 "<p>Differences in the chapter and verse citations among the various "
 "translated sources can be explained by the fact that the translators and "
@@ -3452,7 +3770,7 @@ msgstr ""
 "elimineren van de mitswot die in het Nieuwe Verbond als niet letterlijk "
 "waarneembaar werden beschouwd<sup>57</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:389
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:390
 msgid ""
 "<p>For example, Meir's Positive Mitzvah #MP52 (Deuteronomy 18:4) requires "
 "that we give the kohen the first wool of our sheep. With the Mosaic Covenant"
@@ -3481,11 +3799,11 @@ msgstr ""
 "het geloof dat op Israël is geënt, en dus wordt de mitswa uitgebreid om ook "
 "onze arme broeders te omvatten die onder ons wonen<sup>60</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:395
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:396
 msgid "<h3>14. Matters Left for a Future Volume</h3>"
 msgstr "<h3>14. Zaken die overblijven voor een toekomstig deel</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:398
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:399
 msgid ""
 "<p>Although New Covenant Scriptures (especially mitzvot spoken by Yeshua) "
 "are liberally referenced in this work, a methodical list and commentary of "
@@ -3502,7 +3820,7 @@ msgstr ""
 "een bijlage met een opsomming van de mitswot die door de sjichiem in het "
 "Nieuwe Testament zijn gesproken.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:401
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:402
 msgid ""
 "<p>As a foretaste of what is planned to come, this introduction points "
 "toward a larger structure that includes appendices and indexes rather than "
@@ -3512,11 +3830,11 @@ msgstr ""
 "richting van een grotere structuur die bijlagen en indexen omvat, in plaats "
 "van te proberen alles hier te doen.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:407
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:408
 msgid "<h3>15. Organization and References</h3>"
 msgstr "<h3>15. Organisatie en referenties</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:410
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:411
 msgid ""
 "<p>The organization of this book and the Scripture verses selected to "
 "support each mitzvah are not necessarily the same as those of the classical "
@@ -3532,7 +3850,7 @@ msgstr ""
 "afgeleid van andere delen van de Tenach dan de Thora, en mitswot afgeleid "
 "van de apostolische geschriften.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:413
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:414
 msgid ""
 "<p>The following list summarizes this book's overall approach and "
 "content:</p>"
@@ -3540,7 +3858,7 @@ msgstr ""
 "<p>De volgende lijst vat de algemene aanpak en inhoud van dit boek "
 "samen:</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:417
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:418
 msgid ""
 "<li>Cross-references to the mitzvot identified by Maimonides, Meir and "
 "HaChinuch, and to additional Scriptures not referenced by them.</li>"
@@ -3549,7 +3867,7 @@ msgstr ""
 "en HaChinuch, en naar aanvullende Schriftgedeelten waarnaar niet door hen "
 "wordt verwezen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:420
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:421
 msgid ""
 "<li>Mitzvot identified by Maimonides, Meir and HaChinuch that I do not deem "
 "observable in the New Covenant.</li>"
@@ -3557,7 +3875,7 @@ msgstr ""
 "<li>Mitzvot geïdentificeerd door Maimonides, Meir en HaChinuch die ik niet "
 "waarneembaar acht in het Nieuwe Verbond.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:423
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:424
 msgid ""
 "<li>Mitzvot not traditionally recognized, yet which I deem relevant in the "
 "New Covenant.</li>"
@@ -3565,12 +3883,12 @@ msgstr ""
 "<li>Mitzvot wordt niet traditioneel erkend, maar toch acht ik relevant in "
 "het Nieuwe Verbond.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:426
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:427
 msgid "<li>Interpretations of Scripture from a New Covenant perspective.</li>"
 msgstr ""
 "<li>Interpretaties van de Schrift vanuit een Nieuw Verbondsperspectief.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:429
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:430
 msgid ""
 "<li>A selective commentary that includes differences in the classical "
 "commentators' perspectives, New Covenant interpretation, and application to "
@@ -3580,11 +3898,11 @@ msgstr ""
 "de klassieke commentatoren, de interpretatie van het Nieuwe Verbond en de "
 "toepassing op Joden en heidenen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:432
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:433
 msgid "<li>Mitzvot organized into subject categories.</li>"
 msgstr "<li>Mitzvot georganiseerd in onderwerpcategorieën.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:435
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:436
 msgid ""
 "<li>A New Covenant Literal Application (NCLA) code designation for each "
 "mitzvah, assigning one of seven possible literal compliance levels.</li>"
@@ -3593,56 +3911,56 @@ msgstr ""
 "mitswa, waarbij een van de zeven mogelijke letterlijke nalevingsniveaus "
 "wordt toegewezen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:438
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:439
 msgid "<li>A Table of Contents.</li>"
 msgstr "<li>Een inhoudsopgave.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:441
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:442
 msgid "<li>A Preface.</li>"
 msgstr "<li>Een voorwoord.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:444
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:445
 msgid "<li>This Introduction.</li>"
 msgstr "<li>Deze introductie.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:447
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:448
 msgid "<li>An Introduction by Daniel C. Juster.</li>"
 msgstr "<li>Een inleiding door Daniel C. Juster.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:450
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:451
 msgid "<li>An article on Paul's understanding of the Torah.</li>"
 msgstr "<li>Een artikel over Paulus' begrip van de Torah.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:453
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:454
 msgid "<li>A Subject Index.</li>"
 msgstr "<li>A Onderwerpindex.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:456
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:457
 msgid "<li>An English-versified Scripture Index of Hebrew Scriptures.</li>"
 msgstr "<li>Een Engelstalige index van Hebreeuwse Geschriften.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:459
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:460
 msgid "<li>A Hebrew-versified Scripture Index of Hebrew Scriptures.</li>"
 msgstr ""
 "<li>Een Hebreeuws-versifieerde schriftindex van Hebreeuwse Geschriften.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:462
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:463
 msgid "<li>A Scripture Index of New Covenant Scriptures.</li>"
 msgstr "<li>Een index van de Schriften uit het Nieuwe Verbond.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:465
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:466
 msgid "<li>A Maimonides Mitzvah Cross-Reference Index.</li>"
 msgstr "<li>Een kruisverwijzingsindex van Maimonides Mitswa.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:468
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:469
 msgid "<li>A Meir Mitzvah Cross-Reference Index.</li>"
 msgstr "<li>Een Meir Mitswa-kruisverwijzingsindex.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:471
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:472
 msgid "<li>A Chinuch Mitzvah Cross-Reference Index.</li>"
 msgstr "<li>Een kruisverwijzingsindex van Chinuch Mitswa.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:474
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:475
 msgid ""
 "<li>An Index of Three Classical Commentators' Mitzvot Arranged in Order of "
 "HaChinuch's Mitzvah Numbers and Labeled according to Weekly Parashiyot.</li>"
@@ -3651,7 +3969,7 @@ msgstr ""
 "volgorde van de mitswa-nummers van HaChinuch en gelabeld volgens de "
 "wekelijkse parashiyot.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:477
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:478
 msgid ""
 "<li>An Index of Scriptures Cited by Three Classical Commentators Arranged "
 "according to Weekly Parashiyot.</li>"
@@ -3659,20 +3977,20 @@ msgstr ""
 "<li>Een index van de Schriften, geciteerd door drie klassieke commentatoren,"
 " gerangschikt volgens de wekelijkse Parashiyot.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:480
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:481
 msgid "<li>Maimonides' List of Positive and Negative Mitzvot.</li>"
 msgstr "<li>Maimonides' lijst met positieve en negatieve mitswot.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:483
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:484
 msgid "<li>A List of Explicit Mitzvot of the New Covenant Shlichim.</li>"
 msgstr ""
 "<li>Een lijst met expliciete mitswot van het Nieuwe Verbond Shlichim.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:486
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:487
 msgid "<li>A Hebrew Word Glossary.</li>"
 msgstr "<li>Een woordenlijst met Hebreeuwse woorden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:490
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:491
 msgid ""
 "<p>There is a modern work, \"The Mitzvot: The Commandments and their "
 "Rationale\" by Abraham Chill<sup>61</sup>, that I consult from time to time "
@@ -3686,7 +4004,7 @@ msgstr ""
 "commentaar, uitgebreide verwijzingen bevat naar klassieke rabbijnse "
 "literatuur.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:493
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:494
 msgid ""
 "<p>There is another modern work \"The 613 Mitzvot: A Contemporary Guide to "
 "the Commandments of Judaism\" by Ronald L. Eisenberg<sup>62</sup>, that I "
@@ -3701,7 +4019,7 @@ msgstr ""
 "Maimonides te bepalen aan de hand van het citaat uit de Schrift, en vice "
 "versa.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:496
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:497
 msgid ""
 "<p>In addition to the rabbinical commentaries that focus on the mitzvot, "
 "there are others of a more general character, and there are also Messianic "
@@ -3713,7 +4031,7 @@ msgstr ""
 "commentaren zoals David H. Stern's <em>Joods Nieuwe Testament "
 "Commentaar</em><sup>63</sup>, die ik van tijd tot tijd raadpleeg tijd.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:499
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:500
 msgid ""
 "<p>Finally, I should like to say a word about usage. The writings of Meir, "
 "Maimonides, HaChinuch, and my writings as well, are attempts at "
@@ -3737,11 +4055,11 @@ msgstr ""
 " mezelf in dit boek en daarmee is er geen gebrek aan respect voor God "
 "bedoeld.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:505
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:506
 msgid "<h3>16. Two Kinds of Mitzvot</h3>"
 msgstr "<h3>16. Twee soorten mitswot</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:508
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:509
 msgid ""
 "<p>The Law of Messiah Mitzvot in this book are of two kinds: (1) inclusive "
 "of one or more of the classical mitzvot (those from Maimonides, Meir, or "
@@ -3757,7 +4075,7 @@ msgstr ""
 "die door de auteurs hierin zijn geschreven, gebaseerd zijn op teksten uit de"
 " hele Bijbel.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:511
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:512
 msgid ""
 "<p>Those containing Scripture references from the classical mitzvah "
 "compilations are marked by an asterisk in the Table of Contents, and one or "
@@ -3774,11 +4092,11 @@ msgstr ""
 "lijken; deze worden niet noodzakelijkerwijs in een canonieke volgorde "
 "gepresenteerd.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:517
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:518
 msgid "<h3>17. Choice of Translation</h3>"
 msgstr "<h3>17. Keuze van vertaling</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:520
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:521
 msgid ""
 "<p>The mitzvot which are the subject of this book derive from the original "
 "biblical languages and not from any English or other translation. "
@@ -3801,7 +4119,7 @@ msgstr ""
 "nuances van de Bijbel naar voren brengt, en dit ondanks dat Dr. Stern zelf "
 "zegt: </p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:524
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:525
 msgid ""
 "<p>So the Tanakh you have in this book is something between a translation "
 "and a paraphrase; since it is partly one and partly the other, I refuse to "
@@ -3815,11 +4133,11 @@ msgstr ""
 "daarvan eenvoudigweg een \"versie\". Aan de andere kant zijn de boeken van "
 "het Nieuwe Verbond mijn vertaling uit het originele Grieks.<sup>65</sup></p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:531
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:532
 msgid "<h3>18. Collaboration with Daniel C. Juster</h3>"
 msgstr "<h3>18. Samenwerking met Daniel C. Juster</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:534
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:535
 msgid ""
 "<p>This book has been written in collaboration with Dr. Daniel C. Juster. "
 "Dr. Juster is a shaliach of Tikkun, an international network of Messianic "
@@ -3836,11 +4154,11 @@ msgstr ""
 "zijn enige bestempeld, maar in veel gevallen zijn zijn commentaar en dat van"
 " de auteur naadloos geïntegreerd.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:540
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:541
 msgid "<h3>19. A Work to Build Upon</h3>"
 msgstr "<h3>19. Een werk om op voort te bouwen</h3>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:543
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:544
 msgid ""
 "<p>The uniqueness of this book is not so much in its commentary (although I "
 "have prayerfully sought God's wisdom while writing it), but in its utility "
@@ -3871,7 +4189,7 @@ msgstr ""
 "gemaakt van de geleerden die de regels verklaarden waarop hij "
 "vertrouwde<sup>67</sup>.</p>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:553
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:554
 msgid ""
 "<li>R. Laird Harris, editor, <em>Theological Wordbook of the Old "
 "Testament</em>, TWOT No. 910, p. 404, Moody Press (Chicago, Illinois: "
@@ -3881,7 +4199,7 @@ msgstr ""
 "Testament</em>, TWOT nr. 910, p. 404, Moody Press (Chicago, Illinois: "
 "1980).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:556
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:557
 msgid ""
 "<li>Francis Brown, editor, <em>The New Brown-Driver-Briggs-Gesenius Hebrew "
 "and English Lexicon</em>, \"Torah\", p. 435-436, Hendrickson Publishers "
@@ -3891,7 +4209,7 @@ msgstr ""
 "Hebreeuws en Engels Lexicon</em>, \"Torah\", p. 435-436, Hendrickson "
 "Publishers (Peabody, Massachusetts: 1979).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:559
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:560
 msgid ""
 "<li>Louis Isaac Rabinowitz, <em>Encyclopedia Judaica</em>, \"Torah\", vol. "
 "15, pp. 1235-36, Keter Publishing House Ltd. (Jerusalem: 1971).</li>"
@@ -3899,7 +4217,7 @@ msgstr ""
 "<li>Louis Isaac Rabinowitz, <em>Encyclopedie Judaica</em>, \"Torah\", vol. "
 "15, pp. 1235-1236, Keter Publishing House Ltd. (Jeruzalem: 1971).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:562
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:563
 msgid ""
 "<li>Except where otherwise noted or as part of a quotation, the English "
 "translation of Scripture used in this book is from David H. Stern's "
@@ -3920,7 +4238,7 @@ msgstr ""
 "Testament Publications, Inc.\" en mag niet worden gereproduceerd zonder zijn"
 " toestemming.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:565
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:566
 msgid ""
 "<li>\"A commandment is an order from, and enforceable by, a singular "
 "authority such as a king.\" Francis Brown, editor, <em>The New Brown-Driver-"
@@ -3932,7 +4250,7 @@ msgstr ""
 "Briggs-Gesenius Hebreeuws en Engels Lexicon</em>, \"mitswa\", p. 846, "
 "Hendrickson Publishers (Peabody, Massachusetts: 1979).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:568
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:569
 msgid ""
 "<li>A statute is a legislated directive, generally enforceable by a branch "
 "of government. An ordinance is similar, but at a lower level.</li>"
@@ -3941,7 +4259,7 @@ msgstr ""
 "afgedwongen door een onderdeel van de overheid. Een verordening is "
 "vergelijkbaar, maar op een lager niveau.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:571
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:572
 msgid ""
 "<li>A judgement is law created by a decision made in a case in controversy "
 "or a specific situation.</li>"
@@ -3949,7 +4267,7 @@ msgstr ""
 "<li>Een vonnis is een wet die tot stand is gekomen door een beslissing die "
 "is genomen in een controversiële zaak of een specifieke situatie.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:574
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:575
 msgid ""
 "<li>The CJB verse numbering for these verses is not standard; the majority "
 "Tanakh Hebrew verse numbering is Jeremiah 31:31-34.</li>"
@@ -3957,7 +4275,7 @@ msgstr ""
 "<li>De CJB versnummering voor deze verzen is niet standaard; de meerderheid "
 "van de Hebreeuwse verzen in de Tenach is Jeremia 31:31-34.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:577
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:578
 msgid ""
 "<li>Timothy &amp; Barbara Friberg, <em>Analytical Lexicon to the Greek New "
 "Testament</em>, BibleWorks 4.0, Hermeneutica Bible Research Software (Big "
@@ -3967,7 +4285,7 @@ msgstr ""
 " Testament</em>, BibleWorks 4.0, Hermeneutica Bible Research Software (Big "
 "Fork, Montana: 1999).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:580
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:581
 msgid ""
 "<li>David H. Stern, <em>Jewish New Testament</em>, 1st ed., p. 302, Jewish "
 "New Testament Publications (Clarksville, Maryland: 1991).</li>"
@@ -3975,7 +4293,7 @@ msgstr ""
 "<li>David H. Stern, <em>Joods Nieuwe Testament</em>, 1e druk, p. 302, Joodse"
 " nieuwtestamentische publicaties (Clarksville, Maryland: 1991).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:583
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:584
 msgid ""
 "<li>George Morrish, editor, <em>A Concordance of the Septuagint</em>, p. "
 "166, Zondervan Publishing House (Grand Rapids, Michigan: 1988).</li>"
@@ -3983,7 +4301,7 @@ msgstr ""
 "<li>George Morrish, redacteur, <em>Een concordantie van de Septuaginta</em>,"
 " p. 166, Zondervan Publishing House (Grand Rapids, Michigan: 1988).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:586
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:587
 msgid ""
 "<li>According to MJ 8:6&amp;N, the New Covenant itself \"has been made "
 "Torah\". David H. Stern, <em>Jewish New Testament Commentary</em>, 1st ed., "
@@ -3995,7 +4313,7 @@ msgstr ""
 "nieuwtestamentische publicaties (Clarksville, Maryland: 1992). Zie ook blz. "
 "220 en 466.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:589
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:590
 msgid ""
 "<li>Joseph Telushkin, <em>Jewish Literacy</em>, p. 23, William Morrow and "
 "Company, Inc. (New York: 1991).</li>"
@@ -4003,7 +4321,7 @@ msgstr ""
 "<li>Joseph Telushkin, <em>Joodse geletterdheid</em>, p. 23, William Morrow "
 "and Company, Inc. (New York: 1991).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:592
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:593
 msgid ""
 "<li>The Pentateuch also contains the lives of the patriarchs of earlier "
 "covenants.</li>"
@@ -4011,11 +4329,11 @@ msgstr ""
 "<li>De Pentateuch bevat ook de levens van de patriarchen van eerdere "
 "verbonden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:595
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:596
 msgid "<li>Yeshua's priesthood begins with his resurrection.</li>"
 msgstr "<li>Jesjoea's priesterschap begint met zijn opstanding.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:598
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:599
 msgid ""
 "<li>This categorization, to wit, Torah, Nevi'im and Ketuvim, has resulted in"
 " the Rabbinical canon of the Bible being known by the acronym Tanakh. It is "
@@ -4027,7 +4345,7 @@ msgstr ""
 "Tenach. Het is opmerkelijk dat Yeshua Zelf in deze categorieën naar de "
 "Schrift verwees (Lucas 24:44).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:601
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:602
 msgid ""
 "<li>The terms \"statutory law\" and \"statutes\", as used here, contemplate "
 "ordinances as well.</li>"
@@ -4035,7 +4353,7 @@ msgstr ""
 "<li>De termen \"wettelijk recht\" en \"statuten\", zoals hier gebruikt, "
 "hebben ook betrekking op verordeningen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:604
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:605
 msgid ""
 "<li>Mosaic statutes are not enforceable as law in the New Covenant; it is "
 "their underlying teaching (Torah) and not the statutes themselves that carry"
@@ -4045,7 +4363,7 @@ msgstr ""
 "het is hun onderliggende leer (Torah) en niet de statuten zelf die worden "
 "overgedragen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:607
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:608
 msgid ""
 "<li>Some believe that the Mosaic Covenant has already \"vanished\" as "
 "evidenced by Israel's two thousand-year inability to conduct the Temple "
@@ -4055,7 +4373,7 @@ msgstr ""
 "blijkt uit Israëls tweeduizend jaar durende onvermogen om de tempeloffers te"
 " brengen (de tempel werd verwoest in 70 na Christus).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:610
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:611
 msgid ""
 "<li>The author does not believe that the temple, priesthood, and statutes "
 "prophesied in Ezekiel 40-48 indicate a revitalization of the Mosaic "
@@ -4065,12 +4383,12 @@ msgstr ""
 "geprofeteerd in Ezechiël 40-48, wijzen op een heropleving van het Mozaïsche "
 "Verbond.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:613
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:685
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:614
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:686
 msgid "<li>Rabbinical Jews do not believe that Yeshua is the Messiah.</li>"
 msgstr "<li>Rabbijnse Joden geloven niet dat Yeshua de Messias is.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:616
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:617
 msgid ""
 "<li>Messianic Jews and Gentiles affiliated with them do not look to the "
 "Talmud for authoritative interpretation.</li>"
@@ -4078,8 +4396,8 @@ msgstr ""
 "<li>Messiaanse Joden en heidenen die met hen verbonden zijn, kijken niet "
 "naar de Talmoed voor gezaghebbende interpretatie.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:619
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:691
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:620
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:692
 msgid ""
 "<li>Rabbinical Jews do not consider these Apostolic Writings to be "
 "Scripture.</li>"
@@ -4087,13 +4405,13 @@ msgstr ""
 "<li>Rabbijnse joden beschouwen deze apostolische geschriften niet als de "
 "Schrift.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:622
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:623
 msgid ""
 "<li>Rabbinical Jews do not acknowledge the existence of a New Covenant.</li>"
 msgstr ""
 "<li>Rabbijnse Joden erkennen het bestaan ​​van een Nieuw Verbond niet.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:625
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:626
 msgid ""
 "<li>This verse of Scripture is sometimes wrongly generalized to mean that "
 "all the commandments of Torah are applicable to Jews and Gentiles in the "
@@ -4107,7 +4425,7 @@ msgstr ""
 "van dit Bijbelgedeelte gaat over de vreemdeling die de Pesach wilde eten en "
 "daarom besneden moest worden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:628
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:629
 msgid ""
 "<li>Even if one generalizes the verse from its narrow context of Pesach and "
 "circumcision, the CJB's choice of the word \"teaching\" rather than \"law\" "
@@ -4119,8 +4437,8 @@ msgstr ""
 "'onderwijs' in plaats van 'wet' dat er verschillende toepassingen kunnen "
 "zijn voor de Jood en de heiden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:631
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:724
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:632
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:725
 msgid ""
 "<li>The author believes that after Yeshua's death and prior to the 70 c.e. "
 "destruction, both the Mosaic and the New Covenant existed simultaneously, "
@@ -4138,8 +4456,8 @@ msgstr ""
 "de auteur van mening dat we enthousiast moeten nastreven waar God naartoe "
 "leidt – en niet stil moeten staan ​​bij wat Hij wil beëindigen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:634
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:727
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:635
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:728
 msgid ""
 "<li>There is a reference to what we understand to be a Millennial Temple in "
 "Ezekiel, that some think implies a future restoration of a functioning "
@@ -4149,7 +4467,7 @@ msgstr ""
 " in Ezechiël, waarvan sommigen denken dat dit een toekomstig herstel "
 "impliceert van een functionerend Levitisch priesterschap.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:637
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:638
 msgid ""
 "<li>It is interesting to note that Maimonides' positive Mitzvah #RP195, the "
 "counterpart to Meir's positive Mitzvah #MP58, does not so clearly limit the "
@@ -4159,7 +4477,7 @@ msgstr ""
 "#RP195, de tegenhanger van Meir's positieve Mitswa #MP58, de toepassing van "
 "naastenliefde niet zo duidelijk beperkt tot medejoden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:640
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:641
 msgid ""
 "<li>Although most Hebrew and English renderings of Sefer haMitzvot, Sefer "
 "haMitzvot haKatzar and Sefer haChinuch contain parenthetical chapter and "
@@ -4178,7 +4496,7 @@ msgstr ""
 "onduidelijkheden over welke Schriftplaatsen bedoeld waren als de geciteerde "
 "woorden op meer dan één plaats in de Thora voorkomen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:643
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:644
 msgid ""
 "<li>Even commandments which are no longer observable have teaching value for"
 " our lives (Galatians 3:24, 2 Timothy 3:16-17).</li>"
@@ -4186,11 +4504,11 @@ msgstr ""
 "<li>Zelfs geboden die niet langer waarneembaar zijn, hebben leerwaarde voor "
 "ons leven (Galaten 3:24, 2 Timotheüs 3:16-17).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:646
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:647
 msgid "<li>Mak. 23b</li>"
 msgstr "<li>Mak. 23b</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:649
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:650
 msgid ""
 "<li>I. Brull, <em>Jewish Encyclopedia</em>, \"Commandments, the 613\", vol. "
 "4, p. 181 (ed. Isidore Singer, New York: 1901-1906). Describes the opinions "
@@ -4202,7 +4520,7 @@ msgstr ""
 "van vroege Joodse geleerden over de selectie van geboden waaruit de Taryag "
 "bestaat.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:652
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:653
 msgid ""
 "<li>Some critics remained, notably Moshe ben Nachman Gerondi "
 "(Nachmanides).</li>"
@@ -4210,7 +4528,7 @@ msgstr ""
 "<li>Sommige critici bleven bestaan, met name Moshe ben Nachman Gerondi "
 "(Nachmanides).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:655
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:656
 msgid ""
 "<li><em>Sefer HaChinuch</em> and Nachmanides' criticisms are based upon "
 "Maimonides' first version.</li>"
@@ -4218,11 +4536,11 @@ msgstr ""
 "<li><em>Sefer HaChinuch</em> en de kritiek van Nachmanides zijn gebaseerd op"
 " de eerste versie van Maimonides.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:658
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:659
 msgid "<li>Known respectfully as \"the Chafetz Chaim\".</li>"
 msgstr "<li>Respectvol bekend als \"de Chafetz Chaim\".</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:661
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:662
 msgid ""
 "<li>English adaptation and notes by Charles Wengrove, Feldheim Publishers, "
 "Jerusalem / New York, 1990.</li>"
@@ -4230,7 +4548,7 @@ msgstr ""
 "<li>Engelse bewerking en aantekeningen door Charles Wengrove, Feldheim "
 "Publishers, Jeruzalem / New York, 1990.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:664
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:665
 msgid ""
 "<li>For Maimonides, this may be confirmed (without consulting <em>Kitab al "
 "Fara'id</em> in Arabic) by consulting early copies of <em>Sefer "
@@ -4241,7 +4559,7 @@ msgstr ""
 "<em>Sefer haMitzvot</em> te raadplegen, die allemaal geen hoofdstuk- en "
 "versreferenties bevatten.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:667
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:668
 msgid ""
 "<li>For Meir, see Yisrael Meir haKohen, <em>Sefer haMitzvot haKatzar (The "
 "Concise Book of Mitzvot)</em>, p. VIII, (Charles Wengrove, trans. &amp; ed.;"
@@ -4251,7 +4569,7 @@ msgstr ""
 "beknopte boek van Mitswot)</em>, p. VIII, (Charles Wengrove, vert. & red.; "
 "Jerusalem: Feldheim Publishers, 1990).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:670
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:671
 msgid ""
 "<li>E.g. see Moshe ben Maimon, <em>Sefer haMitzvot</em>, vol. 1 of "
 "<em>Rambam L'am</em>, (Jerusalem: <em>Mossad harav kook</em>, 1957) and "
@@ -4263,7 +4581,7 @@ msgstr ""
 " 1971 (beide in het Hebreeuws). De eerste bevat verwijzingen naar "
 "hoofdstukken en verzen, terwijl de laatste dat niet doet.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:673
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:674
 msgid ""
 "<li>To see an example of this in English, compare Positive <em>Mitzvah</em> "
 "#1 appearing in Moshe ben Maimon (Maimonides), <em>The Commandments</em>, "
@@ -4284,7 +4602,7 @@ msgstr ""
 "laatste slechts de paar woorden bevat van het vers dat door Maimonides wordt"
 " aangehaald.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:676
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:677
 msgid ""
 "<li>A few differences exist between this list and <em>Sefer haMitzvot</em>, "
 "particularly in the Scriptures chosen as proof texts.</li>"
@@ -4293,7 +4611,7 @@ msgstr ""
 "haMitzvot</em>, vooral in de Schriftplaatsen die als bewijsteksten zijn "
 "gekozen.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:679
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:680
 msgid ""
 "<li>Alternatively, the <em>Chumash</em>, which consists of the Pentateuch "
 "and selections from the remainder of the <em>Tanakh</em>.</li>"
@@ -4301,7 +4619,7 @@ msgstr ""
 "<li>Als alternatief de <em>Chumash</em>, die bestaat uit de Pentateuch en "
 "selecties uit de rest van de <em>Tanakh</em>.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:682
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:683
 msgid ""
 "<li>Aaron haLevi of Barcelona, <em>Sefer haHinnuch</em>, vols. 1-5, p.xiii, "
 "(Charles Wengrove, trans,. Jerusalem/New York: Feldheim Publishers, "
@@ -4311,7 +4629,7 @@ msgstr ""
 "p.xiii, (Charles Wengrove, vert., Jerusalem/New York: Feldheim Publishers, "
 "1978-89).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:688
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:689
 msgid ""
 "<li>Messianic Jews and Gentiles affiliated with them do not look to the "
 "<em>Talmud</em> for authoritative interpretation.</li>"
@@ -4319,13 +4637,13 @@ msgstr ""
 "<li>Messiaanse Joden en heidenen die met hen verbonden zijn, kijken niet "
 "naar de <em>Talmoed</em> voor gezaghebbende interpretaties.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:694
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:695
 msgid ""
 "<li>Rabbinical Jews do not acknowledge the existence of a New Covenant</li>"
 msgstr ""
 "<li>Rabbijnse Joden erkennen het bestaan ​​van een Nieuw Verbond niet</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:697
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:698
 msgid ""
 "<li>This verse of Scripture is sometimes wrongly generalized to mean that "
 "all the commandments of <em>Torah</em> are applicable to Jews and Gentiles "
@@ -4339,7 +4657,7 @@ msgstr ""
 "dit Schriftgedeelte gaat over de vreemdeling die de <em>Pesach</em> wilde "
 "eten en daarom besneden moest worden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:700
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:701
 msgid ""
 "<li>Even if one generalizes the verse from its narrow context of "
 "<em>Pesach</em> and circumcision, the CJB's choice of the word \"teaching\" "
@@ -4351,7 +4669,7 @@ msgstr ""
 "woord 'onderwijs' in plaats van 'wet' dat er verschillende toepassingen "
 "kunnen zijn voor de Jood en de heiden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:703
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:704
 msgid ""
 "<li>Yisrael Meir haKohen, <em>Sefer haMitzvot haKatzar (The Concise Book of "
 "Mitzvot)</em> (Charles Wengrove, trans. &amp; ed.; Jerusalem: Feldheim "
@@ -4361,7 +4679,7 @@ msgstr ""
 "van Mitswot)</em> (Charles Wengrove, vert. & red.; Jerusalem: Feldheim "
 "Publishers, 1990).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:706
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:707
 msgid ""
 "<li>Moshe ben Maimon (Maimonides), <em>The Commandments</em>, (Charles B. "
 "Chavel, trans. &amp; ed.; London: The Soncino Press, 1967).</li>"
@@ -4369,7 +4687,7 @@ msgstr ""
 "<li>Moshe ben Maimon (Maimonides), <em>De geboden</em>, (Charles B. Chavel, "
 "vert. & red.; Londen: The Soncino Press, 1967).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:709
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:710
 msgid ""
 "<li>Moshe ben Maimon (Maimonides), <em>Sefer HaMitzvot (The Book of "
 "Mitzvot)</em>, vols 21 &amp; 22 in the Mishneh Torah series, (Shraga "
@@ -4379,7 +4697,7 @@ msgstr ""
 "Mitswot)</em>, delen 21 en 22 in de Mishneh Torah-serie, (Shraga "
 "Silverstein, vert.; New York: Moznaim Publishing Corporation, 1993).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:712
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:713
 msgid ""
 "<li>Aaron haLevi of Barcelona, <em>Sefer haHinnuch</em>, vols. 1-5, p. xiii,"
 " (Charles Wengrove, trans.; Jerusalem/New York: Feldheim Publishers, "
@@ -4389,7 +4707,7 @@ msgstr ""
 "xiii, (Charles Wengrove, vert.; Jeruzalem/New York: Feldheim Publishers, "
 "1978-89).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:715
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:716
 msgid ""
 "<li>Moshe ben Maimon (Maimonides), <em>Sefer haMitzvot</em>, 10th ed.; vol. "
 "1 in the <em>Rambam L'am</em> (Yosef Kapach, trans.; Jerusalem: Mossad Harav"
@@ -4399,7 +4717,7 @@ msgstr ""
 "1 in de <em>Rambam L'am</em> (Yosef Kapach, vert.; Jeruzalem: Mossad Harav "
 "Kook, 1990).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:718
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:719
 msgid ""
 "<li>Although most Hebrew and English renderings of <em>Sefer haMitzvot</em>,"
 " <em>Sefer haMitzvot haKatzar</em> and <em>Sefer haChinuch</em> contain "
@@ -4420,7 +4738,7 @@ msgstr ""
 "over welke Schriftgedeelten bedoeld waren als de geciteerde woorden op meer "
 "dan één plaats voorkomen in de <em>Torah</em>.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:721
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:722
 msgid ""
 "<li>Even commandments which are no longer observable have teaching value for"
 " our lives (<em>Galatians 3:24</em>, <em>2 Timothy 3:16-17</em>).</li>"
@@ -4428,7 +4746,7 @@ msgstr ""
 "<li>Zelfs geboden die niet langer waarneembaar zijn, hebben leerwaarde voor "
 "ons leven (<em>Galaten 3:24</em>, <em>2 Timotheüs 3:16-17</em>).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:730
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:731
 msgid ""
 "<li>It is interesting to note that Maimonides' positive <em>Mitzvah</em> "
 "#RP195, the counterpart to Meir's positive <em>Mitzvah</em> #MP58, does not "
@@ -4439,7 +4757,7 @@ msgstr ""
 "<em>Mitzvah</em> #MP58, de toepassing van naastenliefde niet zo duidelijk "
 "beperkt tot medejoden.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:733
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:734
 msgid ""
 "<li>Abraham Chill, <em>The Mitzvot: The Commandments and their "
 "Rationale</em>, 2nd ed., (Jerusalem, Keter Publishing House, 2000).</li>"
@@ -4447,7 +4765,7 @@ msgstr ""
 "<li>Abraham Chill, <em>De mitswot: de geboden en hun grondgedachten</em>, 2e"
 " ed., (Jeruzalem, Keter Publishing House, 2000).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:736
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:737
 msgid ""
 "<li>Ronald L. Eisenberg, <em>The 613 Mitzvot: A Contemporary Guide to the "
 "Commandments of Judaism</em>, (Rockville, Maryland: Schreiber Publishing, "
@@ -4457,11 +4775,11 @@ msgstr ""
 "geboden van het jodendom</em>, (Rockville, Maryland: Schreiber Publishing, "
 "2005).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:739
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:740
 msgid "<li>David H. Stern, <em>Jewish New Testament Commentary</em>.</li>"
 msgstr "<li>David H. Stern, <em>Jewish New Testament Commentary</em>.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:742
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:743
 msgid ""
 "<li>Stern, <em>Complete Jewish Bible (CJB)</em>. The copyright of \"The "
 "Complete Jewish Bible\" and its translation are held by \"Jewish New "
@@ -4473,11 +4791,11 @@ msgstr ""
 "Testament Publications, Inc.\" en mag niet worden gereproduceerd zonder zijn"
 " toestemming.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:745
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:746
 msgid "<li>Stern, <em>CJB</em>, p. xiv.</li>"
 msgstr "<li>Stern, <em>CJB</em>, p. xiv.</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:748
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:749
 msgid ""
 "<li>Nahum Rakover, ed., <em>Maimonides as Codifier of Jewish Law</em>, p. "
 "26, in the Library of Jewish Law, (Jerusalem: The Jewish Legal Heritage "
@@ -4487,7 +4805,7 @@ msgstr ""
 "wet</em>, p. 26, in de Bibliotheek voor Joods Recht, (Jeruzalem: The Jewish "
 "Legal Heritage Society, 1987).</li>"
 
-#: lawofmessiah_app/templates/authors/michael_rudolph.html:751
+#: lawofmessiah_app/templates/authors/michael_rudolph.html:752
 msgid "<li>Ibid., p. 39.</li>"
 msgstr "<li>Ibid., p. 39.</li>"
 
@@ -4543,75 +4861,75 @@ msgid "Bible references"
 msgstr "Bijbelteksten"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:41
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:378
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:386
 msgid "Commentary"
 msgstr "Commentaar"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:48
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:407
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:469
 msgid "Drawings"
 msgstr "Illustraties"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:55
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:665
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:727
 msgid "Pictures"
 msgstr "Afbeeldingen"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:62
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:429
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:491
 msgid "Superbook"
 msgstr "Superbook"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:69
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:453
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:515
 msgid "De Henkie Show"
 msgstr "De Henkie Show"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:76
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:477
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:539
 msgid "Short Movies"
 msgstr "Korte Filmpjes"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:83
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:501
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:563
 msgid "Songs"
 msgstr "Liederen"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:90
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:525
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:587
 msgid "Movies"
 msgstr "Films"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:97
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:549
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:611
 msgid "Testimonies"
 msgstr "Getuigenissen"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:104
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:597
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:659
 msgid "Blogs"
 msgstr "Blogs"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:111
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:616
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:678
 msgid "Sermons"
 msgstr "Preken"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:118
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:638
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:700
 msgid "Books"
 msgstr "Boeken"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:156
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:84
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:243
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:86
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:247
 #: lawofmessiah_app/templates/pages/index.html:103
 #: lawofmessiah_app/templates/pages/index.html:255
 msgid "Category"
 msgstr "Categorie"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:157
-#: lawofmessiah_app/templates/maimonides/listing.html:38
+#: lawofmessiah_app/templates/maimonides/listing.html:40
 msgid "Type"
 msgstr "Type"
 
@@ -4628,9 +4946,9 @@ msgid "Uniqueness"
 msgstr "Uniekheid"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:160
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:694
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:109
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:247
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:756
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:111
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:251
 #: lawofmessiah_app/templates/pages/index.html:127
 #: lawofmessiah_app/templates/pages/index.html:259
 msgid "Unique"
@@ -4641,8 +4959,8 @@ msgid "Not unique"
 msgstr "Niet uniek"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:161
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:95
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:245
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:97
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:249
 #: lawofmessiah_app/templates/pages/index.html:114
 #: lawofmessiah_app/templates/pages/index.html:257
 msgid "Classical commandment"
@@ -4701,7 +5019,7 @@ msgid "Person categories"
 msgstr "Van toepassing op persoonscategorieen"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:214
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:154
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:156
 #: lawofmessiah_app/templates/pages/index.html:171
 msgid "Application"
 msgstr "Toepassing"
@@ -4741,8 +5059,10 @@ msgstr ""
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:237
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:239
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:204
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:208
 #: lawofmessiah_app/templates/pages/index.html:218
+#: lawofmessiah_app/views/law_of_messiah_view.py:214
+#: lawofmessiah_app/views/law_of_messiah_view.py:642
 msgid "Jewish"
 msgstr "Joods"
 
@@ -4752,8 +5072,10 @@ msgstr "Gebruikt voor instructie die gericht is op Joodse gelovigen."
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:244
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:246
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:211
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:215
 #: lawofmessiah_app/templates/pages/index.html:225
+#: lawofmessiah_app/views/law_of_messiah_view.py:218
+#: lawofmessiah_app/views/law_of_messiah_view.py:643
 msgid "K'rov Yisrael"
 msgstr "K'rov Yisrael"
 
@@ -4766,8 +5088,10 @@ msgstr ""
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:251
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:253
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:218
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:222
 #: lawofmessiah_app/templates/pages/index.html:232
+#: lawofmessiah_app/views/law_of_messiah_view.py:222
+#: lawofmessiah_app/views/law_of_messiah_view.py:644
 msgid "Gentile"
 msgstr "Niet-Joods"
 
@@ -4812,76 +5136,84 @@ msgid "Key NT Scriptures"
 msgstr "Belangrijke NT-schriftgedeelten"
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:297
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:314
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:333
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:350
-#: lawofmessiah_app/templates/maimonides/listing.html:174
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:318
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:337
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:358
+#: lawofmessiah_app/templates/maimonides/listing.html:176
 msgid "Click to retrieve"
 msgstr "Klik om op te halen"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:308
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:303
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:343
+#, fuzzy
+#| msgid "Commentary"
+msgid "Other Commentary"
+msgstr "Commentaar"
+
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:312
 msgid "Key OT Scriptures"
 msgstr "Belangrijke OT-schriftgedeelten"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:319
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:355
-#: lawofmessiah_app/templates/maimonides/listing.html:179
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:323
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:363
+#: lawofmessiah_app/templates/maimonides/listing.html:181
 msgid "Jewish Commentary"
 msgstr "Joods commentaar"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:327
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:331
 msgid "Supportive NT Scriptures"
 msgstr "Ondersteunende NT-schriftgedeelten"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:344
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:352
 msgid "Supportive OT Scriptures"
 msgstr "Ondersteunende OT-schriftgedeelten"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:363
-#: lawofmessiah_app/templates/maimonides/listing.html:68
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:371
+#: lawofmessiah_app/templates/maimonides/listing.html:70
 msgid "Bible verses copyright"
 msgstr "Bijbelteksten copyright"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:363
-#: lawofmessiah_app/templates/maimonides/listing.html:68
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:371
+#: lawofmessiah_app/templates/maimonides/listing.html:70
 msgid "Not provided for this Bible translation."
 msgstr "Het is niet gelukt de Bijbelvertaling te wijzigen."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:380
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:388
 msgid "Rabbi Michael Rudolph"
 msgstr "Rabbi Michael Rudolph"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:384
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:410
 msgid "Rabbi Daniel Juster"
 msgstr "Rabbi Daniël Juster"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:388
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:432
 msgid "Classical commentators"
 msgstr "Klassieke commentatoren"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:413
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:475
 msgid "Artist"
 msgstr "Artiest"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:573
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:635
 msgid "Law of Messiah motivational video"
 msgstr "Wandel als Jezus motiverende video"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:684
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:746
 msgid "Related Law of Messiah commandments"
 msgstr "Gerelateerde geboden van de Wet van Christus"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:716
-#: lawofmessiah_app/templates/maimonides/listing.html:18
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:778
+#: lawofmessiah_app/templates/maimonides/listing.html:20
 #: templates/base.html:164
 msgid "Classical Commandments"
 msgstr "Klassieke Geboden"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:718
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:780
+#: lawofmessiah_app/views/maimonides_view.py:69
 msgid "Maimonides"
 msgstr "Maimonides"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:719
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:781
 msgid ""
 "Maimonides (Rabbi Moshe ben Maimon, 12th century) organized all 613 Torah "
 "commandments into a structured list. These linked items show where this Law "
@@ -4891,12 +5223,12 @@ msgstr ""
 " in een gestructureerde lijst. Deze gekoppelde items tonen waar dit gebod "
 "uit de Wet van Christus overlap heeft met dat klassieke kader."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:732
-#: lawofmessiah_app/templates/maimonides/listing.html:121
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:794
+#: lawofmessiah_app/templates/maimonides/listing.html:123
 msgid "Meir of Rothenburg"
 msgstr "Meir van Rothenburg"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:733
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:795
 msgid ""
 "Rabbi Meir of Rothenburg (13th century, Germany) was a leading Talmudic "
 "authority. These reference numbers link this commandment to his halachic "
@@ -4906,12 +5238,12 @@ msgstr ""
 "Talmoedische autoriteit. Deze referentienummers koppelen dit gebod aan zijn "
 "halachische uitspraken."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:741
-#: lawofmessiah_app/templates/maimonides/listing.html:133
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:803
+#: lawofmessiah_app/templates/maimonides/listing.html:135
 msgid "Sefer HaChinuch"
 msgstr "Sefer HaChinuch"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:742
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:804
 msgid ""
 "The Sefer HaChinuch (13th century) is a systematic presentation of all 613 "
 "commandments, organized by weekly Torah portion. These reference numbers "
@@ -4921,11 +5253,11 @@ msgstr ""
 "geboden, geordend per wekelijks Torahgedeelte. Deze referentienummers "
 "koppelen dit gebod aan dat werk."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:763
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:825
 msgid "Related 77 steps"
 msgstr "in 77 stappen"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:764
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:826
 msgid ""
 "The 77 Steps are a beginner's guide to walking as Jesus walked, designed to "
 "be studied together in a group. These connected steps show where this Law of"
@@ -4936,11 +5268,11 @@ msgstr ""
 "waar dit gebod uit de Wet van Christus terugkomt in dat "
 "introductieprogramma."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:783
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:845
 msgid "Source and License"
 msgstr "Bron en licentie"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:784
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:846
 msgid ""
 "Based on <em>The Law of Messiah - Torah from a New Covenant Perspective</em>"
 " by Michael Rudolph and Daniel C. Juster."
@@ -4948,22 +5280,22 @@ msgstr ""
 "Bronmateriaal: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> door Michael Rudolph en Daniel C. Juster."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:786
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:50
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:848
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:52
 msgid "Volume 1 & 2"
 msgstr "Deel 1 & 2"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:787
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:51
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:849
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:53
 msgid "Volume 3"
 msgstr "Deel 3"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:789
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:851
 msgid "License: CC BY-ND 4.0 (Attribution required, NoDerivatives)."
 msgstr ""
 "Licentie: CC BY-ND 4.0 (naamsvermelding vereist, geen afgeleide producten)."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:790
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:852
 msgid ""
 "Disclaimer: the original content is authored by Rabbi Michael Rudolph and "
 "Rabbi Daniel Juster; additional notes or implementation details on this "
@@ -4975,16 +5307,16 @@ msgstr ""
 " op deze website maken geen deel uit van hun oorspronkelijke werk en "
 "vertegenwoordigen niet hun standpunten."
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:793
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:795
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:855
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:857
 msgid "Record source"
 msgstr "Bron opnemen"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:798
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:860
 msgid "Copyright note"
 msgstr "Copyright-opmerking"
 
-#: lawofmessiah_app/templates/law_of_messiah/detail.html:805
+#: lawofmessiah_app/templates/law_of_messiah/detail.html:867
 msgid "Back to overview"
 msgstr "Terug naar overzicht"
 
@@ -5008,7 +5340,7 @@ msgstr ""
 "serieuze persoonlijke en groepsbijbelstudie."
 
 #: lawofmessiah_app/templates/law_of_messiah/listing.html:16
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:45
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:47
 msgid "Overview of all Laws of Messiah"
 msgstr "Overzicht van alle Wetten van de Messias"
 
@@ -5024,14 +5356,14 @@ msgstr ""
 msgid "Law of Messiah commandments"
 msgstr "Gerelateerde geboden van de Wet van Christus"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:44
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:46
 #: lawofmessiah_app/templates/pages/index.html:14
 #: lawofmessiah_app/templates/pages/index.html:69 templates/base.html:83
 #: templates/base.html:112 templates/base.html:148 templates/base.html:161
 msgid "Law of Messiah"
 msgstr "Wet van Christus"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:46
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:48
 #: lawofmessiah_app/templates/pages/index.html:71
 msgid ""
 "Below is presented the structured commandments (mitzvot) derived from the "
@@ -5053,7 +5385,7 @@ msgstr ""
 "andere verbondsrollen en -situaties. Klik op een gebod om de details ervan "
 "te bekijken, met verwijzingen naar de Bijbel, commentaar en toepassing."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:48
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:50
 msgid ""
 "Source material: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> by Michael Rudolph and Daniel C. Juster."
@@ -5061,7 +5393,7 @@ msgstr ""
 "Bronmateriaal: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> door Michael Rudolph en Daniel C. Juster."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:53
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:55
 #: lawofmessiah_app/templates/pages/index.html:72
 msgid ""
 "License notice: content is shared under CC BY-ND 4.0. Attribution is "
@@ -5072,36 +5404,36 @@ msgstr ""
 " is vereist en gewijzigde versies van het originele materiaal mogen niet "
 "worden verspreid."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:61
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:63
 #: lawofmessiah_app/templates/pages/index.html:82
 msgid "Filter commandments that apply to you"
 msgstr "Filter geboden die op u van toepassing zijn"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:66
-#: lawofmessiah_app/templates/maimonides/listing.html:32
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:68
+#: lawofmessiah_app/templates/maimonides/listing.html:34
 #: lawofmessiah_app/templates/pages/index.html:86
 msgid "Search"
 msgstr "Zoekopdracht"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:67
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:69
 #: lawofmessiah_app/templates/pages/index.html:87
 msgid "ID, title, or commandment text"
 msgstr "ID, titel of gebodtekst"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:74
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:241
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:76
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:245
 #: lawofmessiah_app/templates/pages/index.html:93
 #: lawofmessiah_app/templates/pages/index.html:253
 msgid "Testament"
 msgstr "Oude Testament"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:77
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:87
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:98
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:114
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:125
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:133
-#: lawofmessiah_app/templates/maimonides/listing.html:41
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:79
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:89
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:100
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:116
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:127
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:135
+#: lawofmessiah_app/templates/maimonides/listing.html:43
 #: lawofmessiah_app/templates/pages/index.html:96
 #: lawofmessiah_app/templates/pages/index.html:106
 #: lawofmessiah_app/templates/pages/index.html:117
@@ -5111,99 +5443,83 @@ msgstr "Oude Testament"
 msgid "All"
 msgstr "Alle"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:78
-#: lawofmessiah_app/templates/pages/index.html:97
-msgid "Old Testament"
-msgstr "Oude Testament"
-
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:79
-#: lawofmessiah_app/templates/pages/index.html:98
-msgid "New Testament"
-msgstr "Nieuwe Testament"
-
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:99
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:101
 #: lawofmessiah_app/templates/pages/index.html:118
 msgid "Classical only"
 msgstr "Alleen klassiek"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:100
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:102
 #: lawofmessiah_app/templates/pages/index.html:119
 msgid "Non-classical only"
 msgstr "Alleen niet-klassiek"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:112
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:114
 #: lawofmessiah_app/templates/pages/index.html:130
 msgid "Unique only"
 msgstr "Uniek"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:113
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:115
 #: lawofmessiah_app/templates/pages/index.html:131
 msgid "Non-unique only"
 msgstr "Niet uniek"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:119
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:249
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:121
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:253
 #: lawofmessiah_app/templates/pages/index.html:137
 #: lawofmessiah_app/templates/pages/index.html:261
 msgid "Positive / negative"
 msgstr "Positief en negatief"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:122
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:124
 #: lawofmessiah_app/templates/pages/index.html:140
 msgid "Positive only"
 msgstr "Positief"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:123
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:125
 #: lawofmessiah_app/templates/pages/index.html:141
 msgid "Negative only"
 msgstr "Negatief"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:124
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:126
 #: lawofmessiah_app/templates/pages/index.html:142
 msgid "Positive & negative only"
 msgstr "Positief en negatief"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:130
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:251
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:132
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:255
 #: lawofmessiah_app/templates/pages/index.html:148
 #: lawofmessiah_app/templates/pages/index.html:263
 msgid "Illustration"
 msgstr "Illustratie"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:144
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:146
 #: lawofmessiah_app/templates/pages/index.html:161
 msgid "Applies to (person)"
 msgstr "Van toepassing op (persoon)"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:165
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:253
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:167
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:257
 #: lawofmessiah_app/templates/pages/index.html:182
 #: lawofmessiah_app/templates/pages/index.html:265
 msgid "Context / situation"
 msgstr "Context / situatie"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:168
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:170
 #: lawofmessiah_app/templates/pages/index.html:185
 msgid "Any context"
 msgstr "Elke context"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:181
-#: lawofmessiah_app/templates/maimonides/listing.html:58
-#: lawofmessiah_app/templates/pages/index.html:197
-msgid "Apply Filter"
-msgstr "Filter"
-
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:185
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:189
 #: lawofmessiah_app/templates/pages/index.html:201
 msgid "Legend — what do the icons and filters mean?"
 msgstr "Legenda — wat betekenen de pictogrammen en filters?"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:199
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:203
 #: lawofmessiah_app/templates/pages/index.html:213
 msgid "Person icons"
 msgstr "Van toepassing op persoonscategorieen"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:200
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:204
 #: lawofmessiah_app/templates/pages/index.html:214
 msgid ""
 "These icons on each card show which group(s) this commandment applies to."
@@ -5211,7 +5527,7 @@ msgstr ""
 "Deze pictogrammen op elke kaart laten zien op welke groep(en) dit gebod van "
 "toepassing is."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:205
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:209
 #: lawofmessiah_app/templates/pages/index.html:219
 msgid ""
 "Born into the Jewish people (biological or formal conversion). This "
@@ -5220,7 +5536,7 @@ msgstr ""
 "Geboren in het Joodse volk (biologische of formele bekering). Dit gebod komt"
 " rechtstreeks uit de Thora."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:212
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:216
 #: lawofmessiah_app/templates/pages/index.html:226
 msgid ""
 "Literally 'near to Israel' — non-Jewish believers who are deeply grafted "
@@ -5231,7 +5547,7 @@ msgstr ""
 " de Messiaans-Joodse gemeenschap en ervoor kiezen een op de Thora "
 "geïnspireerde levensstijl te omarmen."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:219
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:223
 #: lawofmessiah_app/templates/pages/index.html:233
 msgid ""
 "Non-Jewish followers of Messiah. Commandments marked here are considered "
@@ -5240,12 +5556,12 @@ msgstr ""
 "Niet-Joodse volgelingen van de Messias. De hier gemarkeerde geboden worden "
 "beschouwd als universeel toepasbaar op alle gelovigen."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:226
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:230
 #: lawofmessiah_app/templates/pages/index.html:239
 msgid "Application levels"
 msgstr "Toepassing"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:227
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:231
 #: lawofmessiah_app/templates/pages/index.html:240
 msgid ""
 "The \"Application\" filter sets how strongly the commandment applies to the "
@@ -5254,73 +5570,80 @@ msgstr ""
 "Met het filter \"Toepassing\" wordt ingesteld hoe sterk het gebod van "
 "toepassing is op de geselecteerde personengroep."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:228
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:232
 #: lawofmessiah_app/templates/pages/index.html:241
+#: lawofmessiah_app/views/law_of_messiah_view.py:278
 msgid "Mandated"
 msgstr "Verplicht"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:228
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:232
 #: lawofmessiah_app/templates/pages/index.html:241
 msgid "Required — clear Biblical obligation."
 msgstr "Vereist: duidelijke Bijbelse verplichting."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:229
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:233
 #: lawofmessiah_app/templates/pages/index.html:242
+#: lawofmessiah_app/views/law_of_messiah_view.py:279
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:229
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:233
 #: lawofmessiah_app/templates/pages/index.html:242
 msgid "Strongly encouraged, but not strictly required."
 msgstr "Sterk aangemoedigd, maar niet strikt vereist."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:230
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:234
 #: lawofmessiah_app/templates/pages/index.html:243
+#: lawofmessiah_app/views/law_of_messiah_view.py:280
 msgid "Optional"
 msgstr "Optioneel"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:230
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:234
 #: lawofmessiah_app/templates/pages/index.html:243
 msgid "Permitted and valued, left to personal conviction."
 msgstr ""
 "Toegestaan ​​en gewaardeerd, overgelaten aan persoonlijke overtuiging."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:231
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:235
 #: lawofmessiah_app/templates/pages/index.html:244
+#: lawofmessiah_app/views/law_of_messiah_view.py:281
 msgid "Not generally recommended"
 msgstr "Over het algemeen niet aanbevolen"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:231
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:235
 #: lawofmessiah_app/templates/pages/index.html:244
 msgid "Normally discouraged, though not categorically forbidden."
 msgstr "Normaal gesproken ontmoedigd, maar niet categorisch verboden."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:232
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:236
 #: lawofmessiah_app/templates/pages/index.html:245
+#: lawofmessiah_app/views/law_of_messiah_view.py:282
 msgid "Unauthorized"
 msgstr "Niet toegestaan"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:232
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:236
 #: lawofmessiah_app/templates/pages/index.html:245
 msgid "Not permitted under the current covenant context."
 msgstr "Niet toegestaan ​​binnen de huidige convenantcontext."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:233
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:237
 #: lawofmessiah_app/templates/pages/index.html:246
+#: lawofmessiah_app/views/law_of_messiah_view.py:283
 msgid "Prohibited"
 msgstr "Verboden"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:233
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:237
 #: lawofmessiah_app/templates/pages/index.html:246
 msgid "Explicitly forbidden for this person group."
 msgstr "Expliciet verboden voor deze personengroep."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:234
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:238
 #: lawofmessiah_app/templates/pages/index.html:247
+#: lawofmessiah_app/views/law_of_messiah_view.py:284
 msgid "Impossible"
 msgstr "Onmogelijk"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:234
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:238
 #: lawofmessiah_app/templates/pages/index.html:247
 msgid ""
 "Cannot currently be carried out (for example due to missing "
@@ -5329,12 +5652,12 @@ msgstr ""
 "Kan momenteel niet worden uitgevoerd (bijvoorbeeld vanwege ontbrekende "
 "tempel-/priesterschapsvoorwaarden)."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:239
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:243
 #: lawofmessiah_app/templates/pages/index.html:251
 msgid "Other filters"
 msgstr "Andere filters"
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:242
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:246
 #: lawofmessiah_app/templates/pages/index.html:254
 msgid ""
 "Limit to commandments whose primary source is from the Old or New Testament."
@@ -5342,7 +5665,7 @@ msgstr ""
 "Beperk u tot geboden waarvan de primaire bron uit het Oude of Nieuwe "
 "Testament komt."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:244
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:248
 #: lawofmessiah_app/templates/pages/index.html:256
 msgid ""
 "Broad topic group (e.g. Worship, Justice, Family). Useful for thematic "
@@ -5351,7 +5674,7 @@ msgstr ""
 "Brede themagroep (bijv. Aanbidding, Gerechtigheid, Familie). Handig voor "
 "thematische studie."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:246
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:250
 #: lawofmessiah_app/templates/pages/index.html:258
 msgid ""
 "Classical commandments are the 613 Torah commandments as categorised by "
@@ -5362,7 +5685,7 @@ msgstr ""
 "Maimonides. Niet-klassieke toevoegingen zijn geïdentificeerd vanuit het "
 "perspectief van het Nieuwe Verbond."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:248
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:252
 #: lawofmessiah_app/templates/pages/index.html:260
 msgid ""
 "Unique shows one canonical representative commandment from a duplicate "
@@ -5371,7 +5694,7 @@ msgstr ""
 "Unique toont één canoniek representatief gebod uit een dubbele cluster. "
 "Standaard is alleen uniek."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:250
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:254
 #: lawofmessiah_app/templates/pages/index.html:262
 msgid ""
 "Choose whether to show positive commands, negative prohibitions, both-type "
@@ -5380,12 +5703,12 @@ msgstr ""
 "Kies of u positieve opdrachten, negatieve verboden, invoer van beide typen "
 "of alles wilt weergeven."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:252
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:256
 #: lawofmessiah_app/templates/pages/index.html:264
 msgid "Filter commandments by whether they have a visible illustration image."
 msgstr "Filter geboden op de vraag of ze een zichtbare illustratie hebben."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:254
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:258
 #: lawofmessiah_app/templates/pages/index.html:266
 msgid ""
 "Narrows results to commandments relevant in a specific life context (e.g. "
@@ -5394,12 +5717,12 @@ msgstr ""
 "Beperkt de resultaten tot geboden die relevant zijn in een specifieke "
 "levenscontext (bijvoorbeeld tempel, huwelijk, gemeenschap)."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:264
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:268
 #: lawofmessiah_app/templates/pages/index.html:275
 msgid "commandments match your current filter."
 msgstr "geboden komen overeen met uw huidige filter."
 
-#: lawofmessiah_app/templates/law_of_messiah/listing.html:276
+#: lawofmessiah_app/templates/law_of_messiah/listing.html:280
 #: lawofmessiah_app/templates/pages/index.html:288
 msgid "No Law of Messiah records are available."
 msgstr "Geen Wet van Christus-records beschikbaar."
@@ -5426,11 +5749,11 @@ msgstr ""
 "vermeldingen uit de Wet van de Messias om continuiteit, vervulling en "
 "praktische toepassing in discipelschap te bestuderen."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:19
+#: lawofmessiah_app/templates/maimonides/listing.html:21
 msgid "Maimonides' 613 Commandments"
 msgstr "De 613 Geboden van Maimonides"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:20
+#: lawofmessiah_app/templates/maimonides/listing.html:22
 msgid ""
 "Maimonides (Rambam) compiled 613 commandments drawn from the Torah, "
 "traditionally categorized as 248 positive (\"do\") and 365 negative (\"do "
@@ -5444,11 +5767,11 @@ msgstr ""
 "van Rothenburg, Sefer HaChinuch en koppelingen naar de Wet van de Messias, "
 "en haal de relevante Bijbelgedeelten pas op wanneer u ze nodig hebt."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:28
+#: lawofmessiah_app/templates/maimonides/listing.html:30
 msgid "Filter classical commandment links"
 msgstr "Filter klassieke geboden en koppelingen"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:33
+#: lawofmessiah_app/templates/maimonides/listing.html:35
 msgid ""
 "Search Maimonides, Meir, HaChinuch, Rudolph, scripture references, or Law of"
 " Messiah"
@@ -5456,27 +5779,32 @@ msgstr ""
 "Zoek in Maimonides, Meir, HaChinuch, Rudolph, schriftverwijzingen of de Wet "
 "van de Messias"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:42
+#: lawofmessiah_app/templates/maimonides/listing.html:44
 msgid "Positive (Do)"
 msgstr "Positief"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:43
+#: lawofmessiah_app/templates/maimonides/listing.html:45
 msgid "Negative (Do not)"
 msgstr "Negatief"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:48
+#: lawofmessiah_app/templates/maimonides/listing.html:50
 msgid "Sort by"
 msgstr "Sorteer op"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:64
+#: lawofmessiah_app/templates/maimonides/listing.html:60
+#: lawofmessiah_app/templates/pages/index.html:197
+msgid "Apply Filter"
+msgstr "Filter"
+
+#: lawofmessiah_app/templates/maimonides/listing.html:66
 msgid "Legend — what do these links and scripture groups mean?"
 msgstr "Legenda — wat betekenen deze koppelingen en schriftgroepen?"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:75
+#: lawofmessiah_app/templates/maimonides/listing.html:77
 msgid "Cross-reference columns"
 msgstr "Kolommen met kruisverwijzingen"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:76
+#: lawofmessiah_app/templates/maimonides/listing.html:78
 msgid ""
 "Meir of Rothenburg and Sefer HaChinuch list medieval Jewish numbering "
 "systems that overlap with the same Torah commandment."
@@ -5484,7 +5812,7 @@ msgstr ""
 "Meir van Rothenburg en Sefer HaChinuch geven middeleeuwse Joodse nummeringen"
 " die overlappen met hetzelfde Thoragebod."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:77
+#: lawofmessiah_app/templates/maimonides/listing.html:79
 msgid ""
 "Law of Messiah / Rudolph links point to commandments on this site that were "
 "already mapped to the same Maimonides ID."
@@ -5492,11 +5820,11 @@ msgstr ""
 "Koppelingen naar de Wet van de Messias / Rudolph wijzen naar geboden op deze"
 " site die al aan hetzelfde Maimonides-ID zijn gekoppeld."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:80
+#: lawofmessiah_app/templates/maimonides/listing.html:82
 msgid "Scripture groups"
 msgstr "Schriftgroepen"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:81
+#: lawofmessiah_app/templates/maimonides/listing.html:83
 msgid ""
 "When the same Bible passage is used by Maimonides, Meir, and HaChinuch, it "
 "is shown once with a shared source label instead of being repeated three "
@@ -5506,7 +5834,7 @@ msgstr ""
 "gebruikt, wordt het eenmaal getoond met een gedeeld bronlabel in plaats van "
 "drie keer herhaald."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:82
+#: lawofmessiah_app/templates/maimonides/listing.html:84
 msgid ""
 "Unique Meir or HaChinuch passages still remain visible, together with their "
 "source numbering when that helps identify where the reference came from."
@@ -5514,7 +5842,7 @@ msgstr ""
 "Unieke passages van Meir of HaChinuch blijven zichtbaar, samen met hun "
 "bronnummering wanneer dat helpt om te zien waar de verwijzing vandaan komt."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:83
+#: lawofmessiah_app/templates/maimonides/listing.html:85
 msgid ""
 "Click a verse button to load the Bible text on demand instead of preloading "
 "the entire page."
@@ -5522,11 +5850,11 @@ msgstr ""
 "Klik op een versknop om de Bijbeltekst op aanvraag te laden in plaats van de"
 " hele pagina vooraf te vullen."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:86
+#: lawofmessiah_app/templates/maimonides/listing.html:88
 msgid "Sorting and searching"
 msgstr "Sorteren en zoeken"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:87
+#: lawofmessiah_app/templates/maimonides/listing.html:89
 msgid ""
 "Search covers the commandment text, all visible cross-reference codes, "
 "scripture references, and related Law of Messiah IDs and titles."
@@ -5535,7 +5863,7 @@ msgstr ""
 "schriftverwijzingen en gerelateerde ID's en titels uit de Wet van de "
 "Messias."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:88
+#: lawofmessiah_app/templates/maimonides/listing.html:90
 msgid ""
 "Sort by the first available Meir or HaChinuch code when you want those "
 "numbering systems grouped together."
@@ -5543,38 +5871,38 @@ msgstr ""
 "Sorteer op de eerste beschikbare Meir- of HaChinuch-code wanneer u die "
 "nummeringssystemen samen wilt groeperen."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:100
+#: lawofmessiah_app/templates/maimonides/listing.html:102
 #, python-format
 msgid "Showing %(count)s commandment(s)"
 msgstr "%(count)s gebod(en) getoond"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:117
+#: lawofmessiah_app/templates/maimonides/listing.html:119
 msgid "Positive commandment"
 msgstr "Positief gebod"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:117
+#: lawofmessiah_app/templates/maimonides/listing.html:119
 msgid "Negative commandment"
 msgstr "Negatief gebod"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:129
-#: lawofmessiah_app/templates/maimonides/listing.html:141
-#: lawofmessiah_app/templates/maimonides/listing.html:159
+#: lawofmessiah_app/templates/maimonides/listing.html:131
+#: lawofmessiah_app/templates/maimonides/listing.html:143
+#: lawofmessiah_app/templates/maimonides/listing.html:161
 msgid "None recorded"
 msgstr "Over het algemeen niet aanbevolen"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:145
+#: lawofmessiah_app/templates/maimonides/listing.html:147
 msgid "Law of Messiah / Rudolph"
 msgstr "Law of Messiah / Rudolph"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:190
+#: lawofmessiah_app/templates/maimonides/listing.html:192
 msgid "Related Law of Messiah commandments:"
 msgstr "Gerelateerde geboden van de Wet van de Messias:"
 
-#: lawofmessiah_app/templates/maimonides/listing.html:204
+#: lawofmessiah_app/templates/maimonides/listing.html:206
 msgid "No related Law of Messiah commandments found."
 msgstr "Geen gerelateerde geboden van de Wet van de Messias gevonden."
 
-#: lawofmessiah_app/templates/maimonides/listing.html:212
+#: lawofmessiah_app/templates/maimonides/listing.html:214
 msgid "No commandments found matching your filter."
 msgstr "Geen geboden gevonden die overeenkomen met uw filter."
 
@@ -6876,6 +7204,246 @@ msgstr ""
 "Onze focus ligt op het wandelen in de Wet van de Messias door middel van "
 "discipelschap en de Bijbel."
 
+#: lawofmessiah_app/urls.py:34
+msgid "bible/"
+msgstr "bijbel/"
+
+#: lawofmessiah_app/urls.py:35
+msgid "languages/"
+msgstr "talen/"
+
+#: lawofmessiah_app/urls.py:36
+msgid "bible-translations/"
+msgstr "bijbel-vertalingen/"
+
+#: lawofmessiah_app/urls.py:37
+msgid "commentary-translate/"
+msgstr "commentaar-vertalen/"
+
+#: lawofmessiah_app/urls.py:38
+#, fuzzy
+#| msgid "commentary-translate/"
+msgid "commentary-scriptura/"
+msgstr "commentaar-vertalen/"
+
+#: lawofmessiah_app/urls.py:39
+#, fuzzy
+#| msgid "Michael Rudolph"
+msgid "authors/michael-rudolph/"
+msgstr "Michael Rudolph"
+
+#: lawofmessiah_app/urls.py:40
+#, fuzzy
+msgid "authors/daniel-juster/"
+msgstr "auteurs/daniel-juster/"
+
+#: lawofmessiah_app/urls.py:41
+msgid "maimonides/"
+msgstr "maimonides/"
+
+#: lawofmessiah_app/urls.py:42
+#, fuzzy
+#| msgid "law_of_messiah/<str:law_id>/verses/"
+msgid "maimonides/<str:maimonides_id>/verses/"
+msgstr "wet_van_christus/<str:law_id>/bijbelverzen/"
+
+#: lawofmessiah_app/urls.py:43
+msgid "law_of_messiah/"
+msgstr "wet_van_christus/"
+
+#: lawofmessiah_app/urls.py:44
+msgid "law_of_messiah/<str:law_id>/"
+msgstr "wet_van_christus/<str:law_id>/"
+
+#: lawofmessiah_app/urls.py:45
+msgid "law_of_messiah/<str:law_id>/verses/"
+msgstr "wet_van_christus/<str:law_id>/bijbelverzen/"
+
+#: lawofmessiah_app/urls.py:46
+msgid "legalism/"
+msgstr "wetticisme/"
+
+#: lawofmessiah_app/urls.py:47
+msgid "termsandconditions/"
+msgstr "voorwaarden/"
+
+#: lawofmessiah_app/urls.py:48
+#, fuzzy
+#| msgid "Privacy"
+msgid "privacy/"
+msgstr "Privacy"
+
+#: lawofmessiah_app/urls.py:49
+msgid "admin/reset_bibles/"
+msgstr "admin/herstel_bijbels/"
+
+#: lawofmessiah_app/urls.py:50
+msgid "admin/persist_bible_cache/"
+msgstr "admin/cache_bijbel_opslaan/"
+
+#: lawofmessiah_app/urls.py:51
+msgid "admin/enable_bible/"
+msgstr "admin/activeer_bijbel/"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:190
+#: lawofmessiah_app/views/law_of_messiah_view.py:269
+msgid "Jewish male"
+msgstr "Joodse man"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:191
+#: lawofmessiah_app/views/law_of_messiah_view.py:270
+msgid "Jewish female"
+msgstr "Joodse vrouw"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:192
+#: lawofmessiah_app/views/law_of_messiah_view.py:271
+msgid "K'rov Yisrael male"
+msgstr "K'rov Yisrael man"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:193
+#: lawofmessiah_app/views/law_of_messiah_view.py:272
+msgid "K'rovat Yisrael female"
+msgstr "K'rovat Yisrael vrouw"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:194
+#: lawofmessiah_app/views/law_of_messiah_view.py:273
+msgid "Gentile male"
+msgstr "Niet-joodse man"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:195
+#: lawofmessiah_app/views/law_of_messiah_view.py:274
+msgid "Gentile female"
+msgstr "Niet-joodse vrouw"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:201
+msgid "mandated"
+msgstr "verplicht"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:202
+msgid "recommended"
+msgstr "aanbevolen"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:203
+msgid "optional"
+msgstr "optioneel"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:204
+msgid "not generally recommended"
+msgstr "over het algemeen niet aanbevolen"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:205
+msgid "unauthorized"
+msgstr "niet toegestaan"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:206
+msgid "prohibited"
+msgstr "verboden"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:207
+msgid "impossible"
+msgstr "onmogelijk"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:268
+#: lawofmessiah_app/views/law_of_messiah_view.py:390
+msgid "Everyone"
+msgstr "Iedereen"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:277
+msgid "Any application"
+msgstr "Elke toepassing"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:325
+#: lawofmessiah_app/views/law_of_messiah_view.py:326
+#: lawofmessiah_app/views/law_of_messiah_view.py:327
+msgid "Not specified"
+msgstr "Niet opgegeven"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:372
+#: lawofmessiah_app/views/law_of_messiah_view.py:406
+#, fuzzy, python-format
+#| msgid "Applies to (person)"
+msgid "%(application)s for %(persons)s"
+msgstr "Van toepassing op (persoon)"
+
+#: lawofmessiah_app/views/law_of_messiah_view.py:805
+#, fuzzy
+#| msgid "Could not load text at the moment."
+msgid "Could not load Bible verse for this reference."
+msgstr "Kan tekst op dit moment niet laden."
+
+#: lawofmessiah_app/views/maimonides_view.py:70
+msgid "Meir"
+msgstr "Meir"
+
+#: lawofmessiah_app/views/maimonides_view.py:71
+msgid "HaChinuch"
+msgstr "HaChinuch"
+
+#: lawofmessiah_app/views/maimonides_view.py:86
+#, python-format
+msgid "Scripture used by %(source)s"
+msgstr "Schriftgedeelte gebruikt door %(source)s"
+
+#: lawofmessiah_app/views/maimonides_view.py:88
+#, python-format
+msgid "Scripture used by %(first)s and %(second)s"
+msgstr "Schriftgedeelte gebruikt door %(first)s en %(second)s"
+
+#: lawofmessiah_app/views/maimonides_view.py:89
+#, python-format
+msgid "Scripture used by %(first)s, %(second)s and %(third)s"
+msgstr "Schriftgedeelte gebruikt door %(first)s, %(second)s en %(third)s"
+
+#: lawofmessiah_app/views/user_preferences.py:261
+msgid "Unsupported language"
+msgstr "Website taal"
+
+#: lawofmessiah_app/views/user_preferences.py:329
+msgid "The selected Bible translation is currently disabled."
+msgstr "De geselecteerde Bijbelvertaling is momenteel uitgeschakeld."
+
+#: lawofmessiah_app/views/user_preferences.py:332
+msgid "Bible translation changed successfully."
+msgstr "Bijbelvertaling succesvol gewijzigd."
+
+#: lawofmessiah_app/views/user_preferences.py:334
+msgid "Bible translation not found."
+msgstr "Bijbelvertaling niet gevonden."
+
+#: lawofmessiah_app/views/user_preferences.py:336
+msgid "Failed to change the Bible translation."
+msgstr "Het is niet gelukt de Bijbelvertaling te wijzigen."
+
+#: lawofmessiah_app/views/user_preferences.py:346
+msgid "Failed to change the user languages"
+msgstr "Kan de taal niet veranderen"
+
+#: lawofmessiah_app/views/user_preferences.py:353
+msgid "Languages updated successfully."
+msgstr "Talen succesvol bijgewerkt"
+
+#: lawofmessiah_app/views/user_preferences.py:355
+msgid "No languages selected"
+msgstr "Geen talen geselecteerd"
+
+#: lawofmessiah_app/views/user_preferences.py:413
+#, fuzzy
+msgid "Missing commentary parameters"
+msgstr "Ontbrekende commentaarparameters"
+
+#: lawofmessiah_app/views/user_preferences.py:419
+#, fuzzy
+msgid "Invalid chapter parameter"
+msgstr "Ongeldige hoofdstukparameter"
+
+#: lawofmessiah_website/base_settings.py:201
+msgid "English"
+msgstr "Engels"
+
+#: lawofmessiah_website/base_settings.py:202
+msgid "Dutch"
+msgstr "Nederlands"
+
 #: templates/base.html:49 templates/base.html:54 templates/base.html:61
 msgid ""
 "Law of Messiah — a digital version of the book series by Michael Rudolph and"
@@ -6940,14 +7508,6 @@ msgstr ""
 msgid "Site Navigation"
 msgstr "Site Navigatie"
 
-#: templates/base.html:162
-msgid "Michael Rudolph"
-msgstr "Michael Rudolph"
-
-#: templates/base.html:163
-msgid "Daniel C. Juster"
-msgstr "Daniel C. Juster"
-
 #: templates/base.html:171
 msgid "Account"
 msgstr "Account"
@@ -6959,14 +7519,6 @@ msgstr "Profiel"
 #: templates/base.html:193
 msgid "The Book Series"
 msgstr "Boekenreeks"
-
-#: templates/base.html:196
-msgid ""
-"Volume 1 &amp; 2 — Michael Rudolph &amp; Daniel C. Juster<br>Volume 3 — "
-"Michael Rudolph &amp; Daniel C. Juster"
-msgstr ""
-"Volume 1 &amp; 2 — Michael Rudolph &amp; Daniel C. Juster<br>Volume 3 — "
-"Michael Rudolph &amp; Daniel C. Juster"
 
 #: templates/base.html:197
 msgid "Read online (Vol. 1 & 2)"
@@ -7023,6 +7575,16 @@ msgstr ""
 #: templates/modal.html:58
 msgid "Save changes"
 msgstr "Wijzigingen opslaan"
+
+#~ msgid "Daniel C. Juster"
+#~ msgstr "Daniel C. Juster"
+
+#~ msgid ""
+#~ "Volume 1 &amp; 2 — Michael Rudolph &amp; Daniel C. Juster<br>Volume 3 — "
+#~ "Michael Rudolph &amp; Daniel C. Juster"
+#~ msgstr ""
+#~ "Volume 1 &amp; 2 — Michael Rudolph &amp; Daniel C. Juster<br>Volume 3 — "
+#~ "Michael Rudolph &amp; Daniel C. Juster"
 
 #~ msgid "Walk as Jesus - Follow Jesus in daily life"
 #~ msgstr "Wandel als Jezus - Volg Jezus in het dagelijks leven"
@@ -8655,38 +9217,11 @@ msgstr "Wijzigingen opslaan"
 #~ msgid "ID or commandment text"
 #~ msgstr "ID, titel of gebodtekst"
 
-#~ msgid "Scripture used by %(source)s"
-#~ msgstr "Schriftgedeelte gebruikt door %(source)s"
-
-#~ msgid "Scripture used by %(first)s and %(second)s"
-#~ msgstr "Schriftgedeelte gebruikt door %(first)s en %(second)s"
-
-#~ msgid "Scripture used by %(first)s, %(second)s and %(third)s"
-#~ msgstr "Schriftgedeelte gebruikt door %(first)s, %(second)s en %(third)s"
-
-#~ msgid "Meir"
-#~ msgstr "Meir"
-
-#~ msgid "HaChinuch"
-#~ msgstr "HaChinuch"
-
 #~ msgid "Blessed are the pure in heart: for they shall see God"
 #~ msgstr "Zalig zijn de reinen van hart, want zij zullen God zien"
 
 #~ msgid "Blessed are the pure in heart, for they shall see God"
 #~ msgstr "Zalig zijn de reinen van hart, want zij zullen God zien"
-
-#~ msgid "bible/"
-#~ msgstr "bijbel/"
-
-#~ msgid "languages/"
-#~ msgstr "talen/"
-
-#~ msgid "bible-translations/"
-#~ msgstr "bijbel-vertalingen/"
-
-#~ msgid "commentary-translate/"
-#~ msgstr "commentaar-vertalen/"
 
 #~ msgid "steps/"
 #~ msgstr "stappen/"
@@ -8694,23 +9229,8 @@ msgstr "Wijzigingen opslaan"
 #~ msgid "lessons/"
 #~ msgstr "lessen/"
 
-#~ msgid "law_of_messiah/"
-#~ msgstr "wet_van_christus/"
-
-#~ msgid "law_of_messiah/<str:law_id>/"
-#~ msgstr "wet_van_christus/<str:law_id>/"
-
-#~ msgid "law_of_messiah/<str:law_id>/verses/"
-#~ msgstr "wet_van_christus/<str:law_id>/bijbelverzen/"
-
 #~ msgid "vision/"
 #~ msgstr "visie/"
-
-#~ msgid "legalism/"
-#~ msgstr "wetticisme/"
-
-#~ msgid "termsandconditions/"
-#~ msgstr "voorwaarden/"
 
 #~ msgid "step/<int:commandment_id>/"
 #~ msgstr "stap/<int:commandment_id>/"
@@ -8723,15 +9243,6 @@ msgstr "Wijzigingen opslaan"
 
 #~ msgid "lesson/<int:lesson_id>/verses/"
 #~ msgstr "les/<int:lesson_id>/bijbelverzen/"
-
-#~ msgid "admin/reset_bibles/"
-#~ msgstr "admin/herstel_bijbels/"
-
-#~ msgid "admin/persist_bible_cache/"
-#~ msgstr "admin/cache_bijbel_opslaan/"
-
-#~ msgid "admin/enable_bible/"
-#~ msgstr "admin/activeer_bijbel/"
 
 #, fuzzy, python-format
 #~ msgid ""
@@ -38579,207 +39090,6 @@ msgstr "Wijzigingen opslaan"
 #~ msgid "What is discipleship about?"
 #~ msgstr "Waar gaat discipelschap over?"
 
-#~ msgid "Genesis"
-#~ msgstr "Genesis"
-
-#~ msgid "Exodus"
-#~ msgstr "Exodus"
-
-#~ msgid "Leviticus"
-#~ msgstr "Leviticus"
-
-#~ msgid "Numbers"
-#~ msgstr "Numeri"
-
-#~ msgid "Deuteronomy"
-#~ msgstr "Deuteronomium"
-
-#~ msgid "Joshua"
-#~ msgstr "Jozua"
-
-#~ msgid "Judges"
-#~ msgstr "Richteren"
-
-#~ msgid "Ruth"
-#~ msgstr "Ruth"
-
-#~ msgid "1 Samuel"
-#~ msgstr "1 Samuel"
-
-#~ msgid "2 Samuel"
-#~ msgstr "2 Samuel"
-
-#~ msgid "1 Kings"
-#~ msgstr "1 Koningen"
-
-#~ msgid "2 Kings"
-#~ msgstr "2 Koningen"
-
-#~ msgid "1 Chronicles"
-#~ msgstr "1 Kronieken"
-
-#~ msgid "2 Chronicles"
-#~ msgstr "2 Kronieken"
-
-#~ msgid "Ezra"
-#~ msgstr "Ezra"
-
-#~ msgid "Nehemiah"
-#~ msgstr "Nehemia"
-
-#~ msgid "Esther"
-#~ msgstr "Esther"
-
-#~ msgid "Job"
-#~ msgstr "Job"
-
-#~ msgid "Psalms"
-#~ msgstr "Psalmen"
-
-#~ msgid "Proverbs"
-#~ msgstr "Spreuken"
-
-#~ msgid "Ecclesiastes"
-#~ msgstr "Prediker"
-
-#~ msgid "Song of Solomon"
-#~ msgstr "Hooglied"
-
-#~ msgid "Isaiah"
-#~ msgstr "Jesaja"
-
-#~ msgid "Jeremiah"
-#~ msgstr "Jeremia"
-
-#~ msgid "Lamentations"
-#~ msgstr "Klaagliederen"
-
-#~ msgid "Ezekiel"
-#~ msgstr "Ezechiël"
-
-#~ msgid "Daniel"
-#~ msgstr "Daniël"
-
-#~ msgid "Hosea"
-#~ msgstr "Hosea"
-
-#~ msgid "Joel"
-#~ msgstr "Joël"
-
-#~ msgid "Amos"
-#~ msgstr "Amos"
-
-#~ msgid "Obadiah"
-#~ msgstr "Obadja"
-
-#~ msgid "Jonah"
-#~ msgstr "Jona"
-
-#~ msgid "Micah"
-#~ msgstr "Micha"
-
-#~ msgid "Nahum"
-#~ msgstr "Nahum"
-
-#~ msgid "Habakkuk"
-#~ msgstr "Habakuk"
-
-#~ msgid "Zephaniah"
-#~ msgstr "Zefanja"
-
-#~ msgid "Haggai"
-#~ msgstr "Haggaï"
-
-#~ msgid "Zechariah"
-#~ msgstr "Zacharia"
-
-#~ msgid "Malachi"
-#~ msgstr "Maleachi"
-
-#~ msgid "Matthew"
-#~ msgstr "Mattheüs"
-
-#~ msgid "Mark"
-#~ msgstr "Markus"
-
-#~ msgid "Luke"
-#~ msgstr "Lukas"
-
-#~ msgid "John"
-#~ msgstr "Johannes"
-
-#~ msgid "Acts"
-#~ msgstr "Handelingen"
-
-#~ msgid "Romans"
-#~ msgstr "Romeinen"
-
-#~ msgid "1 Corinthians"
-#~ msgstr "1 Korintiërs"
-
-#~ msgid "2 Corinthians"
-#~ msgstr "2 Korintiërs"
-
-#~ msgid "Galatians"
-#~ msgstr "Galaten"
-
-#~ msgid "Ephesians"
-#~ msgstr "Efeziërs"
-
-#~ msgid "Philippians"
-#~ msgstr "Filipenzen"
-
-#~ msgid "Colossians"
-#~ msgstr "Kolossenzen"
-
-#~ msgid "1 Thessalonians"
-#~ msgstr "1 Tessalonicenzen"
-
-#~ msgid "2 Thessalonians"
-#~ msgstr "2 Tessalonicenzen"
-
-#~ msgid "1 Timothy"
-#~ msgstr "1 Timotheüs"
-
-#~ msgid "2 Timothy"
-#~ msgstr "2 Timotheüs"
-
-#~ msgid "Titus"
-#~ msgstr "Titus"
-
-#~ msgid "Philemon"
-#~ msgstr "Filemon"
-
-#~ msgid "Hebrews"
-#~ msgstr "Hebreeën"
-
-#~ msgid "James"
-#~ msgstr "Jakobus"
-
-#~ msgid "1 Peter"
-#~ msgstr "1 Petrus"
-
-#~ msgid "2 Peter"
-#~ msgstr "2 Petrus"
-
-#~ msgid "1 John"
-#~ msgstr "1 Johannes"
-
-#~ msgid "2 John"
-#~ msgstr "2 Johannes"
-
-#~ msgid "3 John"
-#~ msgstr "3 Johannes"
-
-#~ msgid "Jude"
-#~ msgstr "Judas"
-
-#~ msgid "Revelation"
-#~ msgstr "Openbaring"
-
-#~ msgid "Could not load text at the moment."
-#~ msgstr "Kan tekst op dit moment niet laden."
-
 #~ msgid "First Commandment"
 #~ msgstr "Eerste Gebod"
 
@@ -38806,15 +39116,6 @@ msgstr "Wijzigingen opslaan"
 
 #~ msgid "Tenth Commandment"
 #~ msgstr "Tiende Gebod"
-
-#~ msgid "Language independent"
-#~ msgstr "Taal onafhankelijk"
-
-#~ msgid "Language unknown"
-#~ msgstr "Taal onbekend"
-
-#~ msgid "The bible book like Genesis, Exodus, etc."
-#~ msgstr "Het bijbelboek zoals Genesis, Exodus, etc."
 
 #~ msgid ""
 #~ "Walk as Jesus - Discover the commandments of Jesus Christ. Learn it, Live "
@@ -38943,87 +39244,6 @@ msgstr "Wijzigingen opslaan"
 
 #~ msgid "NCLA deviation"
 #~ msgstr "NCLA-afwijking"
-
-#~ msgid "maimonides/"
-#~ msgstr "maimonides/"
-
-#~ msgid "Jewish male"
-#~ msgstr "Joodse man"
-
-#~ msgid "Jewish female"
-#~ msgstr "Joodse vrouw"
-
-#~ msgid "K'rov Yisrael male"
-#~ msgstr "K'rov Yisrael man"
-
-#~ msgid "K'rovat Yisrael female"
-#~ msgstr "K'rovat Yisrael vrouw"
-
-#~ msgid "Gentile male"
-#~ msgstr "Niet-joodse man"
-
-#~ msgid "Gentile female"
-#~ msgstr "Niet-joodse vrouw"
-
-#~ msgid "mandated"
-#~ msgstr "verplicht"
-
-#~ msgid "recommended"
-#~ msgstr "aanbevolen"
-
-#~ msgid "optional"
-#~ msgstr "optioneel"
-
-#~ msgid "not generally recommended"
-#~ msgstr "over het algemeen niet aanbevolen"
-
-#~ msgid "unauthorized"
-#~ msgstr "niet toegestaan"
-
-#~ msgid "prohibited"
-#~ msgstr "verboden"
-
-#~ msgid "impossible"
-#~ msgstr "onmogelijk"
-
-#~ msgid "Everyone"
-#~ msgstr "Iedereen"
-
-#~ msgid "Any application"
-#~ msgstr "Elke toepassing"
-
-#~ msgid "Not specified"
-#~ msgstr "Niet opgegeven"
-
-#~ msgid "Unsupported language"
-#~ msgstr "Website taal"
-
-#~ msgid "The selected Bible translation is currently disabled."
-#~ msgstr "De geselecteerde Bijbelvertaling is momenteel uitgeschakeld."
-
-#~ msgid "Bible translation changed successfully."
-#~ msgstr "Bijbelvertaling succesvol gewijzigd."
-
-#~ msgid "Bible translation not found."
-#~ msgstr "Bijbelvertaling niet gevonden."
-
-#~ msgid "Failed to change the Bible translation."
-#~ msgstr "Het is niet gelukt de Bijbelvertaling te wijzigen."
-
-#~ msgid "Failed to change the user languages"
-#~ msgstr "Kan de taal niet veranderen"
-
-#~ msgid "Languages updated successfully."
-#~ msgstr "Talen succesvol bijgewerkt"
-
-#~ msgid "No languages selected"
-#~ msgstr "Geen talen geselecteerd"
-
-#~ msgid "English"
-#~ msgstr "Engels"
-
-#~ msgid "Dutch"
-#~ msgstr "Nederlands"
 
 #~ msgid "Charity, Provision, & Generosity"
 #~ msgstr "Liefdadigheid, voorzieningen en vrijgevigheid"
