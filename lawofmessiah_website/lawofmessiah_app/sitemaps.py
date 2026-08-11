@@ -12,6 +12,8 @@ class StaticViewSitemap(Sitemap):
         return [
             'commandments:index',
             'commandments:law_of_messiah_listing',
+            'commandments:walk_as_jesus',
+            'commandments:author_visser',
             'commandments:legalism',
         ]
 

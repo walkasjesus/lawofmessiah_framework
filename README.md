@@ -2,7 +2,7 @@
 
 This repository contains the Law of Messiah website and supporting Python tools.
 
-It is a digital presentation of the book series _The Law of Messiah - Torah from a New Covenant Perspective_ by Michael Rudolph and Daniel C. Juster.
+It is a digital presentation of the book series _The Law of Messiah - Torah from a New Covenant Perspective_ by Michael Rudolph with Daniel C. Juster.
 
 ## Main components
 

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load cache %}
+
+{% block title_content %}{% trans 'Jenske Visser | Visual Discipleship Author' %}{% endblock %}
+{% block meta_description %}{% trans 'Author profile of Jenske Visser, focused on visual illustration to make biblical commandments memorable and practical for obedience.' %}{% endblock %}
+{% block og_title %}{% trans 'Jenske Visser | Visual Discipleship Author' %}{% endblock %}
+{% block og_description %}{% trans 'Author profile of Jenske Visser, focused on visual illustration to make biblical commandments memorable and practical for obedience.' %}{% endblock %}
+{% block twitter_title %}{% trans 'Jenske Visser | Visual Discipleship Author' %}{% endblock %}
+{% block twitter_description %}{% trans 'Author profile of Jenske Visser, focused on visual illustration to make biblical commandments memorable and practical for obedience.' %}{% endblock %}
+
+{% block content %}
+{% cache cache_timeout author_visser cache_on_language %}
+<section class="ftco-daily-verse img bible-study-top-banner" style="background-image:url('{% static 'images/bg_2.jpg' %}');">
+  <div class="overlay"></div>
+</section>
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <span class="subheading">{% trans 'Illustrator' %}</span>
+        <h2 class="mb-4">Jenske Visser</h2>
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-3 text-center mb-4 mb-md-0 ftco-animate">
+        <img src="{% static 'images/jenske.png' %}" alt="Jenske Visser" style="width: 100%; height: auto;">
+      </div>
+      <div class="col-md-9 heading-section ftco-animate">
+        <p>{% blocktrans %}Jenske Visser serves as an illustrator with a passion to create art that points upwards. Her work supports disciples who want to obey and teach commandments in a practical and enduring way.{% endblocktrans %}</p>
+
+        <p>{% blocktrans %}A single image can often communicate what many words cannot. By combining scriptural teaching with visual storytelling, her contributions help learners retain key principles, discuss them as a group, and put them into practice with confidence.{% endblocktrans %}</p>
+
+        <p class="mt-4">
+          <a href="https://www.jenske.nl" class="btn btn-primary btn-outline-primary py-2 px-4">{% trans 'www.jenske.nl' %}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcache %}
+{% endblock %}

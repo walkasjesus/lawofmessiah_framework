@@ -4377,7 +4377,7 @@ msgstr "Bekering en ontvangst van Joodse proselieten en bekeerlingen"
 #: data/lawofmessiah/Law_of_Messiah_nt.yaml:DA8.copyright
 #: data/lawofmessiah/Law_of_Messiah_nt.yaml:DA9.copyright
 msgid ""
-"Copyright © Michael Rudolph and Daniel C. Juster, The Law of Messiah - Torah "
+"Copyright © Michael Rudolph with Daniel C. Juster, The Law of Messiah - Torah "
 "from a New Covenant Perspective - Volume 3"
 msgstr ""
 "Copyright © Michael Rudolph en Daniel C. Juster, De wet van de Messias - "
@@ -4576,7 +4576,7 @@ msgstr ""
 #: data/lawofmessiah/Law_of_Messiah_ot.yaml:Y9.copyright
 #: data/lawofmessiah/Law_of_Messiah_ot.yaml:Z1.copyright
 msgid ""
-"Copyright © Michael Rudolph and Daniel C. Juster, The Law of Messiah, Torah "
+"Copyright © Michael Rudolph with Daniel C. Juster, The Law of Messiah, Torah "
 "from a New Covenant Perspective, Volume 1 & 2"
 msgstr ""
 "Copyright © Michael Rudolph en Daniel C. Juster, De wet van de Messias, "

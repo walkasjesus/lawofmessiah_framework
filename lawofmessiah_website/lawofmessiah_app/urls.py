@@ -13,6 +13,8 @@ from lawofmessiah_app.views.privacy_view import PrivacyView
 from lawofmessiah_app.views.index_view import IndexView
 from lawofmessiah_app.views.author_rudolph_view import AuthorRudolphView
 from lawofmessiah_app.views.author_juster_view import AuthorJusterView
+from lawofmessiah_app.views.author_visser_view import AuthorVisserView
+from lawofmessiah_app.views.walk_as_jesus_view import WalkAsJesusView
 from lawofmessiah_app.views.law_of_messiah_view import (
     LawOfMessiahListingView,
     LawOfMessiahDetailView,
@@ -36,8 +38,10 @@ urlpatterns = [
     path(_('bible-translations/'), BibleTranslationsForLanguageView.as_view(), name='bible_translations_for_language'),
     path(_('commentary-translate/'), CommentaryTranslationView.as_view(), name='commentary_translate'),
     path(_('commentary-scriptura/'), ScripturaCommentaryProxyView.as_view(), name='commentary_scriptura'),
+    path(_('walk-as-jesus/'), WalkAsJesusView.as_view(), name='walk_as_jesus'),
     path(_('authors/michael-rudolph/'), AuthorRudolphView.as_view(), name='author_rudolph'),
     path(_('authors/daniel-juster/'), AuthorJusterView.as_view(), name='author_juster'),
+    path(_('authors/jenske-visser/'), AuthorVisserView.as_view(), name='author_visser'),
     path(_('maimonides/'), MaimonidesList.as_view(), name='maimonides_listing'),
     path(_('maimonides/<str:maimonides_id>/verses/'), MaimonidesBibleVersesView.as_view(), name='maimonides_verses'),
     path(_('law_of_messiah/'), LawOfMessiahListingView.as_view(), name='law_of_messiah_listing'),

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load cache %}
+
+{% block title_content %}{% trans 'Walk as Jesus | Group Discipleship and Media Resources' %}{% endblock %}
+{% block meta_description %}{% trans 'Walk as Jesus equips groups to practice the commandments together through biblical reflection, accountability, and media resources that help disciples live what they learn.' %}{% endblock %}
+{% block og_title %}{% trans 'Walk as Jesus | Group Discipleship and Media Resources' %}{% endblock %}
+{% block og_description %}{% trans 'Walk as Jesus equips groups to practice the commandments together through biblical reflection, accountability, and media resources that help disciples live what they learn.' %}{% endblock %}
+{% block twitter_title %}{% trans 'Walk as Jesus | Group Discipleship and Media Resources' %}{% endblock %}
+{% block twitter_description %}{% trans 'Walk as Jesus equips groups to practice the commandments together through biblical reflection, accountability, and media resources that help disciples live what they learn.' %}{% endblock %}
+
+{% block content %}
+{% cache cache_timeout walk_as_jesus_page cache_on_language %}
+<section class="ftco-daily-verse img bible-study-top-banner" style="background-image:url('{% static 'images/bg_2.jpg' %}');">
+  <div class="overlay"></div>
+</section>
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <span class="subheading">{% trans 'Discipleship in Practice' %}</span>
+        <h2 class="mb-4">{% trans 'Walk as Jesus' %}</h2>
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-3 text-center mb-4 mb-md-0 ftco-animate">
+        <img src="{% static 'images/wajvideo.png' %}" alt="Walk as Jesus" style="max-width: 120px; width: 100%; height: auto;">
+      </div>
+      <div class="col-md-9 heading-section ftco-animate">
+        <p>{% blocktrans %}Walk as Jesus helps Bible study groups move from theory to obedience by practicing commandments together in daily life. It is designed for regular group rhythm: read, reflect, apply, and encourage one another with concrete next steps.{% endblocktrans %}</p>
+
+        <p>{% blocktrans %}The project follows the same biblical commandment foundation presented by Michael Rudolph with Daniel C. Juster in <em>The Law of Messiah</em>. On top of that foundation, Walk as Jesus expands discipleship with practical media collections such as sermons, songs, testimonies, and films to support transformation in heart and action.{% endblocktrans %}</p>
+
+        <p>{% blocktrans %}Instead of treating commandments as abstract theory, Walk as Jesus creates a shared learning path where participants challenge and support each other. This strengthens consistency, mutual accountability, and joyful perseverance in obeying Yeshua.{% endblocktrans %}</p>
+
+        <p class="mt-4">
+          <a href="https://www.walkasjesus.org" class="btn btn-primary btn-outline-primary py-2 px-4">{% trans 'www.walkasjesus.org' %}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcache %}
+{% endblock %}

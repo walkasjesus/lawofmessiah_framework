@@ -46,19 +46,19 @@
     <link href="{% static 'css/customcss.css' %}" rel="stylesheet">
   {% endcache %}
   {% block head_meta %}
-    <meta name="description" content="{% block meta_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph and Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph with Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
     <meta name="keywords" content="Law of Messiah, Torah, New Covenant, Michael Rudolph, Daniel Juster, commandments, mitzvot, Bible study, discipleship, Messianic, halachah">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
     <meta property="og:title" content="{% block og_title %}{% trans 'Law of Messiah - Torah from a New Covenant Perspective' %}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph and Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph with Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
     <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'images/jc_icon.png' %}">
     <meta property="og:site_name" content="Law of Messiah">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{% block twitter_title %}{% trans 'Law of Messiah - Torah from a New Covenant Perspective' %}{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph and Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{% trans 'Law of Messiah — a digital version of the book series by Michael Rudolph with Daniel C. Juster. Explore Torah from a New Covenant perspective: biblical commandments and mitzvot for discipleship, groups, and families.' %}{% endblock %}">
   {% endblock %}
   {% block jsonld %}
   <script type="application/ld+json">
@@ -68,7 +68,7 @@
     "name": "Law of Messiah",
     "alternateName": ["Law of Messiah - Torah from a New Covenant Perspective"],
     "url": "{{ request.scheme }}://{{ request.get_host }}/",
-    "description": "{% trans 'Law of Messiah — a digital version of the book series Torah from a New Covenant Perspective by Michael Rudolph and Daniel C. Juster. Explore biblical commandments and mitzvot for discipleship, groups, and families.' %}",
+    "description": "{% trans 'Law of Messiah — a digital version of the book series Torah from a New Covenant Perspective by Michael Rudolph with Daniel C. Juster. Explore biblical commandments and mitzvot for discipleship, groups, and families.' %}",
     "keywords": "Law of Messiah, Torah, New Covenant, Michael Rudolph, Daniel Juster, commandments, mitzvot, Bible study, discipleship, Messianic"
   }
   </script>
@@ -115,8 +115,11 @@
               <div class="dropdown-menu authors-dropdown-menu" aria-labelledby="authorsDropdown">
                 <a class="dropdown-item" href="{% url 'commandments:author_rudolph' %}">Michael Rudolph</a>
                 <a class="dropdown-item" href="{% url 'commandments:author_juster' %}">Daniel C. Juster</a>
+                <a class="dropdown-item" href="{% url 'commandments:author_visser' %}">Jenske Visser</a>
               </div>
             </li>
+            <li class="nav-break d-none d-lg-block" aria-hidden="true"></li>
+            <li class="nav-item"><a href="{% url 'commandments:walk_as_jesus' %}" class="nav-link"><span>{% trans 'Walk as Jesus' %}</span></a></li>
             <li class="nav-item"><a href="{% url 'commandments:legalism' %}" class="nav-link"><span>{% trans 'Legalism?' %}</span></a></li>
             {% if user.is_superuser or user.is_staff %}
             <li class="nav-item"><a href="{% url 'admin:index' %}" class="nav-link"><span>{% trans 'Admin Portal' %}</span></a></li>
@@ -147,7 +150,7 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2 logo"><span>{% trans 'Law of Messiah' %}</span></h2>
               <p class="text-muted">{% trans 'Torah from a New Covenant Perspective' %}</p>
-              <p class="text-muted"><small>{% blocktrans %}A digital version of the book series by Michael Rudolph and Daniel C. Juster.{% endblocktrans %}</small></p>
+              <p class="text-muted"><small>{% blocktrans %}A digital version of the book series by Michael Rudolph with Daniel C. Juster.{% endblocktrans %}</small></p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="https://github.com/walkasjesus"><span class="fab fa-github"></span></a></li>
               </ul>
@@ -159,8 +162,10 @@
               <ul class="list-unstyled">
                 <li><a href="{% url 'commandments:index' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{% trans 'Home' %}</a></li>
                 <li><a href="{% url 'commandments:law_of_messiah_listing' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{% trans 'Law of Messiah' %}</a></li>
+                <li><a href="{% url 'commandments:walk_as_jesus' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{% trans 'Walk as Jesus' %}</a></li>
                 <li><a href="{% url 'commandments:author_rudolph' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Michael Rudolph</a></li>
                 <li><a href="{% url 'commandments:author_juster' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Daniel C. Juster</a></li>
+                <li><a href="{% url 'commandments:author_visser' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Jenske Visser</a></li>
                 <li><a href="{% url 'commandments:maimonides_listing' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{% trans 'Classical Commandments' %}</a></li>
                 <li><a href="{% url 'commandments:legalism' %}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{% trans 'Legalism?' %}</a></li>
               </ul>

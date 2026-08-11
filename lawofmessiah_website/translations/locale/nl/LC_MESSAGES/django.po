@@ -5250,7 +5250,7 @@ msgstr "Bron en licentie"
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:846
 msgid ""
 "Based on <em>The Law of Messiah - Torah from a New Covenant Perspective</em> "
-"by Michael Rudolph and Daniel C. Juster."
+"by Michael Rudolph with Daniel C. Juster."
 msgstr ""
 "Bronmateriaal: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> door Michael Rudolph en Daniel C. Juster."
@@ -5342,7 +5342,7 @@ msgstr "Wet van Christus"
 msgid ""
 "Below is presented the structured commandments (mitzvot) derived from the "
 "Bible, as documented in <em>The Law of Messiah - Torah from a New Covenant "
-"Perspective</em> by Michael Rudolph and Daniel C. Juster. The goal here is "
+"Perspective</em> by Michael Rudolph with Daniel C. Juster. The goal here is "
 "to help discipleship groups by reflecting on one commandment at a time how "
 "this can be applied in daily life. Not every commandment is for every "
 "person: some apply specifically to Jews, Gentiles, kings, priests, men, "
@@ -5362,7 +5362,7 @@ msgstr ""
 #: lawofmessiah_app/templates/law_of_messiah/listing.html:50
 msgid ""
 "Source material: <em>The Law of Messiah - Torah from a New Covenant "
-"Perspective</em> by Michael Rudolph and Daniel C. Juster."
+"Perspective</em> by Michael Rudolph with Daniel C. Juster."
 msgstr ""
 "Bronmateriaal: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> door Michael Rudolph en Daniel C. Juster."
@@ -5889,7 +5889,7 @@ msgstr "Torah vanuit een Nieuw Verbondsperspectief"
 
 #: lawofmessiah_app/templates/pages/index.html:16
 #: lawofmessiah_app/templates/pages/index.html:54
-msgid "by Michael Rudolph and Daniel C. Juster"
+msgid "by Michael Rudolph with Daniel C. Juster"
 msgstr "door Michael Rudolph en Daniel C. Juster"
 
 #: lawofmessiah_app/templates/pages/index.html:18
@@ -5905,7 +5905,7 @@ msgid "Walk daily in the Law of Messiah"
 msgstr "Leef dagelijks de Wet van Christus"
 
 #: lawofmessiah_app/templates/pages/index.html:32
-msgid "Book series by Michael Rudolph and Daniel C. Juster"
+msgid "Book series by Michael Rudolph with Daniel C. Juster"
 msgstr "Boekenreeks van Michael Rudolph en Daniel C. Juster"
 
 #: lawofmessiah_app/templates/pages/index.html:34
@@ -7414,7 +7414,7 @@ msgstr ""
 #: templates/base.html:71
 msgid ""
 "Law of Messiah — a digital version of the book series Torah from a New "
-"Covenant Perspective by Michael Rudolph and Daniel C. Juster. Explore "
+"Covenant Perspective by Michael Rudolph with Daniel C. Juster. Explore "
 "biblical commandments and mitzvot for discipleship, groups, and families."
 msgstr ""
 "Law of Messiah – een digitale versie van de boekenreeks Torah from a New "
@@ -7455,7 +7455,7 @@ msgstr "Admin Portaal"
 
 #: templates/base.html:150
 msgid ""
-"A digital version of the book series by Michael Rudolph and Daniel C. Juster."
+"A digital version of the book series by Michael Rudolph with Daniel C. Juster."
 msgstr ""
 "Bronmateriaal: <em>The Law of Messiah - Torah from a New Covenant "
 "Perspective</em> door Michael Rudolph en Daniel C. Juster."
