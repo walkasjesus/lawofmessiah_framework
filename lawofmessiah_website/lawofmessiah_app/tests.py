@@ -1,7 +1,9 @@
 import json
+import os
 from unittest.mock import Mock, patch
 
 from django.contrib.sessions.middleware import SessionMiddleware
+from django.test import override_settings
 from django.test import RequestFactory, SimpleTestCase, TestCase
 
 from lawofmessiah_app.models.bibles import BibleTranslationMetaData, BibleTranslation
@@ -157,6 +159,32 @@ class CommentaryProxyViewTestCase(SimpleTestCase):
 
         self.assertEqual(response.status_code, 502)
         self.assertIn('error', json.loads(response.content.decode('utf-8')))
+
+
+class GeoLocationRedirectMiddlewareTestCase(TestCase):
+    @override_settings(
+        ALLOWED_HOSTS=['testserver', 'acc.lawofmessiah.org', 'acc.wetvanchristus.nl'],
+        GEO_REDIRECT_ENABLED=True,
+        GEO_REDIRECT_NL_DOMAIN='acc.wetvanchristus.nl',
+        GEO_REDIRECT_EN_DOMAIN='acc.lawofmessiah.org',
+    )
+    def test_accept_language_without_cookie_or_geo_does_not_redirect_domains(self):
+        previous_env = os.environ.get('GEO_REDIRECT_ENABLED')
+        os.environ['GEO_REDIRECT_ENABLED'] = 'true'
+        try:
+            response = self.client.get(
+                '/',
+                HTTP_HOST='acc.lawofmessiah.org',
+                HTTP_ACCEPT_LANGUAGE='nl',
+            )
+        finally:
+            if previous_env is None:
+                os.environ.pop('GEO_REDIRECT_ENABLED', None)
+            else:
+                os.environ['GEO_REDIRECT_ENABLED'] = previous_env
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNone(response.headers.get('Location'))
 
 
 class LegalismViewTestCase(TestCase):

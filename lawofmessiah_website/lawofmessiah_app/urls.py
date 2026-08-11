@@ -54,7 +54,7 @@ urlpatterns = [
 
 def _build_localized_aliases():
     """Build URL aliases for all non-default languages using .po file translations."""
-    default_lang = settings.LANGUAGE_CODE
+    default_lang = settings.LANGUAGE_CODE.split('-')[0].lower()
     aliases = []
 
     with translation.override(default_lang):
@@ -65,6 +65,7 @@ def _build_localized_aliases():
         }
 
     for lang_code, _ in settings.LANGUAGES:
+        lang_code = str(lang_code).split('-')[0].lower()
         if lang_code == default_lang:
             continue
         with translation.override(lang_code):

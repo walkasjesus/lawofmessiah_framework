@@ -40,7 +40,6 @@ class GeoLocationRedirectMiddleware(MiddlewareMixin):
             return None
         
         from django.conf import settings
-        from django.utils.translation import get_language
         
         if not hasattr(settings, 'GEO_REDIRECT_ENABLED') or not settings.GEO_REDIRECT_ENABLED:
             return None
@@ -93,12 +92,6 @@ class GeoLocationRedirectMiddleware(MiddlewareMixin):
         # Only trust explicit language cookie for cross-domain routing decisions.
         current_lang = str(request.COOKIES.get(settings.LANGUAGE_COOKIE_NAME, '')).strip().lower()
         has_explicit_language_cookie = bool(current_lang)
-        if not current_lang:
-            # Fallback only when there is no language preference cookie.
-            try:
-                current_lang = get_language() or ''
-            except Exception:
-                current_lang = ''
         
         # Check if user prefers Dutch language
         if current_lang.lower().startswith('nl'):
