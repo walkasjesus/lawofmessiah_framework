@@ -4,8 +4,12 @@
 #
 # Scope:
 # - Dutch only (nl)
-# - Static project strings only
+# - Regular project/template strings only
 # - Excludes data/lawofmessiah and data/lawofmessiah_translations
+#
+# This script is for the website's standard page translations,
+# including the main Django templates and the author/legalism pages.
+# It does not manage the Law of Messiah YAML-derived data strings.
 
 if [[ -f ./venv/Scripts/activate ]]; then
 	source ./venv/Scripts/activate
