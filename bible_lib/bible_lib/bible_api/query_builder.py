@@ -46,6 +46,7 @@ class QueryBuilder:
             BibleBooks.Nehemiah: 'NEH',
             BibleBooks.Tobit: 'TOB',
             BibleBooks.Judith: 'JDT',
+            BibleBooks.Esther: 'EST',
             BibleBooks.Job: 'JOB',
             BibleBooks.Psalms: 'PSA',
             BibleBooks.Proverbs: 'PRO',

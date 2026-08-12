@@ -16,6 +16,10 @@ from django.conf import settings
 from google_trans import Translator
 import requests
 
+from lawofmessiah_app.lib.access_policy import (
+    filter_visible_bibles_for_request,
+    is_bible_id_visible_for_request,
+)
 from lawofmessiah_app.models import UserPreferences, BibleTranslation
 
 
@@ -220,6 +224,14 @@ def _default_bible_for_language(language_code):
     default_bible_id = settings.DEFAULT_BIBLE_PER_LANGUAGE.get(language_code, settings.DEFAULT_BIBLE_ANY_LANGUAGE)
     if default_bible_id in settings.DISABLED_BIBLE_TRANSLATIONS:
         default_bible_id = settings.DEFAULT_BIBLE_ANY_LANGUAGE
+    if not is_bible_id_visible_for_request(None, default_bible_id):
+        fallback = settings.DEFAULT_BIBLE_ANY_LANGUAGE
+        if is_bible_id_visible_for_request(None, fallback):
+            return BibleTranslation().get(fallback)
+        visible_any = filter_visible_bibles_for_request(None, BibleTranslation().all_enabled())
+        if visible_any:
+            return visible_any[0]
+        return BibleTranslation().get(default_bible_id)
     return BibleTranslation().get(default_bible_id)
 
 
@@ -358,17 +370,37 @@ class UserPreferencesLanguagesView(View):
 
 
 class BibleTranslationsForLanguageView(View):
-    """Returns JSON with Bible translations available for the given language code."""
+    """Returns JSON with Bible translations available for the selected site language and supported site languages."""
     def get(self, request):
-        language_code = request.GET.get('language', 'en')
+        language_code = str(request.GET.get('language', '') or '').strip().lower()[:2]
+        supported_language_codes = {
+            str(code).strip().lower()[:2]
+            for code, _ in getattr(settings, 'LANGUAGES', [])
+            if str(code).strip()
+        }
         bible_translation = BibleTranslation()
-        bibles = [b for b in bible_translation.all_enabled() if b.language == language_code]
-        default_bible_id = settings.DEFAULT_BIBLE_PER_LANGUAGE.get(language_code, settings.DEFAULT_BIBLE_ANY_LANGUAGE)
-        if default_bible_id in settings.DISABLED_BIBLE_TRANSLATIONS:
-            default_bible_id = settings.DEFAULT_BIBLE_ANY_LANGUAGE
+        bibles = filter_visible_bibles_for_request(request, bible_translation.all_in_supported_languages())
+        primary_language = language_code if language_code in supported_language_codes else ''
+        bibles = sorted(bibles, key=lambda b: (
+            0 if str(getattr(b, 'language', '') or '').strip().lower()[:2] == primary_language else 1,
+            str(getattr(b, 'language', '') or '').strip().lower()[:2],
+            str(getattr(b, 'abbreviation', '') or '').strip().lower() or str(getattr(b, 'name', '') or '').strip().lower(),
+            str(getattr(b, 'name', '') or '').strip().lower(),
+        ))
+
+        preferred_default = settings.DEFAULT_BIBLE_PER_LANGUAGE.get(language_code, settings.DEFAULT_BIBLE_ANY_LANGUAGE)
+        if preferred_default not in {str(b.id) for b in bibles}:
+            preferred_default = bibles[0].id if bibles else ''
+
         return JsonResponse({
-            'bibles': [{'id': b.id, 'name': b.name} for b in bibles],
-            'default_bible_id': default_bible_id,
+            'bibles': [{
+                'id': b.id,
+                'name': b.name,
+                'language': getattr(b, 'language', ''),
+                'abbreviation': getattr(b, 'abbreviation', '') or b.name,
+                'display_name': f"{str(getattr(b, 'language', '') or '').strip().upper()[:2]} - {getattr(b, 'abbreviation', '') or b.name} - {b.name}",
+            } for b in bibles],
+            'default_bible_id': preferred_default,
         })
 
 

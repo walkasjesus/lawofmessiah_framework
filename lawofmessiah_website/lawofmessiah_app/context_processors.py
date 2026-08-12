@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.utils import translation
 
+from lawofmessiah_app.lib.access_policy import cjb_bible_id, is_bible_id_visible_for_request
 from lawofmessiah_app.lib.media_cache_version import get_media_cache_version
 from lawofmessiah_app.models import BibleTranslation, UserPreferences
 
@@ -8,6 +9,8 @@ from lawofmessiah_app.models import BibleTranslation, UserPreferences
 def bible_translation(request):
     return {
         'bible_translation': BibleTranslation(),
+        'cjb_bible_id': cjb_bible_id(),
+        'cjb_bible_visible': is_bible_id_visible_for_request(request, cjb_bible_id()),
     }
 
 

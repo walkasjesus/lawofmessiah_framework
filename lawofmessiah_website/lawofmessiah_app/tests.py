@@ -47,6 +47,12 @@ class BibleTranslationTestCase(TestCase):
         all_enabled = len(BibleTranslation().all_enabled())
         self.assertEqual(all_enabled, all_bibles-1)
 
+    @override_settings(DISABLED_BIBLE_TRANSLATIONS=['de4e12af7f28f599-01'])
+    def test_all_enabled_respects_settings_disabled_ids(self):
+        self._require_bibles()
+        enabled_ids = {b.id for b in BibleTranslation().all_enabled()}
+        self.assertNotIn('de4e12af7f28f599-01', enabled_ids)
+
     def test_all_disabled(self):
         self._require_bibles()
         before_count = len(BibleTranslation().all_disabled())

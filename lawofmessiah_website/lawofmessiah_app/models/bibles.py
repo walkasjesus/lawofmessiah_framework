@@ -1,31 +1,180 @@
+import json
 import logging
+from pathlib import Path
 
 from bible_lib import BibleFactory, Bible
 from django.db import models
 from django.utils import translation
 
+from lawofmessiah_app.lib.access_policy import cjb_bible_id
 from lawofmessiah_website import settings
+
+
+class LocalCompleteJewishBible(Bible):
+    """Local Complete Jewish Bible data source backed by the bundled CJB JSON."""
+
+    _index = None
+
+    def __init__(self, bible_id):
+        super().__init__(bible_id=bible_id)
+        self.name = str(getattr(settings, 'CJB_BIBLE_NAME', 'Complete Jewish Bible')).strip()
+        self.language = 'en'
+        self.copyright = str(getattr(settings, 'COMPLETE_JEWISH_BIBLE_FOOTER_TEXT', '')).strip()
+        self.abbreviation = 'CJB'
+
+    @staticmethod
+    def _normalize_book_key(value):
+        return ''.join(ch for ch in str(value or '').lower() if ch.isalnum())
+
+    @classmethod
+    def _load_index(cls):
+        if cls._index is not None:
+            return cls._index
+
+        cls._index = {}
+        source_filename = str(getattr(settings, 'CJB_BIBLE_SOURCE_FILE', 'cjb_ot.json') or '').strip() or 'cjb_ot.json'
+        source_filenames = list(getattr(settings, 'CJB_BIBLE_SOURCE_FILES', []) or [])
+        if not source_filenames:
+            source_filenames = [source_filename]
+        elif source_filename not in source_filenames:
+            source_filenames.insert(0, source_filename)
+
+        source_dir = Path(__file__).resolve().parents[3] / 'bible_lib' / 'sources'
+
+        for filename in source_filenames:
+            data_path = source_dir / str(filename or '').strip()
+            if not data_path.exists():
+                continue
+
+            try:
+                with data_path.open('r', encoding='utf-8') as handle:
+                    payload = json.load(handle)
+            except Exception:
+                logging.getLogger().warning('Could not load local CJB source data from %s.', data_path.name)
+                continue
+
+            for book in payload.get('books', []):
+                aliases = {
+                    book.get('bible_book'),
+                    book.get('bible_book_enum_name'),
+                    book.get('bible_book_abbreviation'),
+                    book.get('book_slug'),
+                    book.get('book_title_source'),
+                }
+                chapter_index = {}
+
+                for chapter in book.get('chapters', []):
+                    try:
+                        chapter_number = int(chapter.get('chapter_number'))
+                    except Exception:
+                        continue
+
+                    verse_index = {}
+                    for verse in chapter.get('verses', []):
+                        try:
+                            verse_number = int(verse.get('verse'))
+                        except Exception:
+                            continue
+
+                        text = str(verse.get('text', '')).strip()
+                        if text:
+                            verse_index[verse_number] = text
+
+                    if verse_index:
+                        chapter_index[chapter_number] = verse_index
+
+                if not chapter_index:
+                    continue
+
+                for alias in aliases:
+                    normalized_alias = cls._normalize_book_key(alias)
+                    if normalized_alias:
+                        cls._index[normalized_alias] = chapter_index
+
+        return cls._index
+
+    def verses(self, book, start_chapter: int, start_verse: int, end_chapter: int, end_verse: int) -> str:
+        index = self._load_index()
+        book_key = self._normalize_book_key(getattr(book, 'name', str(book)))
+        chapter_index = index.get(book_key, {})
+        if not chapter_index:
+            return ''
+
+        snippets = []
+        for chapter in range(int(start_chapter), int(end_chapter) + 1):
+            chapter_verses = chapter_index.get(chapter, {})
+            if not chapter_verses:
+                continue
+
+            first_verse = int(start_verse) if chapter == int(start_chapter) else min(chapter_verses.keys())
+            last_verse = int(end_verse) if chapter == int(end_chapter) else max(chapter_verses.keys())
+
+            for verse_nr in range(first_verse, last_verse + 1):
+                text = chapter_verses.get(verse_nr)
+                if text:
+                    snippets.append((chapter, verse_nr, text))
+
+        if not snippets:
+            return ''
+        if len(snippets) == 1:
+            return snippets[0][2]
+        return '\n'.join(f'{chapter}:{verse} {text}' for chapter, verse, text in snippets)
 
 
 class BibleTranslation:
     """" Get a specific (set of) bible translation(s). """
     _bible_factory = BibleFactory(settings.BIBLE_API_KEY)
-    _all_bibles = _bible_factory.all()
+
+    @staticmethod
+    def _build_all_bibles():
+        bibles = BibleFactory(settings.BIBLE_API_KEY).all()
+        local_cjb_id = cjb_bible_id()
+        if local_cjb_id and local_cjb_id not in bibles:
+            bibles[local_cjb_id] = LocalCompleteJewishBible(local_cjb_id)
+        overrides = getattr(settings, 'BIBLE_ABBREVIATION_OVERRIDES', {})
+        for bible_id, abbreviation in overrides.items():
+            if bible_id in bibles:
+                bibles[bible_id].abbreviation = str(abbreviation)
+        return bibles
+
+    _all_bibles = {}
 
     def all(self) -> [Bible]:
         """" Get all bible translations (including languages not supported this website). """
         return list(BibleTranslation._all_bibles.values())
 
+    @staticmethod
+    def _disabled_bible_ids():
+        disabled_ids = {
+            str(item).strip()
+            for item in getattr(settings, 'DISABLED_BIBLE_TRANSLATIONS', [])
+            if str(item).strip()
+        }
+        disabled_ids.update(
+            str(meta_data.bible_id).strip()
+            for meta_data in BibleTranslationMetaData.objects.filter(is_enabled=False)
+            if str(meta_data.bible_id).strip()
+        )
+        return {bible_id for bible_id in disabled_ids if bible_id}
+
     def all_enabled(self) -> [Bible]:
         """ This will list all bibles that are not explicitly disabled,
         so if information is missing it will assume them to be enabled. """
-        return set(self.all()) - set(self.all_disabled())
+        disabled_ids = self._disabled_bible_ids()
+        enabled = [b for b in self.all() if str(getattr(b, 'id', '')).strip() not in disabled_ids]
+        for bible_id in getattr(settings, 'FORCE_ENABLED_BIBLE_TRANSLATIONS', []):
+            normalized_id = str(bible_id or '').strip()
+            if not normalized_id or not self.contains(normalized_id):
+                continue
+            bible = self.get(normalized_id)
+            if bible not in enabled:
+                enabled.append(bible)
+        return enabled
 
     def all_disabled(self) -> [Bible]:
         """ This will return all bibles that are explicitly disabled. """
-        return [BibleTranslation._bible_factory.create(m.bible_id)
-                for m in BibleTranslationMetaData.objects.all()
-                if m.is_enabled is False]
+        disabled_ids = self._disabled_bible_ids()
+        return [b for b in self.all() if str(getattr(b, 'id', '')).strip() in disabled_ids]
 
     def all_in_user_language(self) -> [Bible]:
         """" Get all bibles in the user main language. """
@@ -50,6 +199,21 @@ class BibleTranslation:
 
     def contains(self, bible_id: str):
         return bible_id in BibleTranslation._all_bibles
+
+
+BibleTranslation._all_bibles = BibleTranslation._build_all_bibles()
+
+
+def _apply_bible_abbreviation_overrides():
+    overrides = getattr(settings, 'BIBLE_ABBREVIATION_OVERRIDES', {}) or {}
+    for bible_id, abbreviation in overrides.items():
+        normalized_id = str(bible_id or '').strip()
+        if not normalized_id or normalized_id not in BibleTranslation._all_bibles:
+            continue
+        BibleTranslation._all_bibles[normalized_id].abbreviation = str(abbreviation)
+
+
+_apply_bible_abbreviation_overrides()
 
 
 class BibleTranslationMetaData(models.Model):

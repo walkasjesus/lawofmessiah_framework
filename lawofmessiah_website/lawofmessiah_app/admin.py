@@ -1,7 +1,8 @@
 from django.contrib import admin
+from django.db import models
+from django.urls import path
 
 from lawofmessiah_app.models import (
-    BibleTranslationMetaData,
     LawOfMessiah,
     LawOfMessiahBibleReference,
     LawOfMessiahDrawing,
@@ -11,11 +12,22 @@ from lawofmessiah_app.models import (
 )
 
 
-@admin.register(BibleTranslationMetaData)
-class BibleTranslationMetaDataAdmin(admin.ModelAdmin):
-    list_display = ('bible_id', 'is_enabled')
-    search_fields = ('bible_id',)
-    list_filter = ('is_enabled',)
+class Bible(models.Model):
+    class Meta:
+        managed = False
+        verbose_name_plural = 'Bible'
+        app_label = 'commandments_app'
+
+
+class BibleAdmin(admin.ModelAdmin):
+    model = Bible
+
+    def get_urls(self):
+        from lawofmessiah_app.views.admin.admin_bible_view import AdminBibleView
+        view_name = '{}_{}_changelist'.format(self.model._meta.app_label, self.model._meta.model_name)
+        return [
+            path('', AdminBibleView.as_view(), name=view_name),
+        ]
 
 
 class LawOfMessiahBibleReferenceInline(admin.TabularInline):
@@ -26,6 +38,9 @@ class LawOfMessiahBibleReferenceInline(admin.TabularInline):
 class LawOfMessiahDrawingInline(admin.TabularInline):
     model = LawOfMessiahDrawing
     extra = 0
+
+
+admin.site.register(Bible, BibleAdmin)
 
 
 @admin.register(LawOfMessiah)
