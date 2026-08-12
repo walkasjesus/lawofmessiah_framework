@@ -278,7 +278,7 @@ class UserPreferencesLanguageSwitchView(View):
         if requested_bible_id and requested_bible_id not in settings.DISABLED_BIBLE_TRANSLATIONS:
             try:
                 candidate = BibleTranslation().get(requested_bible_id)
-                if candidate.language == language_code:
+                if candidate is not None:
                     bible = candidate
             except Exception:
                 bible = None

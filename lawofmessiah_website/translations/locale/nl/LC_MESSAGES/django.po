@@ -5152,7 +5152,7 @@ msgstr "Bijbelteksten copyright"
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:371
 #: lawofmessiah_app/templates/maimonides/listing.html:70
 msgid "Not provided for this Bible translation."
-msgstr "Het is niet gelukt de Bijbelvertaling te wijzigen."
+msgstr "Niet beschikbaar voor deze Bijbelvertaling."
 
 #: lawofmessiah_app/templates/law_of_messiah/detail.html:388
 msgid "Rabbi Michael Rudolph"

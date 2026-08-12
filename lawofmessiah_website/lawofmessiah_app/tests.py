@@ -6,11 +6,12 @@ from django.conf import settings
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.test import override_settings
 from django.test import RequestFactory, SimpleTestCase, TestCase
+from django.utils import translation
 
 from lawofmessiah_app.models.bibles import BibleTranslationMetaData, BibleTranslation
 from lawofmessiah_app.context_processors import cache_settings
 from lawofmessiah_app.views.legalism_view import LegalismView
-from lawofmessiah_app.views.user_preferences import ScripturaCommentaryProxyView
+from lawofmessiah_app.views.user_preferences import ScripturaCommentaryProxyView, UserPreferencesLanguageSwitchView
 
 
 class BibleTranslationTestCase(TestCase):
@@ -182,6 +183,35 @@ class CommentaryProxyViewTestCase(SimpleTestCase):
 
         self.assertEqual(response.status_code, 502)
         self.assertIn('error', json.loads(response.content.decode('utf-8')))
+
+
+class UserPreferencesLanguageSwitchViewTestCase(TestCase):
+    def test_valid_non_default_language_bible_is_stored_when_language_stays_english(self):
+        response = self.client.post(
+            '/language-switch/',
+            {
+                'language': 'en',
+                'bible_id': '173b6ec5bba026d2-01',
+                'next': '/law_of_messiah/A23/',
+            },
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(self.client.session['bible_id'], '173b6ec5bba026d2-01')
+        self.assertEqual(self.client.session['bible_id_per_language']['en'], '173b6ec5bba026d2-01')
+
+
+class BibleCopyrightTranslationTestCase(SimpleTestCase):
+    def test_missing_copyright_fallback_message_is_not_the_generic_bible_change_error(self):
+        with translation.override('nl'):
+            self.assertEqual(
+                translation.gettext('Not provided for this Bible translation.'),
+                'Niet beschikbaar voor deze Bijbelvertaling.',
+            )
+            self.assertNotEqual(
+                translation.gettext('Not provided for this Bible translation.'),
+                translation.gettext('Failed to change the Bible translation.'),
+            )
 
 
 class GeoLocationRedirectMiddlewareTestCase(TestCase):
