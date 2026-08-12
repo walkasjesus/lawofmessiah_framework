@@ -43,3 +43,16 @@ class TestSimpleCache(TestCase):
         cache_after_load = cache._cache
 
         self.assertEqual(cache_before_load, cache_after_load)
+
+    def test_get_persists_to_disk_immediately(self):
+        cache = SimpleCache(self.cache_path)
+        if self.cache_path.exists():
+            self.cache_path.unlink()
+
+        cache.get(lambda value: {'result': value}, 'persisted-value')
+
+        self.assertTrue(self.cache_path.exists())
+        with self.cache_path.open() as file:
+            saved = json.load(file)
+
+        self.assertIn('persisted-value', saved)

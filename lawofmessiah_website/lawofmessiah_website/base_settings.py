@@ -229,8 +229,8 @@ ROSETTA_MESSAGES_PER_PAGE = 25
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 1500
 
 # Bible text retrieval settings
-# 6 months default for verse text caching (seconds)
-BIBLE_API_CACHE_TIMEOUT_SECONDS = 60 * 60 * 24 * 30 * 6
+# 30 days default for verse text caching (seconds)
+BIBLE_API_CACHE_TIMEOUT_SECONDS = 60 * 60 * 24 * 30
 # 6 months default for commentary cache (translations + frontend commentary cache)
 COMMENTARY_CACHE_TIMEOUT_SECONDS = 60 * 60 * 24 * 30 * 6
 # Commentary endpoint defaults to BijbelAPI and supports optional x-api-key auth.

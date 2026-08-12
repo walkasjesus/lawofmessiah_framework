@@ -2,6 +2,7 @@ import json
 import os
 from unittest.mock import Mock, patch
 
+from django.conf import settings
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.test import override_settings
 from django.test import RequestFactory, SimpleTestCase, TestCase
@@ -83,6 +84,22 @@ class KidsModeCacheSettingsTestCase(TestCase):
         request.COOKIES['jc_kids_mode'] = 'true'
 
         self.assertEqual(cache_settings(request)['cache_on_kids_mode'], 'kids')
+
+
+from lawofmessiah_app.lib.access_policy import filter_visible_bibles_for_request, is_bible_id_visible_for_request
+
+
+class CJBVisibilitySettingsTestCase(SimpleTestCase):
+    def test_cjb_is_public_by_default_when_enabled(self):
+        self.assertEqual(getattr(settings, 'CJB_BIBLE_ID', ''), 'cjb-bible-com')
+        self.assertTrue(getattr(settings, 'CJB_BIBLE_ENABLED', False))
+        self.assertFalse(getattr(settings, 'CJB_BIBLE_LOGGED_IN_ONLY', True))
+
+    @override_settings(CJB_BIBLE_ID='cjb-bible-com', CJB_BIBLE_ENABLED=True, CJB_BIBLE_LOGGED_IN_ONLY=True)
+    def test_cjb_hidden_when_logged_in_only_is_enabled_for_anonymous_users(self):
+        request = RequestFactory().get('/')
+        self.assertFalse(is_bible_id_visible_for_request(request, 'cjb-bible-com'))
+        self.assertNotIn('cjb-bible-com', [str(b.id) for b in filter_visible_bibles_for_request(request, [Mock(id='cjb-bible-com'), Mock(id='de4e12af7f28f599-02')])])
 
 
 class CommentaryProxyViewTestCase(SimpleTestCase):

@@ -11,6 +11,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.translation import gettext as _
 from django.views import View
 
+from bible_lib.bible_api.services import Services
 from lawofmessiah_app.models import BibleTranslation, LawOfMessiah, Maimonides, MaimonidesBibleReference, UserPreferences
 
 
@@ -137,19 +138,33 @@ def _reference_text_with_source(ref, bible):
         f'verse_text:v1:{bible_cache_id}:'
         f'{ref.book}:{ref.begin_chapter}:{ref.begin_verse}:{ref.end_chapter}:{ref.end_verse}'
     )
-    cached_copyright = cache.get(copyright_cache_key)
+
+    api_cache = Services().cache
+    cached_copyright = api_cache.get_value(copyright_cache_key)
     if cached_copyright:
         bible.copyright = cached_copyright
+    else:
+        cached_copyright = cache.get(copyright_cache_key)
+        if cached_copyright:
+            bible.copyright = cached_copyright
+            api_cache.set_value(copyright_cache_key, cached_copyright, VERSE_CACHE_TIMEOUT)
+
+    cached = api_cache.get_value(cache_key)
+    if cached is not None:
+        return cached, 'bible_lib_cache'
 
     cached = cache.get(cache_key)
     if cached is not None:
-        return cached, 'cache'
+        api_cache.set_value(cache_key, cached, VERSE_CACHE_TIMEOUT)
+        return cached, 'django_cache'
 
     end_chapter = ref.end_chapter if ref.end_chapter else ref.begin_chapter
     end_verse = ref.end_verse if ref.end_verse else ref.begin_verse
     text = bible.verses(BibleLibBibleBooks[ref.book], ref.begin_chapter, ref.begin_verse, end_chapter, end_verse)
+    api_cache.set_value(cache_key, text, VERSE_CACHE_TIMEOUT)
     cache.set(cache_key, text, VERSE_CACHE_TIMEOUT)
     if getattr(bible, 'copyright', ''):
+        api_cache.set_value(copyright_cache_key, bible.copyright, VERSE_CACHE_TIMEOUT)
         cache.set(copyright_cache_key, bible.copyright, VERSE_CACHE_TIMEOUT)
     return text, 'api'
 

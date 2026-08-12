@@ -37,7 +37,7 @@
                     <select name="bible_id" class="drpBibleTranslation selectpicker" id="drpBibleTranslation" data-live-search="true" data-width="100%" data-size="10">
                         {% get_available_languages as LANGUAGES %}
                         {% get_language_info_list for LANGUAGES as languages %}
-                        {% for bible_item in bible_translation.all_in_supported_languages %}
+                        {% for bible_item in bible_translations_for_request %}
                             {% for language in languages %}
                                 {% if bible_item.language|lower|slice:':2' == language.code|lower|slice:':2' %}
                                 <option value="{{ bible_item.id }}" data-abbreviation="{{ bible_item.abbreviation|default:bible_item.name|upper }}" {% if bible_item.id == user_preferences.bible.id %}selected{% endif %}>
