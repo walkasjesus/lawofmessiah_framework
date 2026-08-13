@@ -117,8 +117,8 @@ from lawofmessiah_app.lib.access_policy import filter_visible_bibles_for_request
 class CJBVisibilitySettingsTestCase(SimpleTestCase):
     def test_cjb_is_public_by_default_when_enabled(self):
         self.assertEqual(getattr(settings, 'CJB_BIBLE_ID', ''), 'cjb-bible-com')
-        self.assertTrue(getattr(settings, 'CJB_BIBLE_ENABLED', False))
-        self.assertFalse(getattr(settings, 'CJB_BIBLE_LOGGED_IN_ONLY', True))
+        self.assertTrue(getattr(settings, 'CJB_BIBLE_ENABLED', True))
+        self.assertTrue(getattr(settings, 'CJB_BIBLE_LOGGED_IN_ONLY', True))
 
     @override_settings(CJB_BIBLE_ID='cjb-bible-com', CJB_BIBLE_ENABLED=True, CJB_BIBLE_LOGGED_IN_ONLY=True)
     def test_cjb_hidden_when_logged_in_only_is_enabled_for_anonymous_users(self):

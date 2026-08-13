@@ -241,14 +241,6 @@ BIBLE_AUTO_LOAD_VERSE_LIMIT = 5
 # Set to True only for debugging: disables Django cache usage (forces fresh loads)
 DISABLE_CACHE_FOR_DEBUG = False
 
-# Local Complete Jewish Bible selector settings.
-CJB_BIBLE_ID = 'cjb-bible-com'
-CJB_BIBLE_NAME = 'Complete Jewish Bible'
-CJB_BIBLE_SOURCE_FILE = 'cjb_ot.json'
-CJB_BIBLE_SOURCE_FILES = ['cjb_ot.json', 'jnt_bible_lib_compatible.json']
-CJB_BIBLE_ENABLED = True
-CJB_BIBLE_LOGGED_IN_ONLY = False
-
 # Override the auto-detected abbreviation for specific Bible IDs.
 # Key: bible_id (string), Value: desired abbreviation (string)
 BIBLE_ABBREVIATION_OVERRIDES = {
