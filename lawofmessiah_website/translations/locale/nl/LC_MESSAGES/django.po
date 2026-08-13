@@ -1750,11 +1750,11 @@ msgstr "commentaar-vertalen/"
 
 #: lawofmessiah_app/urls.py:41
 msgid "walk-as-jesus/"
-msgstr "Wandel als Jezus"
+msgstr "wandel-als-jezus/"
 
 #: lawofmessiah_app/urls.py:42
 msgid "authors/michael-rudolph/"
-msgstr "Michael Rudolph"
+msgstr "auteurs/michael-rudolph/"
 
 #: lawofmessiah_app/urls.py:43
 msgid "authors/daniel-juster/"
@@ -1762,7 +1762,7 @@ msgstr "auteurs/daniel-juster/"
 
 #: lawofmessiah_app/urls.py:44
 msgid "authors/jenske-visser/"
-msgstr "auteurs/daniel-juster/"
+msgstr "auteurs/jenske-visser/"
 
 #: lawofmessiah_app/urls.py:45
 msgid "maimonides/"
@@ -1794,7 +1794,7 @@ msgstr "voorwaarden/"
 
 #: lawofmessiah_app/urls.py:52
 msgid "privacy/"
-msgstr "Privacy"
+msgstr "privacy/"
 
 #: lawofmessiah_app/urls.py:53
 msgid "admin/reset_bibles/"
