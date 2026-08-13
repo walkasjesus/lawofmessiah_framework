@@ -6,7 +6,7 @@ from bible_lib.simple_cache import SimpleCache
 
 def _project_cache_path() -> Path:
     root = Path(__file__).resolve().parents[3]
-    cache_dir = root / 'lawofmessiah_website' / '.bible_cache'
+    cache_dir = root / 'lawofmessiah_website'
     cache_dir.mkdir(parents=True, exist_ok=True)
     return cache_dir / 'bible_api_cache.json'
 
