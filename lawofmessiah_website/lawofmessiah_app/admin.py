@@ -3,13 +3,17 @@ from django.db import models
 from django.urls import path
 
 from lawofmessiah_app.models import (
+    BibleTranslationUsageDaily,
     LawOfMessiah,
     LawOfMessiahBibleReference,
     LawOfMessiahDrawing,
     Maimonides,
     MaimonidesBibleReference,
+    PageVisitDaily,
     Redirect,
 )
+from lawofmessiah_app.views.admin.admin_bible_usage_view import AdminBibleUsageView
+from lawofmessiah_app.views.admin.admin_page_usage_view import AdminPageUsageView
 
 
 class Bible(models.Model):
@@ -30,6 +34,26 @@ class BibleAdmin(admin.ModelAdmin):
         ]
 
 
+class BibleTranslationUsageDailyAdmin(admin.ModelAdmin):
+    model = BibleTranslationUsageDaily
+
+    def get_urls(self):
+        view_name = '{}_{}_changelist'.format(self.model._meta.app_label, self.model._meta.model_name)
+        return [
+            path('', AdminBibleUsageView.as_view(), name=view_name),
+        ]
+
+
+class PageVisitDailyAdmin(admin.ModelAdmin):
+    model = PageVisitDaily
+
+    def get_urls(self):
+        view_name = '{}_{}_changelist'.format(self.model._meta.app_label, self.model._meta.model_name)
+        return [
+            path('', AdminPageUsageView.as_view(), name=view_name),
+        ]
+
+
 class LawOfMessiahBibleReferenceInline(admin.TabularInline):
     model = LawOfMessiahBibleReference
     extra = 0
@@ -41,6 +65,8 @@ class LawOfMessiahDrawingInline(admin.TabularInline):
 
 
 admin.site.register(Bible, BibleAdmin)
+admin.site.register(BibleTranslationUsageDaily, BibleTranslationUsageDailyAdmin)
+admin.site.register(PageVisitDaily, PageVisitDailyAdmin)
 
 
 @admin.register(LawOfMessiah)

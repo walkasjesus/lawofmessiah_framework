@@ -12,7 +12,15 @@ from django.utils.translation import gettext as _
 from django.views import View
 
 from bible_lib.bible_api.services import Services
-from lawofmessiah_app.models import BibleTranslation, LawOfMessiah, Maimonides, MaimonidesBibleReference, UserPreferences
+from lawofmessiah_app.lib.usage_tracking import record_bible_usage
+from lawofmessiah_app.models import (
+    BibleTranslation,
+    BibleTranslationUsageDaily,
+    LawOfMessiah,
+    Maimonides,
+    MaimonidesBibleReference,
+    UserPreferences,
+)
 
 
 VERSE_CACHE_TIMEOUT = int(getattr(settings, 'BIBLE_API_CACHE_TIMEOUT_SECONDS', 60 * 60 * 24 * 30 * 6))
@@ -282,6 +290,7 @@ class MaimonidesBibleVersesView(View):
             commandment = get_object_or_404(Maimonides.objects.prefetch_related('bible_reference_rows'), pk=maimonides_id)
             verses = {}
             verse_sources = {}
+            verse_counts_by_source = {}
 
             for ref in commandment.bible_reference_rows.all():
                 ref_key = str(ref.pk)
@@ -290,6 +299,12 @@ class MaimonidesBibleVersesView(View):
                 text, source = _reference_text_with_source(ref, bible)
                 verses[ref_key] = text
                 verse_sources[ref_key] = source
+                verse_counts_by_source[source] = verse_counts_by_source.get(source, 0) + 1
+
+            for source, verse_count in verse_counts_by_source.items():
+                record_bible_usage(
+                    request, bible, source, BibleTranslationUsageDaily.ENDPOINT_MAIMONIDES_VERSES, verse_count
+                )
 
             return JsonResponse({'verses': verses, 'verse_sources': verse_sources})
         except Exception as ex:

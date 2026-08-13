@@ -12,8 +12,16 @@ from django.utils.translation import gettext as _
 from django.views import View
 
 from bible_lib.bible_api.services import Services
+from lawofmessiah_app.lib.usage_tracking import record_bible_usage
 from lawofmessiah_app.media_image_utils import media_file_exists
-from lawofmessiah_app.models import BibleTranslation, LawOfMessiah, LawOfMessiahDrawing, Maimonides, UserPreferences
+from lawofmessiah_app.models import (
+    BibleTranslation,
+    BibleTranslationUsageDaily,
+    LawOfMessiah,
+    LawOfMessiahDrawing,
+    Maimonides,
+    UserPreferences,
+)
 
 
 VERSE_CACHE_TIMEOUT = int(getattr(settings, 'BIBLE_API_CACHE_TIMEOUT_SECONDS', 60 * 60 * 24 * 30 * 6))
@@ -725,7 +733,10 @@ class LawOfMessiahDetailView(View):
             first_ref = law.bible_reference_rows.first()
             if first_ref is not None:
                 try:
-                    _reference_text_with_source(first_ref, selected_bible)
+                    _verse_text, verse_source = _reference_text_with_source(first_ref, selected_bible)
+                    record_bible_usage(
+                        request, selected_bible, verse_source, BibleTranslationUsageDaily.ENDPOINT_STUDY_PAGE
+                    )
                 except Exception:
                     pass
         law.primary_drawing = _find_primary_drawing(law)
@@ -812,6 +823,7 @@ class LawOfMessiahBibleVersesView(View):
             if requested_ref_ids:
                 refs = refs.filter(pk__in=requested_ref_ids)
 
+            verse_counts_by_source = {}
             for ref in refs:
                 ref_key = str(ref.pk)
                 try:
@@ -821,6 +833,12 @@ class LawOfMessiahBibleVersesView(View):
                     source = 'error'
                 verses[ref_key] = text
                 verse_sources[ref_key] = source
+                verse_counts_by_source[source] = verse_counts_by_source.get(source, 0) + 1
+
+            for source, verse_count in verse_counts_by_source.items():
+                record_bible_usage(
+                    request, bible, source, BibleTranslationUsageDaily.ENDPOINT_LAW_OF_MESSIAH_VERSES, verse_count
+                )
 
             return JsonResponse({'verses': verses, 'verse_sources': verse_sources})
         except Exception as ex:
