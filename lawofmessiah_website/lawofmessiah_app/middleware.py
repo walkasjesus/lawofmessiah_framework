@@ -1,8 +1,12 @@
+import logging
+
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import NoReverseMatch, Resolver404, resolve, reverse
 from django.utils import translation
 from django.utils.translation import get_language
+
+from lawofmessiah_app.lib.usage_tracking import record_page_visit
 
 
 class LocalizedUrlRedirectMiddleware:
@@ -49,4 +53,32 @@ class PermissionsPolicyMiddleware:
         response['Permissions-Policy'] = (
             'picture-in-picture=(self "https://www.youtube.com" "https://www.youtube-nocookie.com")'
         )
+        return response
+
+
+class PageVisitTrackingMiddleware:
+    """Record a daily, per-user visit count for public HTML pages (used by the page usage report)."""
+
+    _EXCLUDED_PREFIXES = ('/admin_portal/', '/static/', '/media/', '/ckeditor5/')
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+
+        if (
+            request.method == 'GET'
+            and response.status_code == 200
+            and 'text/html' in response.get('Content-Type', '')
+            and not request.path.startswith(self._EXCLUDED_PREFIXES)
+            and not request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+        ):
+            match = getattr(request, 'resolver_match', None)
+            page_label = (match.view_name if match else '') or request.path
+            try:
+                record_page_visit(request, page_label=page_label)
+            except Exception:
+                logging.getLogger(__name__).exception('Failed to record page visit for %s', request.path)
+
         return response

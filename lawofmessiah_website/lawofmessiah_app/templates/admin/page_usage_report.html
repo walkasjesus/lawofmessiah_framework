@@ -1,0 +1,110 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans 'Page usage report' %}</h1>
+<p>{% trans 'This report shows page visits per year, split per page and language, including unique users.' %}</p>
+
+<form method="get" style="margin-bottom: 1rem;">
+  <label for="report-year"><strong>{% trans 'Year' %}</strong></label>
+  <select name="year" id="report-year">
+    {% for year in available_years %}
+      <option value="{{ year }}"{% if year == selected_year %} selected{% endif %}>{{ year }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="report-page" style="margin-left: 1rem;"><strong>{% trans 'Pages (for report/export)' %}</strong></label>
+  <select name="page_paths" id="report-page" multiple size="8" style="min-width: 420px; vertical-align: top;">
+    {% for item in page_choices %}
+      <option value="{{ item.page_path }}"{% if item.page_path in selected_paths %} selected{% endif %}>
+        {{ item.language_code|upper }} - {{ item.page_label|default:item.page_path }} ({{ item.page_path }})
+      </option>
+    {% endfor %}
+  </select>
+  <div style="display: inline-block; margin-left: 0.5rem; color: #666;">
+    <small>{% trans 'Tip: hold Cmd/Ctrl to select multiple pages. Leave empty for all.' %}</small>
+  </div>
+
+  <button type="submit" class="button" style="margin-left: 1rem;">{% trans 'Apply' %}</button>
+  <button type="submit" class="button" name="export" value="csv" style="margin-left: 0.5rem;">{% trans 'Export CSV' %}</button>
+</form>
+
+<h2>{% trans 'Totals' %} ({{ selected_year }})</h2>
+<table>
+  <tr>
+    <th>{% trans 'Total visits' %}</th>
+    <th>{% trans 'Unique users' %}</th>
+  </tr>
+  <tr>
+    <td>{{ totals.total_visits }}</td>
+    <td>{{ totals.unique_users }}</td>
+  </tr>
+</table>
+
+<br>
+<h2>{% trans 'Year overview per month' %} ({{ selected_year }})</h2>
+<div style="margin-bottom: 1rem;">{{ visits_chart_markup|safe }}</div>
+<table>
+  <tr>
+    <th>{% trans 'Month' %}</th>
+    <th>{% trans 'Visits' %}</th>
+    <th>{% trans 'Unique users' %}</th>
+  </tr>
+  {% for row in monthly_rows %}
+  <tr>
+    <td>{{ row.month_label }}</td>
+    <td><strong>{{ row.total_visits }}</strong></td>
+    <td>{{ row.unique_users }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<br>
+<h2>{% trans 'Per page' %}</h2>
+<table>
+  <tr>
+    <th>{% trans 'Page' %}</th>
+    <th>{% trans 'Language' %}</th>
+    <th>{% trans 'Total visits' %}</th>
+    <th>{% trans 'Unique users' %}</th>
+  </tr>
+  {% for row in page_rows %}
+  <tr>
+    <td>{{ row.page_label|default:row.page_path }}<br><code>{{ row.page_path }}</code></td>
+    <td>{{ row.language_code|upper }}</td>
+    <td><strong>{{ row.total_visits|default:0 }}</strong></td>
+    <td>{{ row.unique_users|default:0 }}</td>
+  </tr>
+  {% empty %}
+  <tr>
+    <td colspan="4">{% trans 'No usage found for this selection.' %}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<br>
+<h2>{% trans 'Per unique user (pseudonymous)' %}</h2>
+<p>{% trans 'User keys are anonymized hashes. Use this section to evidence unique-user usage without exposing personal data.' %}</p>
+<table>
+  <tr>
+    <th>{% trans 'Page' %}</th>
+    <th>{% trans 'Language' %}</th>
+    <th>{% trans 'User type' %}</th>
+    <th>{% trans 'User key' %}</th>
+    <th>{% trans 'Total visits' %}</th>
+  </tr>
+  {% for row in user_rows %}
+  <tr>
+    <td>{{ row.page_label|default:row.page_path }}<br><code>{{ row.page_path }}</code></td>
+    <td>{{ row.language_code|upper }}</td>
+    <td>{{ row.user_kind }}</td>
+    <td><code>{{ row.user_key }}</code></td>
+    <td>{{ row.total_visits|default:0 }}</td>
+  </tr>
+  {% empty %}
+  <tr>
+    <td colspan="5">{% trans 'No user usage rows for this selection.' %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
