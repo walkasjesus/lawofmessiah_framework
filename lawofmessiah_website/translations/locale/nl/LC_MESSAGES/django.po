@@ -1770,7 +1770,7 @@ msgstr "maimonides/"
 
 #: lawofmessiah_app/urls.py:46
 msgid "maimonides/<str:maimonides_id>/verses/"
-msgstr "wet_van_christus/<str:law_id>/bijbelverzen/"
+msgstr "maimonides/<str:maimonides_id>/bijbelverzen/"
 
 #: lawofmessiah_app/urls.py:47
 msgid "law_of_messiah/"
