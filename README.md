@@ -8,7 +8,7 @@ It is a digital presentation of the book series _The Law of Messiah - Torah from
 
 - `lawofmessiah_website/`: Django website project
 - `bible_lib/`: library for Bible API access and verse retrieval helpers
-- `import_tool/`: import utilities for commandments, lessons, and Law of Messiah data
+- `import_tool/`: import utilities for commandments, drawings, and Law of Messiah data
 - `translate_tool/`: translation helper package
 
 ## Quick start (website)
@@ -68,6 +68,7 @@ Then open `http://localhost:8000`.
 - `lawofmessiah_website/account_app/`: account and auth-related app
 - `lawofmessiah_website/commandments_app/`: commandments domain models
 - `lawofmessiah_website/data/lawofmessiah/`: source/import data files
+- `lawofmessiah_website/data/lawofmessiah_translations/`: translation of Book content _The Law of Messiah - Torah from a New Covenant Perspective_
 
 ## Notes
 
@@ -77,4 +78,4 @@ Then open `http://localhost:8000`.
 ## Related repositories
 
 - Law of Messiah source data: https://github.com/walkasjesus/LawofMessiah
-- Translation repository: https://github.com/walkasjesus/walkasjesus_translations
+- Translation repository: https://github.com/walkasjesus/lawofmessiah_translations
