@@ -1,6 +1,7 @@
 from bible_lib import BibleBooks
 from bible_lib.bible_api.cache_controller import CacheController
 from bible_lib.bible_api.services import Services
+from django.conf import settings
 from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
@@ -8,7 +9,6 @@ from django.views import View
 
 from lawofmessiah_app.models import BibleTranslation, BibleReferences
 from lawofmessiah_app.models.bibles import BibleTranslationMetaData
-from lawofmessiah_website import settings
 
 
 class AdminBibleView(View):
@@ -34,9 +34,10 @@ class AdminBibleView(View):
             if not BibleTranslationMetaData.objects.filter(bible_id=bible.id).exists():
                 meta_data = BibleTranslationMetaData()
                 meta_data.bible_id = bible.id
-                # Default enable only in supported languages
-                languages = [code for code, name in settings.LANGUAGES]
-                meta_data.is_enabled = bible.language in languages
+                # Newly discovered translations are enabled by default; supported-language
+                # filtering is done at the view/query level, not by writing a language-based
+                # disabled state into metadata for every new translation.
+                meta_data.is_enabled = True
                 meta_data.save()
             else:
                 meta_data = BibleTranslationMetaData.objects.get(bible_id=bible.id)

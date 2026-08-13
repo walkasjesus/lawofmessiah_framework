@@ -1,6 +1,7 @@
+import json
 from pathlib import Path
 from unittest import TestCase
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 from bible_lib.simple_cache import SimpleCache
 
@@ -56,3 +57,12 @@ class TestSimpleCache(TestCase):
             saved = json.load(file)
 
         self.assertIn('persisted-value', saved)
+
+    def test_get_ignores_permission_errors_when_storing_to_disk(self):
+        cache = SimpleCache(self.cache_path)
+
+        with patch.object(Path, 'open', side_effect=PermissionError('permission denied')):
+            cached_value = cache.get(lambda value: value, 'permission-test')
+
+        self.assertEqual(cached_value, 'permission-test')
+        self.assertEqual(cache.get_value('permission-test'), None)

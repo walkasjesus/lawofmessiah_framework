@@ -23,6 +23,25 @@ class BibleTranslationTestCase(TestCase):
         if len(BibleTranslation().all()) == 0:
             self.skipTest('No Bible translations available in local test environment.')
 
+    def _available_bible_id(self):
+        disabled_ids = {
+            str(item).strip()
+            for item in getattr(settings, 'DISABLED_BIBLE_TRANSLATIONS', [])
+            if str(item).strip()
+        }
+        disabled_ids.update(
+            str(meta_data.bible_id).strip()
+            for meta_data in BibleTranslationMetaData.objects.all()
+            if str(meta_data.bible_id).strip()
+        )
+
+        for bible in BibleTranslation().all():
+            bible_id = str(getattr(bible, 'id', '')).strip()
+            if bible_id and bible_id not in disabled_ids:
+                return bible_id
+
+        self.fail('No non-disabled Bible translation available for this test.')
+
     def test_all(self):
         self._require_bibles()
         all_bibles = BibleTranslation().all()
@@ -37,17 +56,20 @@ class BibleTranslationTestCase(TestCase):
 
     def test_all_enabled_with_no_explicit_disabled_ones(self):
         self._require_bibles()
-        all_bibles = len(BibleTranslation().all())
-        all_enabled = len(BibleTranslation().all_enabled())
-        self.assertEqual(all_enabled, all_bibles)
+        with override_settings(DISABLED_BIBLE_TRANSLATIONS=[], FORCE_ENABLED_BIBLE_TRANSLATIONS=[]):
+            all_bibles = len(BibleTranslation().all())
+            all_enabled = len(BibleTranslation().all_enabled())
+            self.assertEqual(all_enabled, all_bibles)
 
     def test_all_enabled_with_disabled_one(self):
         self._require_bibles()
-        all_bibles = len(BibleTranslation().all())
-        self.assertGreaterEqual(all_bibles, self.approximate_bible_count)
-        self._disable('de4e12af7f28f599-01')
-        all_enabled = len(BibleTranslation().all_enabled())
-        self.assertEqual(all_enabled, all_bibles-1)
+        with override_settings(DISABLED_BIBLE_TRANSLATIONS=[], FORCE_ENABLED_BIBLE_TRANSLATIONS=[]):
+            all_bibles = len(BibleTranslation().all())
+            self.assertGreaterEqual(all_bibles, self.approximate_bible_count)
+            target_id = self._available_bible_id()
+            self._disable(target_id)
+            all_enabled = len(BibleTranslation().all_enabled())
+            self.assertEqual(all_enabled, all_bibles-1)
 
     @override_settings(DISABLED_BIBLE_TRANSLATIONS=['de4e12af7f28f599-01'])
     def test_all_enabled_respects_settings_disabled_ids(self):
@@ -57,10 +79,12 @@ class BibleTranslationTestCase(TestCase):
 
     def test_all_disabled(self):
         self._require_bibles()
-        before_count = len(BibleTranslation().all_disabled())
-        self._disable('de4e12af7f28f599-01')
-        after_count = len(BibleTranslation().all_disabled())
-        self.assertEqual(before_count+1, after_count)
+        with override_settings(DISABLED_BIBLE_TRANSLATIONS=[], FORCE_ENABLED_BIBLE_TRANSLATIONS=[]):
+            before_count = len(BibleTranslation().all_disabled())
+            target_id = self._available_bible_id()
+            self._disable(target_id)
+            after_count = len(BibleTranslation().all_disabled())
+            self.assertEqual(before_count+1, after_count)
 
     def _disable(self, bible_id: str):
         meta_data = BibleTranslationMetaData()
@@ -215,21 +239,48 @@ class BibleCopyrightTranslationTestCase(SimpleTestCase):
 
 
 class GeoLocationRedirectMiddlewareTestCase(TestCase):
-    @override_settings(
-        ALLOWED_HOSTS=['testserver', 'acc.lawofmessiah.org', 'acc.wetvanchristus.nl'],
-        GEO_REDIRECT_ENABLED=True,
-        GEO_REDIRECT_NL_DOMAIN='acc.wetvanchristus.nl',
-        GEO_REDIRECT_EN_DOMAIN='acc.lawofmessiah.org',
-    )
-    def test_accept_language_without_cookie_or_geo_does_not_redirect_domains(self):
+    def test_nl_domain_stays_on_nl_domain_without_cookie_or_geo(self):
+        nl_domain = getattr(settings, 'GEO_REDIRECT_NL_DOMAIN', 'acc.wetvanchristus.nl')
+        en_domain = getattr(settings, 'GEO_REDIRECT_EN_DOMAIN', 'acc.lawofmessiah.org')
         previous_env = os.environ.get('GEO_REDIRECT_ENABLED')
         os.environ['GEO_REDIRECT_ENABLED'] = 'true'
         try:
-            response = self.client.get(
-                '/',
-                HTTP_HOST='acc.lawofmessiah.org',
-                HTTP_ACCEPT_LANGUAGE='nl',
-            )
+            with override_settings(
+                ALLOWED_HOSTS=['testserver', nl_domain, en_domain],
+                GEO_REDIRECT_ENABLED=True,
+                GEO_REDIRECT_NL_DOMAIN=nl_domain,
+                GEO_REDIRECT_EN_DOMAIN=en_domain,
+            ):
+                response = self.client.get(
+                    '/',
+                    HTTP_HOST=nl_domain,
+                )
+        finally:
+            if previous_env is None:
+                os.environ.pop('GEO_REDIRECT_ENABLED', None)
+            else:
+                os.environ['GEO_REDIRECT_ENABLED'] = previous_env
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNone(response.headers.get('Location'))
+
+    def test_accept_language_without_cookie_or_geo_does_not_redirect_domains(self):
+        nl_domain = getattr(settings, 'GEO_REDIRECT_NL_DOMAIN', 'acc.wetvanchristus.nl')
+        en_domain = getattr(settings, 'GEO_REDIRECT_EN_DOMAIN', 'acc.lawofmessiah.org')
+        previous_env = os.environ.get('GEO_REDIRECT_ENABLED')
+        os.environ['GEO_REDIRECT_ENABLED'] = 'true'
+        try:
+            with override_settings(
+                ALLOWED_HOSTS=['testserver', nl_domain, en_domain],
+                GEO_REDIRECT_ENABLED=True,
+                GEO_REDIRECT_NL_DOMAIN=nl_domain,
+                GEO_REDIRECT_EN_DOMAIN=en_domain,
+            ):
+                response = self.client.get(
+                    '/',
+                    HTTP_HOST=en_domain,
+                    HTTP_ACCEPT_LANGUAGE='nl',
+                )
         finally:
             if previous_env is None:
                 os.environ.pop('GEO_REDIRECT_ENABLED', None)

@@ -93,14 +93,19 @@ class GeoLocationRedirectMiddleware(MiddlewareMixin):
         current_lang = str(request.COOKIES.get(settings.LANGUAGE_COOKIE_NAME, '')).strip().lower()
         has_explicit_language_cookie = bool(current_lang)
         
+        # Keep the user on the Dutch domain whenever they are already there, even without
+        # an explicit language cookie or geo signal. This prevents the Dutch site from
+        # redirecting away to the English domain on a plain visit.
+        if current_host == nl_domain:
+            target_domain = nl_domain
         # Check if user prefers Dutch language
-        if current_lang.lower().startswith('nl'):
+        elif current_lang.lower().startswith('nl'):
             target_domain = nl_domain
         else:
             # Check GeoIP location
             geo_country = request.META.get('HTTP_GEO_COUNTRY', '').upper()
             cf_country = request.META.get('HTTP_CF_COUNTRY', '').upper()  # Cloudflare header
-            
+
             if geo_country == 'NL' or cf_country == 'NL':
                 target_domain = nl_domain
             else:

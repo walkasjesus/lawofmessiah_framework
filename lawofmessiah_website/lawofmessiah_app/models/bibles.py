@@ -3,11 +3,11 @@ import logging
 from pathlib import Path
 
 from bible_lib import BibleFactory, Bible
+from django.conf import settings
 from django.db import models
 from django.utils import translation
 
 from lawofmessiah_app.lib.access_policy import cjb_bible_id
-from lawofmessiah_website import settings
 
 
 class LocalCompleteJewishBible(Bible):
@@ -184,7 +184,7 @@ class BibleTranslation:
     def all_in_supported_languages(self):
         """" Get all bibles in translations supported by this website. """
         languages = [code for code, name in settings.LANGUAGES]
-        return [b for b in self.all_enabled() if b.language in languages]
+        return [b for b in self.all() if str(getattr(b, 'language', '') or '').strip() in languages]
 
     def count(self):
         return len(self.all_enabled())
