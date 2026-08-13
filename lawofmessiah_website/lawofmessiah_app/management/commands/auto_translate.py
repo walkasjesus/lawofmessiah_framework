@@ -8,7 +8,16 @@ from lawofmessiah_website.settings import BASE_DIR, LANGUAGES, LOCALE_PATHS
 
 
 class Command(BaseCommand):
+    def add_arguments(self, parser):
+        parser.add_argument(
+            '--approve-fuzzy',
+            action='store_true',
+            default=False,
+            help='Remove fuzzy flags from translated entries after auto-translation.',
+        )
+
     def handle(self, *args, **options):
+        approve_fuzzy = options.get('approve_fuzzy', False)
         languages = [code for code, name in LANGUAGES]
 
         translator = PoTranslator()
@@ -18,6 +27,20 @@ class Command(BaseCommand):
                 for file_path in self._po_file_paths(language):
                     self.stdout.write(f'Auto-translating {file_path}')
                     translator.translate(file_path, 'en', language)
+                    if approve_fuzzy:
+                        self._approve_fuzzy(file_path)
+
+    def _approve_fuzzy(self, file_path):
+        try:
+            import polib
+        except ImportError:
+            return
+
+        po = polib.pofile(file_path)
+        for entry in po:
+            if 'fuzzy' in entry.flags:
+                entry.flags = [flag for flag in entry.flags if flag != 'fuzzy']
+        po.save(file_path)
 
     def _po_file_paths(self, language):
         seen = set()

@@ -10,6 +10,18 @@
 set -euo pipefail
 
 PROFILE="${1:-all}"
+APPROVE_FUZZY="false"
+for arg in "$@"; do
+    case "$arg" in
+        --approve-fuzzy|--approve-fuzzy=yes|--approve-fuzzy=true)
+            APPROVE_FUZZY="true"
+            ;;
+        --approve-fuzzy=no|--approve-fuzzy=false)
+            APPROVE_FUZZY="false"
+            ;;
+    esac
+done
+
 if [[ "${PROFILE}" != "all" && "${PROFILE}" != "quick" ]]; then
     echo "ERROR: unsupported profile '${PROFILE}'. Use 'all' or 'quick'."
     exit 1
@@ -40,13 +52,16 @@ echo "INFO: extraction profile=${PROFILE}" | tee -a "${log}"
 
 export WEBSITE_DIR
 export LOM_TRANSLATION_PROFILE="${PROFILE}"
+export LOM_APPROVE_FUZZY="${APPROVE_FUZZY}"
 
 python3 - <<'PY' | tee -a "${log}"
 import ast
+import html
 import os
 import re
 from pathlib import Path
 
+import polib
 import yaml
 
 
@@ -154,13 +169,40 @@ def is_translatable(text):
     return letter_count >= 2
 
 
+def extract_template_strings(path: Path):
+    text = path.read_text(encoding='utf-8')
+    matches = []
+
+    for match in re.finditer(r"{%\s*trans\s+(['\"])(.*?)\1\s*%}", text, flags=re.S):
+        value = match.group(2).strip()
+        if value:
+            matches.append(value)
+
+    for match in re.finditer(r"{%\s*blocktrans\b.*?%}(.*?){%\s*endblocktrans\s*%}", text, flags=re.S):
+        raw = match.group(1)
+        raw = html.unescape(raw)
+        raw = re.sub(r"<[^>]+>", " ", raw)
+        raw = re.sub(r"\s+", " ", raw)
+        value = raw.strip()
+        if value:
+            matches.append(value)
+
+    return matches
+
+
 website_root = Path(os.environ['WEBSITE_DIR'])
 profile = os.environ.get('LOM_TRANSLATION_PROFILE', 'all').strip().lower() or 'all'
+approve_fuzzy = os.environ.get('LOM_APPROVE_FUZZY', 'false').strip().lower() in {'1', 'true', 'yes'}
 source_po = website_root / 'translations' / 'locale' / 'nl' / 'LC_MESSAGES' / 'django.po'
 target_po = website_root / 'data' / 'lawofmessiah_translations' / 'locale' / 'nl' / 'LC_MESSAGES' / 'django.po'
 data_files = [
     website_root / 'data' / 'lawofmessiah' / 'Law_of_Messiah_ot.yaml',
     website_root / 'data' / 'lawofmessiah' / 'Law_of_Messiah_nt.yaml',
+]
+author_files = [
+    website_root / 'lawofmessiah_app' / 'templates' / 'authors' / 'daniel_juster.html',
+    website_root / 'lawofmessiah_app' / 'templates' / 'authors' / 'michael_rudolph.html',
+    website_root / 'lawofmessiah_app' / 'templates' / 'pages' / 'legalism.html',
 ]
 
 target_po.parent.mkdir(parents=True, exist_ok=True)
@@ -232,9 +274,6 @@ for data_file in data_files:
             'commandment_form',
         )
         extended_keys = (
-            'commentary_rudolph',
-            'commentary_juster',
-            'classical_commentators',
             'copyright',
         )
         selected_keys = common_keys if profile == 'quick' else common_keys + extended_keys
@@ -260,6 +299,12 @@ for data_file in data_files:
                     if isinstance(title, str):
                         add_msgid(title, f'data/lawofmessiah/{data_file.name}:{item_id}.{related_key}[{rel_index}].title')
 
+for template_path in author_files:
+    if not template_path.exists():
+        continue
+    for value in extract_template_strings(template_path):
+        add_msgid(value, f'{template_path.relative_to(website_root)}')
+
 lines = []
 lines.extend([
     '# SOME DESCRIPTIVE TITLE.',
@@ -284,8 +329,31 @@ for msgid in sorted(extract_map.keys()):
 
 target_po.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
 
+po = polib.pofile(str(target_po))
+filtered_entries = []
+for entry in po:
+    refs = [ref for ref, _line in entry.occurrences]
+    if any('.commentary_rudolph' in ref or '.commentary_juster' in ref or '.classical_commentators' in ref for ref in refs):
+        continue
+    if approve_fuzzy and 'fuzzy' in entry.flags:
+        entry.flags = [flag for flag in entry.flags if flag != 'fuzzy']
+    filtered_entries.append(entry)
+
+header_meta = po.metadata.copy() if getattr(po, 'metadata', None) else {}
+header_meta.setdefault('Project-Id-Version', 'Lawofmessiah_Translations')
+header_meta.setdefault('Language', 'nl')
+header_meta.setdefault('MIME-Version', '1.0')
+header_meta.setdefault('Content-Type', 'text/plain; charset=UTF-8')
+header_meta.setdefault('Content-Transfer-Encoding', '8bit')
+header_meta.setdefault('Plural-Forms', 'nplurals=2; plural=(n != 1);')
+po = polib.POFile()
+po.metadata = header_meta
+po.extend(filtered_entries)
+po.save(str(target_po))
+
 pretranslated = sum(1 for msgid in extract_map.keys() if existing_msgstr_map.get(msgid, source_msgstr_map.get(msgid, '')).strip())
 print(f'profile={profile}')
+print(f'approve_fuzzy={approve_fuzzy}')
 print(f'data_entries_extracted={len(extract_map)}')
 print(f'data_entries_pretranslated={pretranslated}')
 print(f'target_entries_written={written_entries}')
